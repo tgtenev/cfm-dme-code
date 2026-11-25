@@ -9,7 +9,7 @@
     }
   ],
   "description": "The code and the outputs behind Papers I and II of the series on the dark-matter effect in the Cosmic Fabric Model: the derived law for galaxies and its fits to the SPARC rotation curves, and the law's field theory and kinetics.",
-  "license": "MIT",
+  "license": "mit",
   "keywords": [
     "dark-matter effect",
     "MOND",
