@@ -6,6 +6,8 @@ This repository holds the code and the outputs behind two papers by T. G. Tenev:
 - Paper II: *The Dark-Matter Effect in the Cosmic Fabric Model. II. The Field Theory and the Kinetics of the Law for Galaxies*.
 
 Each release is archived on Zenodo with its own DOI.
+Release 1.0.0 holds the code and outputs that Paper I cites.
+Release 1.0.1 adds the test of the stellar normalization of Paper II, Sect. 6.1, the option `--ml-centres` of three scripts with its outputs, and takes the empirical function's upper divisor as 5.60 in the catalogue of unit shapes; every other output is that of 1.0.0.
 
 ## Layout
 
@@ -53,6 +55,7 @@ The commands are written with `python`; on Windows, `py -3` serves.
 | The full solution against the algebraic relation, with catalog distances and wider priors, the slope tests, and the free volume of the two-constant fit | §6.1 | `rotation-curves/aqual-refit-solve.py`, `aqual-refit-fit.py` | `aqual-refit-main-*-results.txt`, `aqual-refit-kuzmin-results.txt` |
 | The same solutions coarse-grained at the catchment length | §6.1 | `rotation-curves/coarse_grained_solve.py`, `coarse_grained_merge.py`, `coarse_grained_fit.py` | `coarse_grained_fit-*-results.txt` |
 | The full solution against the relation averaged over the gas layer: the slope test and the distance from noiseless rotation curves of the full solution; the share of AQUAL's own departure that the data show | §§6.1, 7.3 | `rotation-curves/gas_layer_solve.py`, `gas_layer_baseline.py` | `gas_layer_baseline-model-results.txt`, `gas_layer_baseline-sparc-results.txt` |
+| The disk results with the stellar mass-to-light priors centred 10 and 20 percent higher: the constrained fit against MOND's functions, the full solution against the algebraic relation, the slope tests and the test against the gas layer | §6.1 | `rotation-curves/constrained_fit.py`, `aqual-refit-fit.py` and `gas_layer_baseline.py`, each with `--ml-centres` | `constrained_fit-ml0.55-results.txt` and `-ml0.60-`, `aqual-refit-main-T11-ml0.55-results.txt` and `-ml0.60-`, `gas_layer_baseline-model-ml0.55-results.txt` and the three others |
 | The direction of a new layer, tested on the inner rotation curves of the 32 galaxies that the law boosts by more than 5 | §3.1, Table 1 | `rotation-curves/fetch_*.py`, `layer_direction_test.py` | `layer_direction_test-results.txt` |
 | The quality split of disturbed galaxies | §6.5 | `rotation-curves/quality_split.pl` | `quality_split-results.txt` |
 | The kinetic windows, the relaxation time, the residence screen, the stability margins, the domains, the tilt of the layers and where the boosts of 28 and 90 fall | §§2, 3.1, 4.1, 4.2, 5.3, 7.3, Appendix C, Tables 1 and 4 | `kinetics/kinetic_windows.py` | `kinetic_windows-results.txt` |
@@ -84,6 +87,7 @@ The committed outputs let each script run on its own, except where an input is n
   - `constrained_solve.py` (gamma, upsvar), then `constrained_fit.py --parts main`, then `constrained_solve.py --part atopt`, then `constrained_fit.py` and `counting_factor_menu.py`;
   - `coarse_grained_solve.py`, then `coarse_grained_merge.py`, then `coarse_grained_fit.py`;
   - `gas_layer_solve.py` (its parts gamma, upsvar and relvar), then `gas_layer_baseline.py`;
+  - for the test of the stellar normalization, `constrained_fit.py --parts main`, `aqual-refit-fit.py --part main --law T11` and `gas_layer_baseline.py` (both inputs), each with `--ml-centres 0.55,0.77` and with `--ml-centres 0.6,0.84`;
   - `catalog_distances_nodes.py`, then `catalog_distances.py`;
   - the four `fetch_*.py`, then `layer_direction_test.py`.
 - `globular-clusters/gc_dynamical.py`, then `globular-clusters/gc_radial_trends.py` and `mond-classes/mond_gc.py`.

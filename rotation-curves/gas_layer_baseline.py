@@ -5,7 +5,9 @@ RESULTS SUPPORTED
   Paper II, Sect. 6.1: against the vertically gas-averaged accelerations (R below), the slope test disfavors the full
   offset (F below) at about 3 SD in the inner disks (3.1 SD on the model's own field, 2.8 SD on SPARC's tables, line
   "Slope test" of part 2), and the observed Delta chi^2 sits about 5 SD from its value for noiseless rotation curves
-  made by the full solution (4.82 and 4.96 SD, line "observed" of part 2). Paper II, Sect. 7.3, item 3: the share of
+  made by the full solution (4.82 and 4.96 SD, line "observed" of part 2). With the mass-to-light priors and the mocks
+  centred 10 and 20 percent higher (--ml-centres), the slope test falls to 2.6 to 2.7 and 2.2 to 2.3 SD, and that
+  distance to 4.2 to 4.4 and 3.7 to 3.8 SD (the files -ml0.55- and -ml0.60-). Paper II, Sect. 7.3, item 3: the share of
   AQUAL's own part that the data show, 0.40 to 0.45 by the slope test (the slope itself), and lower by the Delta chi^2
   comparison (its position between the two expectations of part 2).
 
@@ -37,8 +39,14 @@ INPUTS
 OUTPUTS AND COMMANDS, from the repository root (about 5 min each; the two can run at the same time)
   python rotation-curves/gas_layer_baseline.py --input model --out rotation-curves/gas_layer_baseline-model-results.txt
   python rotation-curves/gas_layer_baseline.py --input sparc --out rotation-curves/gas_layer_baseline-sparc-results.txt
+  python rotation-curves/gas_layer_baseline.py --input model --ml-centres 0.55,0.77 --out rotation-curves/gas_layer_baseline-model-ml0.55-results.txt
+  python rotation-curves/gas_layer_baseline.py --input model --ml-centres 0.6,0.84 --out rotation-curves/gas_layer_baseline-model-ml0.60-results.txt
+  python rotation-curves/gas_layer_baseline.py --input sparc --ml-centres 0.55,0.77 --out rotation-curves/gas_layer_baseline-sparc-ml0.55-results.txt
+  python rotation-curves/gas_layer_baseline.py --input sparc --ml-centres 0.6,0.84 --out rotation-curves/gas_layer_baseline-sparc-ml0.60-results.txt
   --input model uses the model's own Newtonian field for every model, sparc SPARC's tabulated g_bar. --nboot N sets the
-  draws for the Delta chi^2 SDs (300), --nslope N those for the slope SDs (2000). Needs numpy.
+  draws for the Delta chi^2 SDs (300), --nslope N those for the slope SDs (2000). --ml-centres D,B centres the disk and
+  bulge mass-to-light priors, and the noiseless mocks, at the ratios D and B instead of 0.5 and 0.7 (Paper II,
+  Sect. 6.1). Needs numpy.
 """
 import csv, importlib.util, math, os, re, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -60,6 +68,9 @@ def arg(name, default=None):
 NBOOT = int(arg("--nboot", "300"))
 NSLOPE = int(arg("--nslope", "2000"))
 INP = arg("--input", "model")
+ML = arg("--ml-centres")
+if ML:
+    RC.set_ml_centres(*(float(x) for x in ML.split(",")))
 LA = RC.LA_T11                           # log10 a0 = -10.7 to -9.3 by 0.1
 GAMMA_T = [f"rotation-curves/gas-layer-gamma-{k}.csv" for k in range(6)]
 UPSVAR_T = [f"rotation-curves/gas-layer-upsvar-{k}.csv" for k in range(6)]
@@ -135,6 +146,9 @@ def slope(Py, Px, ds, a0_cov, seed):
 def main():
     out(f"The gas-layer baseline test, T11 (the empirical function), input '{INP}'.")
     out(f"Delta chi^2 SDs from {NBOOT} galaxy-bootstrap draws; slope SDs from {NSLOPE}.")
+    if ML:
+        out(f"VARIANT: mass-to-light priors, and the noiseless mocks, centred at {ML} (disk, bulge) instead of 0.5,0.7, a test of the "
+            "stellar normalization (Paper II, Sect. 6.1).")
     out("=" * 112)
     T1, gals = AF.load()
     GT = read_gamma_t()

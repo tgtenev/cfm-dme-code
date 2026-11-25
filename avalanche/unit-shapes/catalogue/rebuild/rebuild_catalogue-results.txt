@@ -137,10 +137,10 @@ p6-05     2.977  0.1904  55.2  5.739  0.0710  3.83   4.18    3.73    2.14   386 
 
 6b. Derived numbers
   empirical-window shapes: D 4.600 to 5.374; below 5.70 by 6.1 to 23.9 percent of their own divisor (5.7 to 19.3 percent of 5.70)
-  target-window shapes: D 5.712 to 5.938; above 5.61 by 1.8 to 5.9 percent
+  target-window shapes: D 5.712 to 5.938; above 5.60 by 2.0 to 6.0 percent
   distinct shapes run, by site count: 2: 1; 3: 2; 4: 7; 5: 26; 6: 5; 8: 2; 9: 1; 10: 1; 12: 3; 15: 1; 16: 2; 18: 2; 20: 2; 24: 3; 30: 1; 32: 1; 36: 2
-  rod4      a0 = cH/D for cH 5.42 to 5.87: 0.933 to 1.011; against 5.61: 3.5 percent above
-  brick124  a0 = cH/D for cH 5.42 to 5.87: 0.915 to 0.991; against 5.61: 5.6 percent above
-  box145    a0 = cH/D for cH 5.42 to 5.87: 0.913 to 0.988; against 5.61: 5.9 percent above
-  box234    a0 = cH/D for cH 5.42 to 5.87: 0.949 to 1.028; against 5.61: 1.8 percent above
-  p6-05     a0 = cH/D for cH 5.42 to 5.87: 0.944 to 1.023; against 5.61: 2.3 percent above
+  rod4      a0 = cH/D for cH 5.42 to 5.87: 0.933 to 1.011; against 5.60: 3.7 percent above
+  brick124  a0 = cH/D for cH 5.42 to 5.87: 0.915 to 0.991; against 5.60: 5.8 percent above
+  box145    a0 = cH/D for cH 5.42 to 5.87: 0.913 to 0.988; against 5.60: 6.0 percent above
+  box234    a0 = cH/D for cH 5.42 to 5.87: 0.949 to 1.028; against 5.60: 2.0 percent above
+  p6-05     a0 = cH/D for cH 5.42 to 5.87: 0.944 to 1.023; against 5.60: 2.5 percent above

@@ -1,0 +1,390 @@
+THE CONSTRAINED FIT: THE BOOST LAW WITH a0 = c H_dS ln(1 + delta), kappa = 1, ON THE 153 SPARC ROTATION CURVES
+c H_dS = 5.4185e-10 m/s^2 at H0 = 67.4 km/s/Mpc and 5.8687e-10 at 73 (Omega_Lambda = 0.6847); the scale relation gives a0 = 0.9426e-10 at delta = 0.19 (67.4) and 0.9214e-10 at 0.17 (73)
+153 galaxies; 2000 bootstrap draws by galaxy, seed 20261114. Added Gamma tables (simple, standard): 0 points newly undefined; the model's Newtonian field agrees with that of aqual-refit-gamma-*.csv to 0.0e+00; the standard function's correction measured at a0 = 1.100e-10 m/s^2.
+VARIANT: the mass-to-light priors are centred at 0.6,0.84 (disk, bulge) instead of 0.5,0.7, a test of the stellar normalization (Paper II, Sect. 6.1); rotation-curves/constrained_fit-optimum.csv and rotation-curves/constrained_fit-valley.csv are not written.
+On the full field solution Gamma is read between the solver's nodes as in aqual-refit-fit.py: a quartic through the five free-volume
+nodes (0.05, 0.2, 0.4, 0.7, 1.2), a Catmull-Rom cubic in log10 a0 on the 0.2-dex nodes at a0/s, and the correction for other
+mass-to-light ratios linear in delta between its nodes 0.03 and 0.3; the constrained curve needs no interpolation of chi^2 between
+scale nodes, since each of its nodes is fitted directly at its own a0. Part exact gives the error that the reading of Gamma adds at the optima.
+
+======================================================================================================================
+SPARC'S TABULATED FIELD, THE ALGEBRAIC RELATION (THE FIT OF RECORD)
+======================================================================================================================
+1. THE CONSTRAINED CURVE a0 = c H_dS ln(1 + delta), kappa = 1 (every galaxy's mass-to-light ratios, distance and inclination refitted at every node)
+   H0 = 67.4 km/s/Mpc (c H_dS = 5.4185e-10 m/s^2): constrained minimum delta = 0.1950 (Delta chi^2 = 1 half-width 0.0052), chi^2 = 4356.73; scale a0 = 0.9651e-10 m/s^2; divisor c H_dS/a0 = 5.614
+      bootstrap (2000 draws): delta 16-84 percent 0.1783 to 0.2117, median 0.1946, SD 0.0165, 2.5-97.5 percent 0.1649 to 0.2280; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8889 to 1.0403e-10, SD 0.0747e-10; divisor 16-84 percent 5.209 to 6.096
+      chi^2 evaluated directly at delta = 0.1950: 4356.82 (the parabola through the three lowest nodes gives 4356.73; difference +0.090)
+      chi^2 at delta = 0.19: 4357.65 (a0 = 0.9426e-10); at delta = 0.17: 4381.42 (a0 = 0.8507e-10)
+      chi^2 minus the constrained minimum: at 0.19 +0.92, at 0.17 +24.68
+   H0 = 73.0 km/s/Mpc (c H_dS = 5.8687e-10 m/s^2): constrained minimum delta = 0.1804 (Delta chi^2 = 1 half-width 0.0050), chi^2 = 4360.37; scale a0 = 0.9732e-10 m/s^2; divisor c H_dS/a0 = 6.031
+      bootstrap (2000 draws): delta 16-84 percent 0.1646 to 0.1954, median 0.1800, SD 0.0153, 2.5-97.5 percent 0.1524 to 0.2109; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8941 to 1.0474e-10, SD 0.0758e-10; divisor 16-84 percent 5.603 to 6.564
+      chi^2 evaluated directly at delta = 0.1804: 4360.37 (the parabola through the three lowest nodes gives 4360.37; difference +0.007)
+      chi^2 at delta = 0.19: 4364.11 (a0 = 1.0209e-10); at delta = 0.17: 4364.69 (a0 = 0.9214e-10)
+      chi^2 minus the constrained minimum: at 0.19 +3.74, at 0.17 +4.32
+   [sparc, relation: constrained curve: 48 s]
+   the constrained curves: delta | a0 at 67.4 (1e-10) | chi^2 at 67.4 | a0 at 73 (1e-10) | chi^2 at 73
+      0.05 | 0.2644 |  7056.88 | 0.2863 |  6743.36
+      0.06 | 0.3157 |  6363.61 | 0.3420 |  6093.56
+      0.07 | 0.3666 |  5855.21 | 0.3971 |  5624.20
+      0.08 | 0.4170 |  5475.80 | 0.4517 |  5279.86
+      0.09 | 0.4670 |  5189.32 | 0.5058 |  5023.64
+      0.10 | 0.5164 |  4970.53 | 0.5593 |  4831.83
+      0.11 | 0.5655 |  4803.09 | 0.6125 |  4688.70
+      0.12 | 0.6141 |  4675.38 | 0.6651 |  4581.55
+      0.13 | 0.6622 |  4577.57 | 0.7173 |  4502.00
+      0.14 | 0.7100 |  4503.31 | 0.7690 |  4444.38
+      0.15 | 0.7573 |  4448.07 | 0.8202 |  4404.38
+      0.16 | 0.8042 |  4408.35 | 0.8710 |  4378.68
+      0.17 | 0.8507 |  4381.42 | 0.9214 |  4364.69
+      0.18 | 0.8968 |  4365.10 | 0.9714 |  4360.37
+      0.19 | 0.9426 |  4357.65 | 1.0209 |  4364.11
+      0.20 | 0.9879 |  4357.68 | 1.0700 |  4374.58
+      0.21 | 1.0329 |  4364.05 | 1.1187 |  4390.68
+      0.22 | 1.0775 |  4375.75 | 1.1670 |  4411.67
+      0.23 | 1.1217 |  4392.10 | 1.2149 |  4437.02
+      0.24 | 1.1656 |  4412.45 | 1.2624 |  4466.12
+      0.25 | 1.2091 |  4436.46 | 1.3096 |  4498.45
+      0.26 | 1.2523 |  4463.64 | 1.3563 |  4533.54
+      0.27 | 1.2951 |  4493.56 | 1.4027 |  4571.07
+      0.28 | 1.3376 |  4525.89 | 1.4488 |  4610.69
+      0.29 | 1.3798 |  4560.34 | 1.4944 |  4652.28
+      0.30 | 1.4216 |  4596.65 | 1.5397 |  4695.65
+      0.31 | 1.4631 |  4634.63 | 1.5847 |  4740.57
+      0.32 | 1.5044 |  4674.21 | 1.6293 |  4786.90
+      0.33 | 1.5452 |  4715.21 | 1.6736 |  4834.44
+      0.34 | 1.5858 |  4757.47 | 1.7176 |  4883.06
+      0.35 | 1.6261 |  4800.87 | 1.7612 |  4932.65
+      0.36 | 1.6661 |  4845.27 | 1.8045 |  4983.16
+      0.37 | 1.7058 |  4890.57 | 1.8475 |  5034.51
+      0.38 | 1.7452 |  4936.67 | 1.8902 |  5086.66
+      0.39 | 1.7843 |  4983.55 | 1.9326 |  5139.53
+      0.40 | 1.8232 |  5031.17 | 1.9747 |  5193.08
+      0.41 | 1.8617 |  5079.45 | 2.0164 |  5247.22
+      0.42 | 1.9000 |  5128.36 | 2.0579 |  5301.97
+      0.43 | 1.9381 |  5177.85 | 2.0991 |  5357.27
+      0.44 | 1.9758 |  5227.88 | 2.1400 |  5413.07
+      0.45 | 2.0133 |  5278.40 | 2.1806 |  5469.34
+   the scale relation at kappa = 1/3, a0 = 3 c H_dS ln(1 + delta) (the whole set point as the mean threshold), delta 0.02 to 0.12 in steps of 0.0025:
+   kappa = 1/3, H0 = 67.4: constrained minimum delta = 0.0653 (Delta chi^2 = 1 half-width 0.0018), chi^2 = 4394.47; scale a0 = 1.0283e-10 m/s^2; divisor c H_dS/a0 = 5.269
+      bootstrap (2000 draws): delta 16-84 percent 0.0596 to 0.0708, median 0.0652, SD 0.0056, 2.5-97.5 percent 0.0550 to 0.0765; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.9415 to 1.1124e-10, SD 0.0852e-10; divisor 16-84 percent 4.871 to 5.755
+      kappa = 1/3 minus kappa = 1 at their minima:    +37.7 +/-  12.4 (+3.05 SD); share of draws in which kappa = 1/3 fits better 0.000
+   kappa = 1/3, H0 = 73.0: constrained minimum delta = 0.0603 (Delta chi^2 = 1 half-width 0.0017), chi^2 = 4396.16; scale a0 = 1.0310e-10 m/s^2; divisor c H_dS/a0 = 5.693
+      bootstrap (2000 draws): delta 16-84 percent 0.0551 to 0.0654, median 0.0602, SD 0.0052, 2.5-97.5 percent 0.0508 to 0.0707; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.9439 to 1.1156e-10, SD 0.0856e-10; divisor 16-84 percent 5.260 to 6.218
+      kappa = 1/3 minus kappa = 1 at their minima:    +35.8 +/-  11.6 (+3.09 SD); share of draws in which kappa = 1/3 fits better 0.000
+   [sparc, relation: kappa 1/3: 97 s]
+2. AT EQUAL FREEDOM: ONE FITTED GLOBAL CONSTANT EACH (the scale by the ladder in log10 a0 of two_constant_fit.pl, every galaxy's nuisances refitted)
+   the square-root onset form, X_sat and a0 free (two_constant_fit.pl section E): X_sat = 2.3070 (stat 0.3400; clustered SD 0.5491, 16-84 percent 2.000 to 3.031), a0 = 0.9961e-10, chi^2 = 4340.85 (two_constant_fit.pl 3.3024, 1.0308e-10, 4314.09; two_constant_fit-results.txt section E)
+      the constrained fit (67.4) minus the onset form:    +15.9 +/-  12.8 (+1.24 SD); the two-constant fit minus the onset form:    -12.3 +/-  13.1 (-0.94 SD)
+      the constrained fit's onset at delta 0.1900: X = 3.779, against X_sat 2.307: +2.68 clustered SD
+      the constrained fit's onset at delta 0.1950: X = 3.690, against X_sat 2.307: +2.52 clustered SD
+   [sparc, relation: competitors: 201 s]
+   law | fitted constant | scale a0 (1e-10 m/s^2) | chi^2 | the constrained fit (H0 = 67.4) minus the law, galaxy-clustered SD | share of draws in which the constrained fit is better
+   the constrained fit, H0 = 67.4 | delta = 0.1950 | 0.9651 | 4356.73 | (itself) |
+   the constrained fit, H0 = 73.0 | delta = 0.1804 | 0.9732 | 4360.37 |     -3.6 +/-   1.3 (-2.73 SD) |
+   MOND's simple function | none | 1.0627 | 4417.34 |    -60.6 +/-  18.7 (-3.24 SD) | 1.000
+   MOND's standard function | none | 1.2092 | 4438.17 |    -81.4 +/-  76.8 (-1.06 SD) | 0.848
+   the empirical function | none | 1.0266 | 4370.36 |    -13.6 +/-   8.0 (-1.70 SD) | 0.990
+   the sharp knee of Burton, Cabrera and Frank | none | 1.2411 | 4521.60 |   -164.9 +/- 102.7 (-1.61 SD) | 0.945
+   the two-constant fit (reference) | delta = 0.4587 | 0.8549 | 4328.55 |    +28.2 +/-  18.7 (+1.51 SD) | 0.000
+   the same differences for the constrained fit at H0 = 73: minus MOND's simple function:    -57.0 +/-  17.4 (-3.27 SD); minus MOND's standard function:    -77.8 +/-  77.4 (-1.01 SD); minus the empirical function:    -10.0 +/-   7.0 (-1.43 SD); minus the sharp knee:   -161.2 +/- 103.2 (-1.56 SD); minus the two-constant fit:    +31.8 +/-  19.9 (+1.60 SD)
+   pairwise among the competitors (first minus second): STD - SIM:    +20.8 +/-  83.5 (+0.25 SD); SIM - T11:    +47.0 +/-  13.0 (+3.60 SD); STD - T11:    +67.8 +/-  81.7 (+0.83 SD); BCF - SIM:   +104.3 +/- 107.4 (+0.97 SD); STD - two-constant:   +109.6 +/-  64.5 (+1.70 SD); SIM - two-constant:    +88.8 +/-  34.7 (+2.56 SD)
+   [sparc, relation: 201 s]
+
+3. THE FIT OF RECORD AT THE CONSTRAINED MINIMUM: SCATTER, BINNED RESIDUALS, THE DEEP LIMB AND THE MATCH TO THE EMPIRICAL FUNCTION
+   scatter about the constrained fit (H0 = 67.4): 0.1108 dex over 3166 points (two_constant_fit.pl: boost law 0.1101, empirical function 0.1103, simple 0.1105, standard 0.1103; two_constant_fit-results.txt section J)
+   scatter about the two-constant fit (delta 0.4587): 0.1105 dex over 3166 points (two_constant_fit.pl: boost law 0.1101, empirical function 0.1103, simple 0.1105, standard 0.1103; two_constant_fit-results.txt section J)
+   scatter about the empirical function: 0.1109 dex over 3166 points (two_constant_fit.pl: boost law 0.1101, empirical function 0.1103, simple 0.1105, standard 0.1103; two_constant_fit-results.txt section J)
+   scatter about MOND's simple function: 0.1111 dex over 3166 points (two_constant_fit.pl: boost law 0.1101, empirical function 0.1103, simple 0.1105, standard 0.1103; two_constant_fit-results.txt section J)
+   scatter about MOND's standard function: 0.1107 dex over 3166 points (two_constant_fit.pl: boost law 0.1101, empirical function 0.1103, simple 0.1105, standard 0.1103; two_constant_fit-results.txt section J)
+   binned mean residual log10(g_obs/q^2) - log10 g_model in 0.25-dex bins of log10 g_bar at each law's own fit (the bins of two_constant_fit.pl section D2):
+      [-12.35,-12.10)  constrained    8 -0.0844   standard    8 -0.0970
+      [-12.10,-11.85)  constrained   31 -0.0533   standard   28 -0.0730
+      [-11.85,-11.60)  constrained   98 -0.0093   standard   98 -0.0142
+      [-11.60,-11.35)  constrained  225 -0.0147   standard  215 -0.0193
+      [-11.35,-11.10)  constrained  469 -0.0174   standard  437 -0.0227
+      [-11.10,-10.85)  constrained  435 -0.0027   standard  423 -0.0037
+      [-10.85,-10.60)  constrained  349 -0.0034   standard  340 -0.0053
+      [-10.60,-10.35)  constrained  289 -0.0146   standard  296 -0.0121
+      [-10.35,-10.10)  constrained  304 -0.0122   standard  269 -0.0016
+      [-10.10, -9.85)  constrained  300 +0.0055   standard  334 +0.0138
+      [ -9.85, -9.60)  constrained  217 -0.0126   standard  249 -0.0131
+      [ -9.60, -9.35)  constrained  166 -0.0089   standard  183 +0.0013
+      [ -9.35, -9.10)  constrained  123 -0.0214   standard  137 -0.0275
+      [ -9.10, -8.85)  constrained   82 +0.0099   standard   83 -0.0014
+      [ -8.85, -8.60)  constrained   42 +0.0333   standard   40 +0.0314
+      [ -8.60, -8.35)  constrained   24 +0.0458   standard   22 +0.0553
+      largest |bin offset|: the constrained fit 0.0844 dex (bin from -12.35), the standard function 0.0970 dex (bin from -12.35); two_constant_fit.pl at the two-constant fit 0.0593 and 0.0777 (two_constant_fit-results.txt section D2)
+   the boost law at delta 0.1950 against the empirical function over 0.01 <= y <= 32 (same y): rms 0.0091 dex, largest 0.0168 dex (two_constant_fit.pl at 0.2953: 0.0135 and 0.0245, two_constant_fit-results.txt section H)
+   the boost law at delta 0.1900 against the empirical function over 0.01 <= y <= 32 (same y): rms 0.0089 dex, largest 0.0164 dex (two_constant_fit.pl at 0.2953: 0.0135 and 0.0245, two_constant_fit-results.txt section H)
+   the boost law at delta 0.2953 against the empirical function over 0.01 <= y <= 32 (same y): rms 0.0135 dex, largest 0.0245 dex (two_constant_fit.pl at 0.2953: 0.0135 and 0.0245, two_constant_fit-results.txt section H)
+   Verlinde's c H0/6 at H0 = 67.4: 1.0914e-10 (divisor 4.965 against c H_dS); against the constrained scale 0.9651e-10 (clustered SD 0.0747): +1.69 SD; against the empirical function's 1.0266e-10 (clustered SD 0.0860): +0.75 SD
+   Verlinde's c H0/6 at H0 = 73.0: 1.1821e-10 (divisor 4.965 against c H_dS); against the constrained scale 0.9732e-10 (clustered SD 0.0758): +2.76 SD; against the empirical function's 1.0266e-10 (clustered SD 0.0860): +1.81 SD
+   at delta 0.1900: lambda 0.1740, dilute slope s = 0.9155, deep-limb factor s^-1/2 = 1.0451, onset 0.6573/lambda = 3.779, guided share at the crossover delta/(1 + delta) = 0.160, amplification A = 2/delta^2 = 55.4, deep normalization a0/s at the constrained scale (67.4) = 1.0295e-10
+   at delta 0.1700: lambda 0.1570, dilute slope s = 0.9236, deep-limb factor s^-1/2 = 1.0406, onset 0.6573/lambda = 4.187, guided share at the crossover delta/(1 + delta) = 0.145, amplification A = 2/delta^2 = 69.2, deep normalization a0/s at the constrained scale (67.4) = 0.9211e-10
+   at delta 0.1950: lambda 0.1781, dilute slope s = 0.9136, deep-limb factor s^-1/2 = 1.0462, onset 0.6573/lambda = 3.690, guided share at the crossover delta/(1 + delta) = 0.163, amplification A = 2/delta^2 = 52.6, deep normalization a0/s at the constrained scale (67.4) = 1.0564e-10
+   at delta 0.2953: lambda 0.2587, dilute slope s = 0.8762, deep-limb factor s^-1/2 = 1.0683, onset 0.6573/lambda = 2.540, guided share at the crossover delta/(1 + delta) = 0.228, amplification A = 2/delta^2 = 22.9, deep normalization a0/s at the constrained scale (67.4) = 1.6001e-10
+   binned relation below 1e-11 m/s^2 (Upsilon 0.5/0.7, catalog distances, 3166 points, 0.2-dex bins, median log10 g_obs/g_law): the two-constant fit (0.2953, 0.9246e-10): bins +0.049, +0.011, -0.028, -0.021, +0.013; the law over the data, 10^-(mean) = 0.989
+   binned relation below 1e-11 m/s^2 (Upsilon 0.5/0.7, catalog distances, 3166 points, 0.2-dex bins, median log10 g_obs/g_law): the constrained fit (0.1950, 0.9651e-10): bins +0.047, +0.009, -0.030, -0.024, +0.010; the law over the data, 10^-(mean) = 0.995
+   binned relation below 1e-11 m/s^2 (Upsilon 0.5/0.7, catalog distances, 3166 points, 0.2-dex bins, median log10 g_obs/g_law): the scale relation at the fiducial free volume (0.19, 0.9426e-10): bins +0.052, +0.015, -0.025, -0.019, +0.014; the law over the data, 10^-(mean) = 0.983
+   [the fit of record at the constrained minimum: 202 s]
+
+======================================================================================================================
+THE MODEL'S OWN NEWTONIAN FIELD OF DISKS WITH THICKNESS, THE ALGEBRAIC RELATION
+======================================================================================================================
+1. THE CONSTRAINED CURVE a0 = c H_dS ln(1 + delta), kappa = 1 (every galaxy's mass-to-light ratios, distance and inclination refitted at every node)
+   H0 = 67.4 km/s/Mpc (c H_dS = 5.4185e-10 m/s^2): constrained minimum delta = 0.1821 (Delta chi^2 = 1 half-width 0.0049), chi^2 = 4271.11; scale a0 = 0.9063e-10 m/s^2; divisor c H_dS/a0 = 5.979
+      bootstrap (2000 draws): delta 16-84 percent 0.1674 to 0.1966, median 0.1815, SD 0.0150, 2.5-97.5 percent 0.1539 to 0.2117; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8385 to 0.9726e-10, SD 0.0686e-10; divisor 16-84 percent 5.571 to 6.462
+      chi^2 evaluated directly at delta = 0.1821: 4271.16 (the parabola through the three lowest nodes gives 4271.11; difference +0.046)
+      chi^2 at delta = 0.19: 4273.73 (a0 = 0.9426e-10); at delta = 0.17: 4277.14 (a0 = 0.8507e-10)
+      chi^2 minus the constrained minimum: at 0.19 +2.62, at 0.17 +6.03
+   H0 = 73.0 km/s/Mpc (c H_dS = 5.8687e-10 m/s^2): constrained minimum delta = 0.1684 (Delta chi^2 = 1 half-width 0.0047), chi^2 = 4272.26; scale a0 = 0.9132e-10 m/s^2; divisor c H_dS/a0 = 6.427
+      bootstrap (2000 draws): delta 16-84 percent 0.1546 to 0.1818, median 0.1678, SD 0.0139, 2.5-97.5 percent 0.1424 to 0.1958; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8435 to 0.9805e-10, SD 0.0696e-10; divisor 16-84 percent 5.985 to 6.958
+      chi^2 evaluated directly at delta = 0.1684: 4272.21 (the parabola through the three lowest nodes gives 4272.26; difference -0.050)
+      chi^2 at delta = 0.19: 4291.95 (a0 = 1.0209e-10); at delta = 0.17: 4272.38 (a0 = 0.9214e-10)
+      chi^2 minus the constrained minimum: at 0.19 +19.69, at 0.17 +0.12
+   [model, relation: constrained curve: 226 s]
+   the constrained curves: delta | a0 at 67.4 (1e-10) | chi^2 at 67.4 | a0 at 73 (1e-10) | chi^2 at 73
+      0.05 | 0.2644 |  6716.60 | 0.2863 |  6420.64
+      0.06 | 0.3157 |  6064.68 | 0.3420 |  5811.19
+      0.07 | 0.3666 |  5589.26 | 0.3971 |  5373.13
+      0.08 | 0.4170 |  5235.88 | 0.4517 |  5053.14
+      0.09 | 0.4670 |  4970.51 | 0.5058 |  4817.57
+      0.10 | 0.5164 |  4770.33 | 0.5593 |  4644.13
+      0.11 | 0.5655 |  4619.63 | 0.6125 |  4517.54
+      0.12 | 0.6141 |  4507.21 | 0.6651 |  4426.17
+      0.13 | 0.6622 |  4424.10 | 0.7173 |  4361.17
+      0.14 | 0.7100 |  4363.45 | 0.7690 |  4316.99
+      0.15 | 0.7573 |  4320.87 | 0.8202 |  4289.48
+      0.16 | 0.8042 |  4292.97 | 0.8710 |  4275.43
+      0.17 | 0.8507 |  4277.14 | 0.9214 |  4272.38
+      0.18 | 0.8968 |  4271.28 | 0.9714 |  4278.39
+      0.19 | 0.9426 |  4273.73 | 1.0209 |  4291.95
+      0.20 | 0.9879 |  4283.17 | 1.0700 |  4311.86
+      0.21 | 1.0329 |  4298.59 | 1.1187 |  4337.08
+      0.22 | 1.0775 |  4319.06 | 1.1670 |  4366.72
+      0.23 | 1.1217 |  4343.85 | 1.2149 |  4400.19
+      0.24 | 1.1656 |  4372.23 | 1.2624 |  4436.99
+      0.25 | 1.2091 |  4403.82 | 1.3096 |  4476.72
+      0.26 | 1.2523 |  4438.21 | 1.3563 |  4518.97
+      0.27 | 1.2951 |  4475.12 | 1.4027 |  4563.35
+      0.28 | 1.3376 |  4514.20 | 1.4488 |  4609.53
+      0.29 | 1.3798 |  4555.15 | 1.4944 |  4657.23
+      0.30 | 1.4216 |  4597.69 | 1.5397 |  4706.32
+      0.31 | 1.4631 |  4641.62 | 1.5847 |  4756.69
+      0.32 | 1.5044 |  4686.72 | 1.6293 |  4808.22
+      0.33 | 1.5452 |  4732.99 | 1.6736 |  4860.71
+      0.34 | 1.5858 |  4780.28 | 1.7176 |  4914.05
+      0.35 | 1.6261 |  4828.51 | 1.7612 |  4968.16
+      0.36 | 1.6661 |  4877.52 | 1.8045 |  5022.93
+      0.37 | 1.7058 |  4927.25 | 1.8475 |  5078.28
+      0.38 | 1.7452 |  4977.60 | 1.8902 |  5134.16
+      0.39 | 1.7843 |  5028.51 | 1.9326 |  5190.45
+      0.40 | 1.8232 |  5079.93 | 1.9747 |  5247.22
+      0.41 | 1.8617 |  5131.78 | 2.0164 |  5304.42
+      0.42 | 1.9000 |  5184.00 | 2.0579 |  5362.07
+      0.43 | 1.9381 |  5236.60 | 2.0991 |  5420.12
+      0.44 | 1.9758 |  5289.59 | 2.1400 |  5478.57
+      0.45 | 2.0133 |  5342.94 | 2.1806 |  5537.41
+   the scale relation at kappa = 1/3, a0 = 3 c H_dS ln(1 + delta) (the whole set point as the mean threshold), delta 0.02 to 0.12 in steps of 0.0025:
+   kappa = 1/3, H0 = 67.4: constrained minimum delta = 0.0614 (Delta chi^2 = 1 half-width 0.0018), chi^2 = 4284.75; scale a0 = 0.9681e-10 m/s^2; divisor c H_dS/a0 = 5.597
+      bootstrap (2000 draws): delta 16-84 percent 0.0562 to 0.0663, median 0.0611, SD 0.0051, 2.5-97.5 percent 0.0518 to 0.0716; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8892 to 1.0439e-10, SD 0.0785e-10; divisor 16-84 percent 5.191 to 6.093
+      kappa = 1/3 minus kappa = 1 at their minima:    +13.6 +/-  10.7 (+1.28 SD); share of draws in which kappa = 1/3 fits better 0.087
+   kappa = 1/3, H0 = 73.0: constrained minimum delta = 0.0567 (Delta chi^2 = 1 half-width 0.0016), chi^2 = 4285.49; scale a0 = 0.9710e-10 m/s^2; divisor c H_dS/a0 = 6.044
+      bootstrap (2000 draws): delta 16-84 percent 0.0520 to 0.0613, median 0.0565, SD 0.0047, 2.5-97.5 percent 0.0478 to 0.0662; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8921 to 1.0469e-10, SD 0.0789e-10; divisor 16-84 percent 5.606 to 6.578
+      kappa = 1/3 minus kappa = 1 at their minima:    +13.2 +/-   9.9 (+1.33 SD); share of draws in which kappa = 1/3 fits better 0.075
+   [model, relation: kappa 1/3: 249 s]
+2. AT EQUAL FREEDOM: ONE FITTED GLOBAL CONSTANT EACH (the scale by the ladder in log10 a0 of two_constant_fit.pl, every galaxy's nuisances refitted)
+   [model, relation: competitors: 287 s]
+   law | fitted constant | scale a0 (1e-10 m/s^2) | chi^2 | the constrained fit (H0 = 67.4) minus the law, galaxy-clustered SD | share of draws in which the constrained fit is better
+   the constrained fit, H0 = 67.4 | delta = 0.1821 | 0.9063 | 4271.11 | (itself) |
+   the constrained fit, H0 = 73.0 | delta = 0.1684 | 0.9132 | 4272.26 |     -1.2 +/-   1.2 (-0.97 SD) |
+   MOND's simple function | none | 1.0026 | 4295.97 |    -24.9 +/-  16.0 (-1.55 SD) | 0.954
+   MOND's standard function | none | 1.1293 | 4315.63 |    -44.5 +/-  70.6 (-0.63 SD) | 0.723
+   the empirical function | none | 0.9686 | 4278.26 |     -7.2 +/-   5.4 (-1.33 SD) | 0.949
+   the sharp knee of Burton, Cabrera and Frank | none | 1.1647 | 4372.69 |   -101.6 +/-  93.5 (-1.09 SD) | 0.847
+   the two-constant fit (reference) | delta = 0.3687 | 0.8252 | 4265.19 |     +5.9 +/-  14.5 (+0.41 SD) | 0.023
+   the same differences for the constrained fit at H0 = 73: minus MOND's simple function:    -23.7 +/-  14.9 (-1.59 SD); minus MOND's standard function:    -43.4 +/-  71.1 (-0.61 SD); minus the empirical function:     -6.0 +/-   4.5 (-1.33 SD); minus the sharp knee:   -100.4 +/-  94.0 (-1.07 SD); minus the two-constant fit:     +7.1 +/-  15.4 (+0.46 SD)
+   pairwise among the competitors (first minus second): STD - SIM:    +19.7 +/-  77.0 (+0.26 SD); SIM - T11:    +17.7 +/-  12.6 (+1.40 SD); STD - T11:    +37.4 +/-  74.7 (+0.50 SD); BCF - SIM:    +76.7 +/-  98.4 (+0.78 SD); STD - two-constant:    +50.4 +/-  62.0 (+0.81 SD); SIM - two-constant:    +30.8 +/-  27.9 (+1.10 SD)
+   [model, relation: 287 s]
+
+======================================================================================================================
+SPARC'S TABULATED FIELD, THE FULL FIELD SOLUTION
+======================================================================================================================
+1. THE CONSTRAINED CURVE a0 = c H_dS ln(1 + delta), kappa = 1 (every galaxy's mass-to-light ratios, distance and inclination refitted at every node)
+   H0 = 67.4 km/s/Mpc (c H_dS = 5.4185e-10 m/s^2): constrained minimum delta = 0.1787 (Delta chi^2 = 1 half-width 0.0049), chi^2 = 4448.69; scale a0 = 0.8907e-10 m/s^2; divisor c H_dS/a0 = 6.083
+      bootstrap (2000 draws): delta 16-84 percent 0.1639 to 0.1936, median 0.1782, SD 0.0150, 2.5-97.5 percent 0.1506 to 0.2101; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8224 to 0.9590e-10, SD 0.0691e-10; divisor 16-84 percent 5.650 to 6.588
+      chi^2 evaluated directly at delta = 0.1787: 4448.65 (the parabola through the three lowest nodes gives 4448.69; difference -0.043)
+      chi^2 at delta = 0.19: 4454.12 (a0 = 0.9426e-10); at delta = 0.17: 4451.87 (a0 = 0.8507e-10)
+      chi^2 minus the constrained minimum: at 0.19 +5.42, at 0.17 +3.17
+   H0 = 73.0 km/s/Mpc (c H_dS = 5.8687e-10 m/s^2): constrained minimum delta = 0.1650 (Delta chi^2 = 1 half-width 0.0047), chi^2 = 4449.66; scale a0 = 0.8964e-10 m/s^2; divisor c H_dS/a0 = 6.547
+      bootstrap (2000 draws): delta 16-84 percent 0.1517 to 0.1792, median 0.1647, SD 0.0139, 2.5-97.5 percent 0.1393 to 0.1942; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8290 to 0.9672e-10, SD 0.0701e-10; divisor 16-84 percent 6.067 to 7.080
+      chi^2 evaluated directly at delta = 0.1650: 4449.54 (the parabola through the three lowest nodes gives 4449.66; difference -0.125)
+      chi^2 at delta = 0.19: 4476.85 (a0 = 1.0209e-10); at delta = 0.17: 4450.80 (a0 = 0.9214e-10)
+      chi^2 minus the constrained minimum: at 0.19 +27.19, at 0.17 +1.14
+   [sparc, full: constrained curve: 493 s]
+   the constrained curves: delta | a0 at 67.4 (1e-10) | chi^2 at 67.4 | a0 at 73 (1e-10) | chi^2 at 73
+      0.05 | 0.2644 |  6937.10 | 0.2863 |  6628.40
+      0.06 | 0.3157 |  6258.66 | 0.3420 |  5996.29
+      0.07 | 0.3666 |  5767.61 | 0.3971 |  5546.07
+      0.08 | 0.4170 |  5406.14 | 0.4517 |  5220.64
+      0.09 | 0.4670 |  5137.05 | 0.5058 |  4983.16
+      0.10 | 0.5164 |  4935.92 | 0.5593 |  4810.56
+      0.11 | 0.5655 |  4786.29 | 0.6125 |  4684.74
+      0.12 | 0.6141 |  4674.46 | 0.6651 |  4593.71
+      0.13 | 0.6622 |  4591.71 | 0.7173 |  4529.80
+      0.14 | 0.7100 |  4532.07 | 0.7690 |  4487.38
+      0.15 | 0.7573 |  4491.08 | 0.8202 |  4462.14
+      0.16 | 0.8042 |  4465.26 | 0.8710 |  4450.82
+      0.17 | 0.8507 |  4451.87 | 0.9214 |  4450.80
+      0.18 | 0.8968 |  4448.77 | 0.9714 |  4459.96
+      0.19 | 0.9426 |  4454.12 | 1.0209 |  4476.85
+      0.20 | 0.9879 |  4466.65 | 1.0700 |  4500.11
+      0.21 | 1.0329 |  4485.19 | 1.1187 |  4528.68
+      0.22 | 1.0775 |  4508.78 | 1.1670 |  4561.68
+      0.23 | 1.1217 |  4536.68 | 1.2149 |  4598.39
+      0.24 | 1.1656 |  4568.21 | 1.2624 |  4638.25
+      0.25 | 1.2091 |  4602.80 | 1.3096 |  4680.87
+      0.26 | 1.2523 |  4640.08 | 1.3563 |  4725.91
+      0.27 | 1.2951 |  4679.70 | 1.4027 |  4773.14
+      0.28 | 1.3376 |  4721.38 | 1.4488 |  4822.25
+      0.29 | 1.3798 |  4764.99 | 1.4944 |  4872.96
+      0.30 | 1.4216 |  4810.28 | 1.5397 |  4925.02
+      0.31 | 1.4631 |  4857.23 | 1.5847 |  4978.45
+      0.32 | 1.5044 |  4905.42 | 1.6293 |  5032.83
+      0.33 | 1.5452 |  4954.66 | 1.6736 |  5088.04
+      0.34 | 1.5858 |  5004.79 | 1.7176 |  5144.02
+      0.35 | 1.6261 |  5055.68 | 1.7612 |  5200.77
+      0.36 | 1.6661 |  5107.24 | 1.8045 |  5258.13
+      0.37 | 1.7058 |  5159.47 | 1.8475 |  5316.02
+      0.38 | 1.7452 |  5212.31 | 1.8902 |  5374.35
+      0.39 | 1.7843 |  5265.69 | 1.9326 |  5433.12
+      0.40 | 1.8232 |  5319.51 | 1.9747 |  5492.30
+      0.41 | 1.8617 |  5373.70 | 2.0164 |  5551.82
+      0.42 | 1.9000 |  5428.26 | 2.0579 |  5611.63
+      0.43 | 1.9381 |  5483.19 | 2.0991 |  5671.65
+      0.44 | 1.9758 |  5538.42 | 2.1400 |  5731.93
+      0.45 | 2.0133 |  5593.89 | 2.1806 |  5792.46
+   the scale relation at kappa = 1/3, a0 = 3 c H_dS ln(1 + delta) (the whole set point as the mean threshold), delta 0.02 to 0.12 in steps of 0.0025:
+   kappa = 1/3, H0 = 67.4: constrained minimum delta = 0.0603 (Delta chi^2 = 1 half-width 0.0016), chi^2 = 4462.48; scale a0 = 0.9522e-10 m/s^2; divisor c H_dS/a0 = 5.690
+      bootstrap (2000 draws): delta 16-84 percent 0.0552 to 0.0654, median 0.0602, SD 0.0052, 2.5-97.5 percent 0.0506 to 0.0710; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8741 to 1.0296e-10, SD 0.0790e-10; divisor 16-84 percent 5.263 to 6.199
+      kappa = 1/3 minus kappa = 1 at their minima:    +13.8 +/-  11.2 (+1.23 SD); share of draws in which kappa = 1/3 fits better 0.095
+   kappa = 1/3, H0 = 73.0: constrained minimum delta = 0.0557 (Delta chi^2 = 1 half-width 0.0015), chi^2 = 4463.21; scale a0 = 0.9548e-10 m/s^2; divisor c H_dS/a0 = 6.146
+      bootstrap (2000 draws): delta 16-84 percent 0.0510 to 0.0604, median 0.0556, SD 0.0048, 2.5-97.5 percent 0.0467 to 0.0656; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8759 to 1.0327e-10, SD 0.0794e-10; divisor 16-84 percent 5.683 to 6.700
+      kappa = 1/3 minus kappa = 1 at their minima:    +13.5 +/-  10.5 (+1.30 SD); share of draws in which kappa = 1/3 fits better 0.082
+   [sparc, full: kappa 1/3: 690 s]
+2. AT EQUAL FREEDOM: ONE FITTED GLOBAL CONSTANT EACH (the scale by the ladder in log10 a0 of two_constant_fit.pl, every galaxy's nuisances refitted)
+   cross-check: the simple function with Gamma from the boost law's table at delta = 0 (quartic extrapolated): a0 = 0.9868e-10, chi^2 = 4472.68, against 0.9868e-10 and 4472.55 with its own table
+   [sparc, full: competitors: 988 s]
+   law | fitted constant | scale a0 (1e-10 m/s^2) | chi^2 | the constrained fit (H0 = 67.4) minus the law, galaxy-clustered SD | share of draws in which the constrained fit is better
+   the constrained fit, H0 = 67.4 | delta = 0.1787 | 0.8907 | 4448.69 | (itself) |
+   the constrained fit, H0 = 73.0 | delta = 0.1650 | 0.8964 | 4449.66 |     -1.0 +/-   1.2 (-0.79 SD) |
+   MOND's simple function | none | 0.9868 | 4472.55 |    -23.9 +/-  17.1 (-1.39 SD) | 0.937
+   MOND's standard function | none | 1.1358 | 4660.14 |   -211.4 +/-  90.1 (-2.35 SD) | 0.993
+   the empirical function | none | 0.9513 | 4447.73 |     +1.0 +/-   5.6 (+0.17 SD) | 0.443
+   the two-constant fit (reference) | delta = 0.2330 | 0.8632 | 4447.08 |     +1.6 +/-   7.3 (+0.22 SD) | 0.052
+   the same differences for the constrained fit at H0 = 73: minus MOND's simple function:    -22.9 +/-  16.0 (-1.43 SD); minus MOND's standard function:   -210.5 +/-  90.6 (-2.32 SD); minus the empirical function:     +1.9 +/-   4.8 (+0.40 SD); minus the two-constant fit:     +2.6 +/-   8.2 (+0.32 SD)
+   pairwise among the competitors (first minus second): STD - SIM:   +187.6 +/-  95.1 (+1.97 SD); SIM - T11:    +24.8 +/-  13.9 (+1.78 SD); STD - T11:   +212.4 +/-  94.4 (+2.25 SD); STD - two-constant:   +213.1 +/-  86.5 (+2.46 SD); SIM - two-constant:    +25.5 +/-  21.9 (+1.16 SD)
+   [sparc, full: 988 s]
+
+======================================================================================================================
+THE MODEL'S OWN NEWTONIAN FIELD OF DISKS WITH THICKNESS, THE FULL FIELD SOLUTION
+======================================================================================================================
+1. THE CONSTRAINED CURVE a0 = c H_dS ln(1 + delta), kappa = 1 (every galaxy's mass-to-light ratios, distance and inclination refitted at every node)
+   H0 = 67.4 km/s/Mpc (c H_dS = 5.4185e-10 m/s^2): constrained minimum delta = 0.1668 (Delta chi^2 = 1 half-width 0.0046), chi^2 = 4402.34; scale a0 = 0.8361e-10 m/s^2; divisor c H_dS/a0 = 6.481
+      bootstrap (2000 draws): delta 16-84 percent 0.1534 to 0.1807, median 0.1666, SD 0.0139, 2.5-97.5 percent 0.1405 to 0.1958; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.7733 to 0.9002e-10, SD 0.0644e-10; divisor 16-84 percent 6.019 to 7.007
+      chi^2 evaluated directly at delta = 0.1668: 4402.25 (the parabola through the three lowest nodes gives 4402.34; difference -0.088)
+      chi^2 at delta = 0.19: 4426.60 (a0 = 0.9426e-10); at delta = 0.17: 4402.82 (a0 = 0.8507e-10)
+      chi^2 minus the constrained minimum: at 0.19 +24.26, at 0.17 +0.48
+   H0 = 73.0 km/s/Mpc (c H_dS = 5.8687e-10 m/s^2): constrained minimum delta = 0.1543 (Delta chi^2 = 1 half-width 0.0039), chi^2 = 4401.25; scale a0 = 0.8421e-10 m/s^2; divisor c H_dS/a0 = 6.969
+      bootstrap (2000 draws): delta 16-84 percent 0.1420 to 0.1672, median 0.1540, SD 0.0129, 2.5-97.5 percent 0.1300 to 0.1812; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.7792 to 0.9073e-10, SD 0.0653e-10; divisor 16-84 percent 6.469 to 7.532
+      chi^2 evaluated directly at delta = 0.1543: 4401.41 (the parabola through the three lowest nodes gives 4401.25; difference +0.160)
+      chi^2 at delta = 0.19: 4462.72 (a0 = 1.0209e-10); at delta = 0.17: 4414.92 (a0 = 0.9214e-10)
+      chi^2 minus the constrained minimum: at 0.19 +61.47, at 0.17 +13.66
+   [model, full: constrained curve: 1191 s]
+   the constrained curves: delta | a0 at 67.4 (1e-10) | chi^2 at 67.4 | a0 at 73 (1e-10) | chi^2 at 73
+      0.05 | 0.2644 |  6641.74 | 0.2863 |  6351.74
+      0.06 | 0.3157 |  6006.65 | 0.3420 |  5761.59
+      0.07 | 0.3666 |  5549.69 | 0.3971 |  5343.38
+      0.08 | 0.4170 |  5214.67 | 0.4517 |  5042.94
+      0.09 | 0.4670 |  4967.38 | 0.5058 |  4826.87
+      0.10 | 0.5164 |  4785.43 | 0.5593 |  4673.40
+      0.11 | 0.5655 |  4653.38 | 0.6125 |  4565.84
+      0.12 | 0.6141 |  4558.41 | 0.6651 |  4491.48
+      0.13 | 0.6622 |  4491.11 | 0.7173 |  4442.86
+      0.14 | 0.7100 |  4445.74 | 0.7690 |  4414.56
+      0.15 | 0.7573 |  4418.03 | 0.8202 |  4402.45
+      0.16 | 0.8042 |  4404.59 | 0.8710 |  4403.38
+      0.17 | 0.8507 |  4402.82 | 0.9214 |  4414.92
+      0.18 | 0.8968 |  4410.67 | 0.9714 |  4435.21
+      0.19 | 0.9426 |  4426.60 | 1.0209 |  4462.72
+      0.20 | 0.9879 |  4449.24 | 1.0700 |  4496.17
+      0.21 | 1.0329 |  4477.51 | 1.1187 |  4534.55
+      0.22 | 1.0775 |  4510.49 | 1.1670 |  4577.00
+      0.23 | 1.1217 |  4547.45 | 1.2149 |  4622.85
+      0.24 | 1.1656 |  4587.74 | 1.2624 |  4671.51
+      0.25 | 1.2091 |  4630.83 | 1.3096 |  4722.53
+      0.26 | 1.2523 |  4676.30 | 1.3563 |  4775.50
+      0.27 | 1.2951 |  4723.78 | 1.4027 |  4830.15
+      0.28 | 1.3376 |  4772.96 | 1.4488 |  4886.33
+      0.29 | 1.3798 |  4823.58 | 1.4944 |  4943.81
+      0.30 | 1.4216 |  4875.52 | 1.5397 |  5002.39
+      0.31 | 1.4631 |  4928.91 | 1.5847 |  5062.12
+      0.32 | 1.5044 |  4983.29 | 1.6293 |  5122.59
+      0.33 | 1.5452 |  5038.52 | 1.6736 |  5183.63
+      0.34 | 1.5858 |  5094.43 | 1.7176 |  5245.12
+      0.35 | 1.6261 |  5150.94 | 1.7612 |  5306.43
+      0.36 | 1.6661 |  5207.87 | 1.8045 |  5368.63
+      0.37 | 1.7058 |  5265.17 | 1.8475 |  5431.20
+      0.38 | 1.7452 |  5322.26 | 1.8902 |  5494.07
+      0.39 | 1.7843 |  5380.14 | 1.9326 |  5557.20
+      0.40 | 1.8232 |  5438.33 | 1.9747 |  5620.51
+      0.41 | 1.8617 |  5496.77 | 2.0164 |  5683.97
+      0.42 | 1.9000 |  5555.44 | 2.0579 |  5747.50
+      0.43 | 1.9381 |  5614.27 | 2.0991 |  5811.15
+      0.44 | 1.9758 |  5673.24 | 2.1400 |  5874.95
+      0.45 | 2.0133 |  5732.29 | 2.1806 |  5938.89
+   the scale relation at kappa = 1/3, a0 = 3 c H_dS ln(1 + delta) (the whole set point as the mean threshold), delta 0.02 to 0.12 in steps of 0.0025:
+   kappa = 1/3, H0 = 67.4: constrained minimum delta = 0.0566 (Delta chi^2 = 1 half-width 0.0016), chi^2 = 4397.35; scale a0 = 0.8948e-10 m/s^2; divisor c H_dS/a0 = 6.056
+      bootstrap (2000 draws): delta 16-84 percent 0.0520 to 0.0613, median 0.0565, SD 0.0048, 2.5-97.5 percent 0.0475 to 0.0667; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8242 to 0.9671e-10, SD 0.0735e-10; divisor 16-84 percent 5.603 to 6.574
+      kappa = 1/3 minus kappa = 1 at their minima:     -5.0 +/-   9.7 (-0.51 SD); share of draws in which kappa = 1/3 fits better 0.674
+   kappa = 1/3, H0 = 73.0: constrained minimum delta = 0.0523 (Delta chi^2 = 1 half-width 0.0014), chi^2 = 4397.27; scale a0 = 0.8978e-10 m/s^2; divisor c H_dS/a0 = 6.537
+      bootstrap (2000 draws): delta 16-84 percent 0.0481 to 0.0567, median 0.0522, SD 0.0044, 2.5-97.5 percent 0.0439 to 0.0616; draws at an end of the grid 0
+      the scale over the draws: 16-84 percent 0.8264 to 0.9705e-10, SD 0.0739e-10; divisor 16-84 percent 6.047 to 7.102
+      kappa = 1/3 minus kappa = 1 at their minima:     -4.0 +/-   9.1 (-0.44 SD); share of draws in which kappa = 1/3 fits better 0.660
+   [model, full: kappa 1/3: 1378 s]
+2. AT EQUAL FREEDOM: ONE FITTED GLOBAL CONSTANT EACH (the scale by the ladder in log10 a0 of two_constant_fit.pl, every galaxy's nuisances refitted)
+   cross-check: the simple function with Gamma from the boost law's table at delta = 0 (quartic extrapolated): a0 = 0.9286e-10, chi^2 = 4397.19, against 0.9285e-10 and 4397.05 with its own table
+   [model, full: competitors: 1631 s]
+   law | fitted constant | scale a0 (1e-10 m/s^2) | chi^2 | the constrained fit (H0 = 67.4) minus the law, galaxy-clustered SD | share of draws in which the constrained fit is better
+   the constrained fit, H0 = 67.4 | delta = 0.1668 | 0.8361 | 4402.34 | (itself) |
+   the constrained fit, H0 = 73.0 | delta = 0.1543 | 0.8421 | 4401.25 |     +1.1 +/-   1.1 (+0.99 SD) |
+   MOND's simple function | none | 0.9285 | 4397.05 |     +5.3 +/-  14.8 (+0.36 SD) | 0.379
+   MOND's standard function | none | 1.0638 | 4536.26 |   -133.9 +/-  83.8 (-1.60 SD) | 0.934
+   the empirical function | none | 0.8945 | 4401.24 |     +1.1 +/-   4.5 (+0.25 SD) | 0.446
+   the two-constant fit (reference) | delta = 0.0300 (the scan's lower stop) | 0.9101 | 4397.21 |     +5.1 +/-   8.8 (+0.58 SD) | 0.021
+   the same differences for the constrained fit at H0 = 73: minus MOND's simple function:     +4.2 +/-  13.8 (+0.30 SD); minus MOND's standard function:   -135.0 +/-  84.3 (-1.60 SD); minus the empirical function:     +0.0 +/-   3.9 (+0.00 SD); minus the two-constant fit:     +4.0 +/-   8.4 (+0.48 SD)
+   pairwise among the competitors (first minus second): STD - SIM:   +139.2 +/-  89.0 (+1.56 SD); SIM - T11:     -4.2 +/-  13.1 (-0.32 SD); STD - T11:   +135.0 +/-  87.6 (+1.54 SD); STD - two-constant:   +139.1 +/-  83.8 (+1.66 SD); SIM - two-constant:     -0.2 +/-  12.3 (-0.01 SD)
+   [model, full: 1631 s]
+
+THE FULL FIELD SOLUTION AGAINST THE ALGEBRAIC RELATION, EACH LAW AT ITS OWN BEST FIT (full minus relation; positive favours the relation;
+galaxy-clustered SD over the same 2,000 draws; aqual-refit-main-T11-results.txt and aqual-refit-main-T3-results.txt give +233 to +279 for
+the empirical function and +241 to +261 for the two-constant fit, with SDs of 140 to 144 on draws of their own)
+   sparc: the constrained fit (H0 = 67.4):    +92.0 +/- 141.2 (+0.65 SD); the constrained fit (H0 = 73.0):    +89.3 +/- 141.1 (+0.63 SD); MOND's simple function:    +55.2 +/- 139.3 (+0.40 SD); MOND's standard function:   +222.0 +/- 149.4 (+1.49 SD); the empirical function:    +77.4 +/- 140.5 (+0.55 SD); the two-constant fit:   +118.5 +/- 138.7 (+0.85 SD)
+   model: the constrained fit (H0 = 67.4):   +131.2 +/- 140.2 (+0.94 SD); the constrained fit (H0 = 73.0):   +129.0 +/- 140.1 (+0.92 SD); MOND's simple function:   +101.1 +/- 138.7 (+0.73 SD); MOND's standard function:   +220.6 +/- 147.8 (+1.49 SD); the empirical function:   +123.0 +/- 140.0 (+0.88 SD); the two-constant fit:   +132.0 +/- 136.8 (+0.96 SD)
+
+[run time 1631 s]

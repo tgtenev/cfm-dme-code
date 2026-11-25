@@ -6,7 +6,7 @@ The machinery is that of two_constant_fit.pl, the fits of Paper I, Sect. 4.1 and
     galaxies, 3,168 points); a point enters a galaxy's chi^2 only while its baryonic acceleration is positive;
   - chi^2 = sum w (V_obs - q V_pred)^2, w = 1/(eV^2 + (0.05 V_obs)^2), V_pred = sqrt(g_pred R) (Paper I, Eq. (14));
   - the disk ratio, and the bulge ratio of each galaxy with a bulge, free in the box 0.03 to 10, with lognormal
-    priors of 0.10 dex about 0.5 and 0.7 (Li et al. 2018);
+    priors of 0.10 dex about 0.5 and 0.7 (Li et al. 2018), centres that set_ml_centres can move;
   - q = sqrt(f) sin(i)/sin(i_c), f = D/D_cat, profiled exactly at every trial ratio under the prior of Paper I,
     Eq. (15), P(q) = min over i of [((f-1)/sig_f)^2 + ((i-i_c)/sig_i)^2], sig_f = max(e_D/D, 0.02),
     sig_i = max(e_Inc, 0.5 deg), on q bounds from f in 1 +/- 4 sig_f and i in i_c +/- 4 sig_i; P is tabulated per
@@ -48,6 +48,18 @@ CONV = 3.24078e-14                       # (km/s)^2/kpc -> m/s^2
 FLOOR = 0.05
 LGY0, LGYB0 = math.log10(0.5), math.log10(0.7)
 PRIOR = 0.10
+# The centres of the mass-to-light priors in the objective, and the ratios of the noiseless mocks, in log10. The tables
+# of Gamma and their corrections stay referred to LGY0 and LGYB0; set_ml_centres moves only the centres, a test of the
+# stellar normalization (Paper II, Sect. 6.1).
+PRIOR_CD, PRIOR_CB = LGY0, LGYB0
+
+
+def set_ml_centres(disk, bulge):
+    """Centre the disk and bulge mass-to-light priors, and the noiseless mocks, at these ratios instead of 0.5 and 0.7."""
+    global PRIOR_CD, PRIOR_CB
+    PRIOR_CD, PRIOR_CB = math.log10(disk), math.log10(bulge)
+
+
 ULO, UHI = math.log10(0.03), math.log10(10.0)
 D2R = math.pi / 180.0
 GR = 0.6180339887
@@ -530,9 +542,9 @@ class Dataset:
         Soo = np.add.reduceat(w * (Vo * Vo)[:, None], grp.starts, axis=0)
         Sop = np.add.reduceat(wVp * Vo[:, None], grp.starts, axis=0)
         Spp = np.add.reduceat(wVp * Vp, grp.starts, axis=0)
-        pri = ((U - LGY0) / PRIOR) ** 2
+        pri = ((U - PRIOR_CD) / PRIOR) ** 2
         if grp.two:
-            pri = pri + ((V - LGYB0) / PRIOR) ** 2
+            pri = pri + ((V - PRIOR_CB) / PRIOR) ** 2
         if self.frozen:
             return pri + Soo - 2 * Sop + Spp, np.ones_like(U)
         q, h = self.qprofile(grp, Sop, Spp)
@@ -710,13 +722,13 @@ class Dataset:
         return outp
 
     def mock(self, ctx):
-        """A noiseless mock of the model in ctx at the prior centres (ratios 0.5 and 0.7, q = 1): returns the Vo and
-        point-mask overrides for later contexts (points invalid at the prior centres are masked)."""
+        """A noiseless mock of the model in ctx at the prior centres (ratios 0.5 and 0.7 unless set_ml_centres moves them,
+        q = 1): returns the Vo and point-mask overrides for later contexts (points invalid at those ratios are masked)."""
         Vo, pm = [], []
         for grp in self.groups:
             if grp.G == 0:
                 Vo.append(np.zeros(0)); pm.append(np.zeros(0, bool)); continue
-            U = np.full((grp.G, 1), LGY0); V = np.full((grp.G, 1), LGYB0)
+            U = np.full((grp.G, 1), PRIOR_CD); V = np.full((grp.G, 1), PRIOR_CB)
             lg, valid = self.logg(grp, U, V if grp.two else None, ctx)
             Vo.append(np.where(valid[:, 0], np.sqrt(10.0 ** lg[:, 0]) * grp.sR, 0.0))
             pm.append(valid[:, 0].copy())

@@ -51,6 +51,12 @@ repro, about 1,600 s for main (about 130 s for each setup with the relation and 
 field solution), about 670 s for treat, about 15 s for scales and under 1 s for exact. Run alone, --parts scales first
 runs the setup of the fit of record and takes about 150 s; --parts repro,exact takes about 10 s. The options
 --setups sparc-relation,model-full and --cells c01-baseline,c04-catalog restrict a run, for testing only.
+--ml-centres D,B centres the disk and bulge mass-to-light priors at the ratios D and B instead of 0.5 and 0.7, a test of
+the stellar normalization (Paper II, Sect. 6.1); with it, part main writes neither the optimum nor the valley file:
+    python rotation-curves/constrained_fit.py --parts main --ml-centres 0.55,0.77 --out rotation-curves/constrained_fit-ml0.55-results.txt
+    python rotation-curves/constrained_fit.py --parts main --ml-centres 0.6,0.84 --out rotation-curves/constrained_fit-ml0.60-results.txt
+(about 1,500 s each). With the full field solution on the model's own field, MOND's simple function then leads the
+constrained fit by 1.5 and 0.4 SD, against 2.7 SD at 0.5 and 0.7, and the scale relation costs 1.7 and 0.6 SD there.
 """
 import csv
 import math
@@ -396,6 +402,8 @@ def write_optimum():
     if arg('--setups'):
         out(f'   --setups restricts the run: {OPT_PATH} and {VALLEY_PATH} are not written')
         return
+    if arg('--ml-centres'):
+        return                           # a test of the normalization: the files of the fit of record stay as they are
     rows = []
     for inp in ('sparc', 'model'):
         R = RES.get((inp, True))
@@ -653,6 +661,8 @@ def part_exact(ds):
 CC_DS = None
 if __name__ == '__main__':
     parts = (arg('--parts') or 'repro,main,treat,scales,exact').split(',')
+    if arg('--ml-centres'):
+        RC.set_ml_centres(*(float(x) for x in arg('--ml-centres').split(',')))
     T1, gals, ds, nnew, dmax, ref = load()
     CC_DS = ds
     out('THE CONSTRAINED FIT: THE BOOST LAW WITH a0 = c H_dS ln(1 + delta), kappa = 1, ON THE 153 SPARC ROTATION CURVES')
@@ -661,6 +671,9 @@ if __name__ == '__main__':
     out(f'{len(ds.names)} galaxies; {CC.NBOOT} bootstrap draws by galaxy, seed {CC.SEED}. Added Gamma tables (simple, standard): {nnew} points newly '
         f'undefined; the model\'s Newtonian field agrees with that of aqual-refit-gamma-*.csv to {dmax:.1e}; the standard function\'s correction '
         f'measured at a0 = {ref:.3e} m/s^2.')
+    if arg('--ml-centres'):
+        out(f'VARIANT: the mass-to-light priors are centred at {arg("--ml-centres")} (disk, bulge) instead of 0.5,0.7, a test of the '
+            f'stellar normalization (Paper II, Sect. 6.1); {OPT_PATH} and {VALLEY_PATH} are not written.')
     out('On the full field solution Gamma is read between the solver\'s nodes as in aqual-refit-fit.py: a quartic through the five free-volume')
     out('nodes (0.05, 0.2, 0.4, 0.7, 1.2), a Catmull-Rom cubic in log10 a0 on the 0.2-dex nodes at a0/s, and the correction for other')
     out('mass-to-light ratios linear in delta between its nodes 0.03 and 0.3; the constrained curve needs no interpolation of chi^2 between')

@@ -1,0 +1,26 @@
+The gas-layer baseline test, T11 (the empirical function), input 'sparc'.
+Delta chi^2 SDs from 300 galaxy-bootstrap draws; slope SDs from 2000.
+VARIANT: mass-to-light priors, and the noiseless mocks, centred at 0.6,0.84 (disk, bulge) instead of 0.5,0.7, a test of the stellar normalization (Paper II, Sect. 6.1).
+================================================================================================================
+   153 galaxies, 3168 points; validity masks identical: True
+
+Part 1. The three models fitted to the data (M is the relation's fit of aqual-refit-main-T11-results.txt)
+   M midplane relation:        a0 = 1.0266e-10, chi^2 = 4370.36
+   R gas-layer relation:       a0 = 1.0156e-10, chi^2 = 4250.84
+   F gas-layer full solution:  a0 = 0.9347e-10, chi^2 = 4375.78  [55 s]
+   Delta chi^2 F minus R    +124.9 +/-  147.5 (+0.85 SD)
+   Delta chi^2 R minus M    -119.5 +/-   59.0 (-2.03 SD)
+   Delta chi^2 F minus M      +5.4 +/-  175.7 (+0.03 SD)
+   [part 1: 60 s]
+
+Part 2. The baseline test: R (gas-layer relation) as the baseline, F (gas-layer full solution) as the alternative
+   mock of F: R refitted a0 = 0.9623e-10, chi^2 = 434.41; F refitted a0 = 0.9348e-10, chi^2 = 0.06; expected Delta chi^2 (F minus R) -434.4
+   mock of R: R refitted a0 = 1.0158e-10, chi^2 = 0.06; F refitted a0 = 0.9153e-10, chi^2 = 433.32; expected Delta chi^2 (F minus R) +433.3
+   observed +124.9 +/- 147.5: from F's expectation +3.79 SD, from R's expectation -2.09 SD  [103 s]
+   Slope test, refit residuals of R on the unabsorbed AQUAL part (1 if F is right, 0 if R is): slope +0.541 +/- 0.206; rejection of F 2.2 SD, of R +2.6 SD; rms of the unabsorbed part 0.0417 dex (3166 points)
+      the unabsorbed part: median |.| 0.0067 dex, points beyond 0.05 dex 273, beyond 0.1 dex 105
+   Reverse slope test, refit residuals of F on the unabsorbed -(AQUAL part) (1 if R is right, 0 if F is): slope +0.423 +/- 0.231; rejection of R 2.5 SD, of F +1.8 SD; rms 0.0386 dex
+   Scatter of the residuals about each model: R 0.1111 dex, F 0.1082 dex
+   [part 2: 164 s]
+
+[run time 164 s]

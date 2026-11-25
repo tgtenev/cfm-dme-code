@@ -23,7 +23,7 @@ one-draw front gives D = 4.236); 6b, derived numbers (the site counts, up to 36,
 Sec. 5.2).
 
 Standings: target for D in the target divisor window 5.70 to 6.19 (Paper II, Sec. 5.2), empirical for the
-empirical function's divisors 4.52 to 5.61 (App. C), and above, between or below otherwise. Shape names: rodL
+empirical function's divisors 4.52 to 5.60 (App. C), and above, between or below otherwise. Shape names: rodL
 is the 1 x 1 x L rod, pN-MM a generated piece of N sites, boxLMN an L x M x N block, and the other names are
 those of polycubes.py. The checks: L4-th<th> is the rod at trigger scale th; L4-th0.01-ca0.375 the rod with
 half its hole; L4front1-th0.01 the rod at the raw packing error of the one-draw front; brick124-th<th> the
@@ -43,7 +43,7 @@ CAT = os.path.dirname(HERE)
 UM = os.path.dirname(CAT)
 
 TARGET = (5.70, 6.19)      # the target divisor window of Paper II, Sec. 5.2
-EMPIRICAL = (4.52, 5.61)   # the empirical function's divisors, Paper II, App. C
+EMPIRICAL = (4.52, 5.60)   # the empirical function's divisors, Paper II, App. C
 OUT = []
 
 
@@ -415,23 +415,23 @@ def main():
         say(f"    {n:9s} D(0.01) {D0:.3f}: rod slopes {txt[0]}; brick slopes {txt[1]}")
 
     # 6b. derived numbers. cH_dS is 5.42 and 5.87 in units of 1e-10 m s^-2 at H0 = 67.4 and 73 km/s/Mpc
-    # (Paper II, Sec. 5.2); 5.61 is the upper edge of the empirical function's divisors.
+    # (Paper II, Sec. 5.2); 5.60 is the upper edge of the empirical function's divisors.
     say("\n6b. Derived numbers")
     emp = sorted(res[v[0]]["D"] for v in with_c.values() if standing(res[v[0]]["D"]) == "empirical")
     tgt = sorted(res[v[0]]["D"] for v in with_c.values() if standing(res[v[0]]["D"]) == "target")
     say(f"  empirical-window shapes: D {emp[0]:.3f} to {emp[-1]:.3f}; below 5.70 by {100 * (5.70 / emp[-1] - 1):.1f} to "
         f"{100 * (5.70 / emp[0] - 1):.1f} percent of their own divisor ({100 * (1 - emp[-1] / 5.70):.1f} to "
         f"{100 * (1 - emp[0] / 5.70):.1f} percent of 5.70)")
-    say(f"  target-window shapes: D {tgt[0]:.3f} to {tgt[-1]:.3f}; above 5.61 by {100 * (tgt[0] / 5.61 - 1):.1f} to "
-        f"{100 * (tgt[-1] / 5.61 - 1):.1f} percent")
+    say(f"  target-window shapes: D {tgt[0]:.3f} to {tgt[-1]:.3f}; above 5.60 by {100 * (tgt[0] / 5.60 - 1):.1f} to "
+        f"{100 * (tgt[-1] / 5.60 - 1):.1f} percent")
     bysize = {}
     for k, v in groups.items():
         bysize.setdefault(len(cells[v[0]]), []).append(sorted(v)[0])
     say("  distinct shapes run, by site count: " + "; ".join(f"{n}: {len(v)}" for n, v in sorted(bysize.items())))
     for n in ("rod4", "brick124", "box145", "box234", "p6-05"):
         Dn = res[n]["D"]
-        say(f"  {n:9s} a0 = cH/D for cH 5.42 to 5.87: {5.42 / Dn:.3f} to {5.87 / Dn:.3f}; against 5.61: "
-            f"{100 * (Dn / 5.61 - 1):.1f} percent above")
+        say(f"  {n:9s} a0 = cH/D for cH 5.42 to 5.87: {5.42 / Dn:.3f} to {5.87 / Dn:.3f}; against 5.60: "
+            f"{100 * (Dn / 5.60 - 1):.1f} percent above")
 
     with open(os.path.join(HERE, "rebuild_catalogue-results.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(OUT) + "\n")

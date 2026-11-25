@@ -15,7 +15,7 @@ seeds and the turning hole ca, and locates the crossing of A d_emit^2 = 2 by the
 D = 1/ln(1 + d_emit)). It writes the table to <out.tsv> and prints it as Markdown, sorted by divisor.
 
 The column standing places D against the target divisor window 5.70 to 6.19 of Paper II, Sec. 5.2 (target)
-and the empirical function's divisors 4.52 to 5.61 of App. C (empirical); above, between and below are the
+and the empirical function's divisors 4.52 to 5.60 of App. C (empirical); above, between and below are the
 other places. Paper II results it supports: the rod of four sites (rod4) at delta0 0.2818, ca 0.75, eta
 0.964 percent, d_emit 0.1879, A 56.6 and D 5.807 (Sec. 5.1 and 5.2); the four other shapes in the target
 window under the cheapest hole, brick124 5.926, box145 5.938, p6-05 5.739 and box234 5.712 (App. C); the
@@ -26,7 +26,7 @@ import csv, glob, math, os, re, sys
 from collections import defaultdict
 
 TARGET = (5.70, 6.19)      # the target divisor window of Paper II, Sec. 5.2
-EMPIRICAL = (4.52, 5.61)   # the empirical function's divisors, Paper II, App. C
+EMPIRICAL = (4.52, 5.60)   # the empirical function's divisors, Paper II, App. C
 
 NAMES = {  # display names for the built-in and generated shapes
     "rod2": "rod of 2 (dimer)", "rod3": "rod of 3", "rod4": "rod of 4", "rod5": "rod of 5",

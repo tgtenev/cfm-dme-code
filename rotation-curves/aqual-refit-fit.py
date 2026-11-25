@@ -14,6 +14,9 @@ RESULTS SUPPORTED
   falls to the scan's lower stop, 0.03, with chi^2 still falling at the probes down to 0.004, and with the algebraic
   relation on the model's own field it falls to 0.03 as well (aqual-refit-main-T3-results.txt). Paper I, Sect. 4.2:
   the penalty of the full solution narrows under wider mass-to-light priors (aqual-refit-main-T11-prior0.25-results.txt).
+  Paper II, Sect. 6.1: with the mass-to-light priors and the mocks centred 10 and 20 percent higher (--ml-centres), the
+  penalty falls to 1.4 and 0.9 SD on the model's own field and the slope test to 2.2 and 1.9 SD
+  (aqual-refit-main-T11-ml0.55-results.txt and aqual-refit-main-T11-ml0.60-results.txt).
   Part machinery checks the numpy port of the fit machinery, refit_core.py, against two_constant_fit.pl: the second
   implementation of the fit.
 
@@ -35,7 +38,9 @@ WHAT PART MAIN COMPUTES
   for bulge galaxies, over the grid of disk ratios -0.4 to +0.8 dex by bulge ratios -0.8 to +0.8 dex (steps of 0.2),
   for T11 and for the boost law at delta 0.03 and 0.3 (interpolated linearly in delta).
   --frozen holds the catalog distances and inclinations (q = 1); --prior 0.25 widens the disk and bulge mass-to-light
-  priors to 0.25 dex. Both are treatments of Paper I, Sect. 4.1.
+  priors to 0.25 dex. Both are treatments of Paper I, Sect. 4.1. --ml-centres D,B centres the disk and bulge priors,
+  and the noiseless mocks, at the ratios D and B instead of 0.5 and 0.7, a test of the stellar normalization
+  (Paper II, Sect. 6.1).
 
 INPUTS
   data/sparc/SPARC_Lelli2016c.mrt, data/sparc/rotmod_ltg/; rotation-curves/aqual-disk-points.csv;
@@ -48,6 +53,8 @@ OUTPUTS AND COMMANDS, from the repository root, after aqual-refit-solve.py
   python rotation-curves/aqual-refit-fit.py --part main --law T11 --out rotation-curves/aqual-refit-main-T11-results.txt
   python rotation-curves/aqual-refit-fit.py --part main --law T11 --frozen --out rotation-curves/aqual-refit-main-T11-frozen-results.txt
   python rotation-curves/aqual-refit-fit.py --part main --law T11 --prior 0.25 --out rotation-curves/aqual-refit-main-T11-prior0.25-results.txt
+  python rotation-curves/aqual-refit-fit.py --part main --law T11 --ml-centres 0.55,0.77 --out rotation-curves/aqual-refit-main-T11-ml0.55-results.txt
+  python rotation-curves/aqual-refit-fit.py --part main --law T11 --ml-centres 0.6,0.84 --out rotation-curves/aqual-refit-main-T11-ml0.60-results.txt
       (3 to 8 min each)
   python rotation-curves/aqual-refit-fit.py --part main --law T3 --out rotation-curves/aqual-refit-main-T3-results.txt
       (about 50 min; 2,892 s)
@@ -316,7 +323,7 @@ def report_comparison(ds, alg, full, c_alg, c_full, lab, seed, pointtables=True,
     def parts(fit, P):
         dat = np.array([P[nm]["chi"].sum() for nm in ds.names])
         u, v = fit.best["u"], fit.best["v"]
-        pri = ((u - RC.LGY0) / RC.PRIOR) ** 2 + np.where(np.isfinite(v), ((np.nan_to_num(v) - RC.LGYB0) / RC.PRIOR) ** 2, 0.0)
+        pri = ((u - RC.PRIOR_CD) / RC.PRIOR) ** 2 + np.where(np.isfinite(v), ((np.nan_to_num(v) - RC.PRIOR_CB) / RC.PRIOR) ** 2, 0.0)
         return dat, pri, fit.best["F"] - dat - pri
     da, pa, qa = parts(alg, Pa); df_, pf_, qf_ = parts(full, Pf)
     duf = full.best["u"] - RC.LGY0
@@ -422,6 +429,11 @@ def part_main():
     if arg("--prior"):
         RC.PRIOR = float(arg("--prior"))
         out(f"VARIANT: mass-to-light priors of {RC.PRIOR:g} dex for disks and bulges (a treatment of Paper I, Sect. 4.1).")
+    if arg("--ml-centres"):
+        cd, cb = (float(x) for x in arg("--ml-centres").split(","))
+        RC.set_ml_centres(cd, cb)
+        out(f"VARIANT: mass-to-light priors, and the noiseless mocks, centred at {cd:g} for disks and {cb:g} for bulges instead of "
+            f"0.5 and 0.7, a test of the stellar normalization (Paper II, Sect. 6.1).")
     if frozen:
         out("REDUCTION: catalog distances and inclinations held fixed (q = 1), a treatment of Paper I, Sect. 4.1.")
     ds = RC.Dataset(gals, frozen=frozen)
