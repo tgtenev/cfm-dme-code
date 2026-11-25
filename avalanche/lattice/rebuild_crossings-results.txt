@@ -1,0 +1,213 @@
+rows read: 398 from 29 files
+families (runs differing only in eta): 80
+families in crossings.tsv: 80; keys missing there: []; extra there: []
+rows whose Ad2 or D_emit column disagrees with A and d_emit beyond print precision: 0
+duplicate (family, eta) points: 0 []
+families where A d^2 is not strictly decreasing in eta: ['main   L=16 q= 2 d0=0.163 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42', 'main   L=16 q= 6 d0=0.163 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42', 'main   L=16 q= 2 d0=0.163 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42', 'main   L=16 q= 6 d0=0.163 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42']
+overflowed avalanches (cap 2e6) over all rows: 0
+
+=== Crossings of A d_emit^2 = 2: rule A (lattice_analyze.py's), rule B (slowly varying parts), rule C (local quadratic) against crossings.tsv ===
+family | n | bracket | ruleA eta% +- err | A | d_emit | D | A(2/d^2) | ruleB eta% | A | d_emit | D | ruleC eta% | A | D | tsv eta% | tsv A | tsv d_emit | tsv D | flags
+ca1    L=16 q= 2 d0=0.334 ca=1.0 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 5 | 0.0075-0.01 | 0.9433 +- 0.0063 | 35.48 | 0.23832 | 4.6783 | 35.21 | 0.9432 | 35.21 | 0.23832 | 4.6783 | 0.9411 | 35.21 | 4.6783 | 0.9433 | 35.48 | 0.23832 | 4.6783 | 
+ca1    L=16 q= 6 d0=0.334 ca=1.0 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 5 | 0.015-0.02 | 1.6715 +- 0.0092 | 37.90 | 0.23067 | 4.8179 | 37.59 | 1.6711 | 37.59 | 0.23067 | 4.8179 | 1.6717 | 37.59 | 4.8179 | 1.6715 | 37.90 | 0.23067 | 4.8179 | 
+corner L=16 q= 6 d0=0.500 ca=1.2 nn/off k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.05-0.075 | 5.0667 +- 0.0164 | 20.33 | 0.31400 | 3.6620 | 20.29 | 5.0660 | 20.29 | 0.31400 | 3.6620 | 5.0657 | 20.29 | 3.6620 | 5.0667 | 20.33 | 0.31400 | 3.6620 | 
+corner L=16 q= 6 d0=0.500 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.03-0.05 | 4.1421 +- 0.0150 | 20.49 | 0.31701 | 3.6316 | 19.90 | 4.1358 | 19.90 | 0.31701 | 3.6316 | 4.1320 | 19.90 | 3.6316 | 4.1421 | 20.49 | 0.31701 | 3.6316 | 
+corner L=16 q= 6 d0=0.500 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.05-0.075 | 5.2417 +- 0.0075 | 22.36 | 0.30011 | 3.8103 | 22.21 | 5.2395 | 22.21 | 0.30011 | 3.8103 | 5.2377 | 22.21 | 3.8103 | 5.2417 | 22.36 | 0.30011 | 3.8103 | 
+corner L=16 q= 6 d0=0.500 ca=1.2 rn/off k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.05-0.075 | 5.0647 +- 0.0203 | 20.31 | 0.31414 | 3.6606 | 20.27 | 5.0640 | 20.27 | 0.31414 | 3.6606 | 5.0637 | 20.27 | 3.6606 | 5.0647 | 20.31 | 0.31414 | 3.6606 | 
+corner L=16 q= 6 d0=0.500 ca=1.2 rn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.03-0.05 | 4.1749 +- 0.0175 | 20.36 | 0.31762 | 3.6255 | 19.83 | 4.1690 | 19.83 | 0.31761 | 3.6255 | 4.1652 | 19.83 | 3.6255 | 4.1749 | 20.36 | 0.31761 | 3.6255 | 
+corner L=37 q= 6 d0=0.500 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=42 | 1 | none: max A d^2 = 2.090 at eta 0.05 (A = 23.23) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.09 at eta = 0.05)
+fsize  L=12 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.0075-0.01 | 0.8828 +- 0.0044 | 38.92 | 0.22766 | 4.8755 | 38.59 | 0.8826 | 38.59 | 0.22766 | 4.8755 | 0.8816 | 38.59 | 4.8754 | 0.8828 | 38.92 | 0.22766 | 4.8755 | 
+fsize  L=12 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.0075-0.01 | 0.7920 +- 0.0047 | 23.28 | 0.29385 | 3.8817 | 23.16 | 0.7918 | 23.16 | 0.29385 | 3.8817 | 0.7906 | 23.16 | 3.8817 | 0.7920 | 23.28 | 0.29385 | 3.8817 | 
+fsize  L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=11 | 4 | 0.0075-0.01 | 0.8808 +- 0.0032 | 38.94 | 0.22769 | 4.8749 | 38.58 | 0.8806 | 38.58 | 0.22769 | 4.8749 | 0.8799 | 38.58 | 4.8749 | 0.8808 | 38.94 | 0.22769 | 4.8749 | 
+fsize  L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=7 | 4 | 0.0075-0.01 | 0.8793 +- 0.0034 | 38.92 | 0.22784 | 4.8720 | 38.53 | 0.8790 | 38.53 | 0.22784 | 4.8720 | 0.8792 | 38.53 | 4.8720 | 0.8793 | 38.92 | 0.22784 | 4.8720 | 
+fsize  L=16 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=11 | 4 | 0.0075-0.01 | 0.7925 +- 0.0049 | 23.27 | 0.29389 | 3.8812 | 23.16 | 0.7922 | 23.16 | 0.29389 | 3.8812 | 0.7924 | 23.16 | 3.8812 | 0.7925 | 23.27 | 0.29389 | 3.8812 | 
+fsize  L=16 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=7 | 4 | 0.0075-0.01 | 0.7843 +- 0.0055 | 23.22 | 0.29400 | 3.8799 | 23.14 | 0.7841 | 23.14 | 0.29400 | 3.8799 | 0.7895 | 23.14 | 3.8801 | 0.7843 | 23.22 | 0.29400 | 3.8799 | 
+fsize  L=24 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.0075-0.01 | 0.8838 +- 0.0048 | 38.91 | 0.22768 | 4.8750 | 38.58 | 0.8836 | 38.58 | 0.22768 | 4.8750 | 0.8831 | 38.58 | 4.8750 | 0.8838 | 38.91 | 0.22768 | 4.8750 | 
+fsize  L=24 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.0075-0.01 | 0.7930 +- 0.0047 | 23.27 | 0.29386 | 3.8816 | 23.16 | 0.7928 | 23.16 | 0.29386 | 3.8816 | 0.7954 | 23.16 | 3.8817 | 0.7930 | 23.27 | 0.29385 | 3.8816 | 
+fsize  L=32 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.0075-0.01 | 0.8812 +- 0.0049 | 38.93 | 0.22767 | 4.8751 | 38.58 | 0.8810 | 38.58 | 0.22768 | 4.8751 | 0.8803 | 38.58 | 4.8751 | 0.8812 | 38.93 | 0.22767 | 4.8751 | 
+fsize  L=32 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=7 | 2 | 0.0075-0.01 | 0.8905 +- 0.0043 | 38.95 | 0.22766 | 4.8755 | 38.59 | 0.8903 | 38.59 | 0.22766 | 4.8755 | n/a | |  | 0.8905 | 38.95 | 0.22766 | 4.8755 | 
+fsize  L=32 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.0075-0.01 | 0.8002 +- 0.0087 | 23.30 | 0.29380 | 3.8822 | 23.17 | 0.8000 | 23.17 | 0.29380 | 3.8822 | 0.7989 | 23.17 | 3.8822 | 0.8002 | 23.30 | 0.29380 | 3.8822 | 
+fsize  L=32 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=7 | 2 | 0.0075-0.01 | 0.7886 +- 0.0115 | 23.25 | 0.29394 | 3.8805 | 23.15 | 0.7884 | 23.15 | 0.29395 | 3.8805 | n/a | |  | 0.7886 | 23.25 | 0.29395 | 3.8805 | 
+gain   L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=11 | 1 | none: max A d^2 = 2.333 at eta 0.0075 (A = 44.94) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.33 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=42 | 1 | none: max A d^2 = 2.332 at eta 0.0075 (A = 44.96) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.33 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=7 | 1 | none: max A d^2 = 2.356 at eta 0.0075 (A = 45.49) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.36 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0.4 seed=42 | 1 | none: max A d^2 = 2.327 at eta 0.0075 (A = 44.83) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.33 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.283 ca=1.2 rn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=11 | 1 | none: max A d^2 = 2.303 at eta 0.0075 (A = 44.22) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.30 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.283 ca=1.2 rn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=42 | 1 | none: max A d^2 = 2.287 at eta 0.0075 (A = 43.89) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.29 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.283 ca=1.2 rn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=7 | 1 | none: max A d^2 = 2.296 at eta 0.0075 (A = 44.08) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.30 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=11 | 1 | none: max A d^2 = 2.092 at eta 0.0075 (A = 24.20) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.09 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=42 | 1 | none: max A d^2 = 2.097 at eta 0.0075 (A = 24.26) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.10 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=7 | 1 | none: max A d^2 = 2.098 at eta 0.0075 (A = 24.28) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.10 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0.4 seed=42 | 1 | none: max A d^2 = 2.102 at eta 0.0075 (A = 24.33) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.10 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.334 ca=1.7 rn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=11 | 1 | none: max A d^2 = 2.008 at eta 0.0075 (A = 23.11) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.01 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.334 ca=1.7 rn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=42 | 1 | none: max A d^2 = 2.012 at eta 0.0075 (A = 23.17) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.01 at eta = 0.0075)
+gain   L=16 q= 6 d0=0.334 ca=1.7 rn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=7 | 1 | none: max A d^2 = 2.013 at eta 0.0075 (A = 23.18) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.01 at eta = 0.0075)
+gain   L=32 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=42 | 1 | none: max A d^2 = 2.348 at eta 0.0075 (A = 45.31) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.35 at eta = 0.0075)
+gain   L=32 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0.2 seed=42 | 1 | none: max A d^2 = 2.092 at eta 0.0075 (A = 24.21) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.09 at eta = 0.0075)
+main   L=16 q=12 d0=0.163 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.003-0.005 | 0.3120 +- 0.0014 | 117.06 | 0.13122 | 8.1108 | 116.16 | 0.3120 | 116.16 | 0.13122 | 8.1108 | 0.3118 | 116.16 | 8.1108 | 0.3120 | 117.06 | 0.13121 | 8.1108 | 
+main   L=16 q=12 d0=0.163 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | none: max A d^2 = 0.041 at eta 0.002 (A = 1.56) | tsv: no crossing: A d_emit^2 < 2.0 at every eta (max 0.041 at eta = 0.002, A = 1.56)
+main   L=16 q=12 d0=0.163 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | none: max A d^2 = 0.027 at eta 0.002 (A = 1.02) | tsv: no crossing: A d_emit^2 < 2.0 at every eta (max 0.027 at eta = 0.002, A = 1.02)
+main   L=16 q=12 d0=0.283 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.01-0.015 | 1.3920 +- 0.0045 | 62.84 | 0.17954 | 6.0559 | 62.04 | 1.3918 | 62.04 | 0.17954 | 6.0559 | 1.3902 | 62.04 | 6.0559 | 1.3920 | 62.84 | 0.17954 | 6.0559 | 
+main   L=16 q=12 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.01-0.015 | 1.0014 +- 0.0052 | 39.11 | 0.22618 | 4.9044 | 39.10 | 1.0014 | 39.10 | 0.22618 | 4.9044 | 1.0003 | 39.10 | 4.9044 | 1.0014 | 39.11 | 0.22618 | 4.9044 | 
+main   L=16 q=12 d0=0.283 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 11 | 0.0014-0.002 | 0.1832 +- 0.0023 | 27.35 | 0.27175 | 4.1599 | 27.08 | 0.1832 | 27.08 | 0.27175 | 4.1599 | 0.1838 | 27.08 | 4.1599 | 0.1832 | 27.35 | 0.27175 | 4.1599 | 
+main   L=16 q=12 d0=0.334 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.015-0.02 | 1.9892 +- 0.0102 | 50.54 | 0.19900 | 5.5101 | 50.51 | 1.9892 | 50.51 | 0.19900 | 5.5101 | 1.9863 | 50.51 | 5.5101 | 1.9892 | 50.54 | 0.19900 | 5.5101 | 
+main   L=16 q=12 d0=0.334 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.015-0.02 | 1.6767 +- 0.0042 | 32.83 | 0.24784 | 4.5164 | 32.56 | 1.6762 | 32.56 | 0.24784 | 4.5164 | 1.6764 | 32.56 | 4.5164 | 1.6767 | 32.83 | 0.24784 | 4.5164 | 
+main   L=16 q=12 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.0075-0.01 | 0.9155 +- 0.0032 | 23.64 | 0.29197 | 3.9037 | 23.46 | 0.9152 | 23.46 | 0.29197 | 3.9037 | 0.9136 | 23.46 | 3.9037 | 0.9155 | 23.64 | 0.29197 | 3.9037 | 
+main   L=16 q= 2 d0=0.163 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 12 | 0.0014-0.002 | 0.1460 +- 0.0014 | 108.21 | 0.13640 | 7.8208 | 107.50 | 0.1460 | 107.50 | 0.13640 | 7.8208 | 0.1448 | 107.51 | 7.8210 | 0.1460 | 108.21 | 0.13640 | 7.8208 | 
+main   L=16 q= 2 d0=0.163 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | none: max A d^2 = 0.035 at eta 0.002 (A = 1.32) | tsv: no crossing: A d_emit^2 < 2.0 at every eta (max 0.035 at eta = 0.002, A = 1.32)
+main   L=16 q= 2 d0=0.163 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | none: max A d^2 = 0.027 at eta 0.03 (A = 1.01) | tsv: no crossing: A d_emit^2 < 2.0 at every eta (max 0.027 at eta = 0.002, A = 1.01)
+main   L=16 q= 2 d0=0.283 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.005-0.0075 | 0.7291 +- 0.0092 | 57.73 | 0.18667 | 5.8428 | 57.40 | 0.7291 | 57.40 | 0.18667 | 5.8428 | 0.7305 | 57.40 | 5.8428 | 0.7291 | 57.73 | 0.18667 | 5.8428 | 
+main   L=16 q= 2 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.003-0.005 | 0.4591 +- 0.0035 | 36.83 | 0.23541 | 4.7303 | 36.09 | 0.4589 | 36.09 | 0.23541 | 4.7303 | 0.4612 | 36.09 | 4.7302 | 0.4591 | 36.83 | 0.23541 | 4.7303 | 
+main   L=16 q= 2 d0=0.283 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 15 | none: max A d^2 = 0.742 at eta 0.0002 (A = 9.35) | tsv: no crossing: A d_emit^2 < 2.0 at every eta (max 0.742 at eta = 0.0002, A = 9.35)
+main   L=16 q= 2 d0=0.334 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.01-0.015 | 1.0499 +- 0.0081 | 47.18 | 0.20674 | 5.3213 | 46.79 | 1.0497 | 46.79 | 0.20674 | 5.3213 | 1.0404 | 46.79 | 5.3214 | 1.0499 | 47.18 | 0.20674 | 5.3213 | 
+main   L=16 q= 2 d0=0.334 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.0075-0.01 | 0.8451 +- 0.0062 | 30.55 | 0.25707 | 4.3710 | 30.26 | 0.8448 | 30.26 | 0.25707 | 4.3710 | 0.8447 | 30.26 | 4.3710 | 0.8451 | 30.55 | 0.25707 | 4.3710 | 
+main   L=16 q= 2 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.003-0.005 | 0.3568 +- 0.0042 | 22.24 | 0.30341 | 3.7738 | 21.72 | 0.3563 | 21.72 | 0.30341 | 3.7738 | 0.3559 | 21.72 | 3.7738 | 0.3568 | 22.24 | 0.30341 | 3.7738 | 
+main   L=16 q= 6 d0=0.163 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.002-0.003 | 0.2797 +- 0.0017 | 116.20 | 0.13201 | 8.0650 | 114.77 | 0.2796 | 114.77 | 0.13201 | 8.0650 | 0.2797 | 114.77 | 8.0650 | 0.2797 | 116.20 | 0.13201 | 8.0650 | 
+main   L=16 q= 6 d0=0.163 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | none: max A d^2 = 0.040 at eta 0.003 (A = 1.52) | tsv: no crossing: A d_emit^2 < 2.0 at every eta (max 0.040 at eta = 0.002, A = 1.51)
+main   L=16 q= 6 d0=0.163 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | none: max A d^2 = 0.027 at eta 0.003 (A = 1.02) | tsv: no crossing: A d_emit^2 < 2.0 at every eta (max 0.027 at eta = 0.002, A = 1.02)
+main   L=16 q= 6 d0=0.283 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.01-0.015 | 1.2595 +- 0.0038 | 62.43 | 0.18072 | 6.0195 | 61.24 | 1.2591 | 61.24 | 0.18072 | 6.0195 | 1.2585 | 61.24 | 6.0195 | 1.2595 | 62.43 | 0.18072 | 6.0195 | 
+main   L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.0075-0.01 | 0.8793 +- 0.0040 | 38.97 | 0.22768 | 4.8751 | 38.58 | 0.8791 | 38.58 | 0.22768 | 4.8751 | 0.8791 | 38.58 | 4.8751 | 0.8793 | 38.97 | 0.22768 | 4.8751 | 
+main   L=16 q= 6 d0=0.283 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 11 | 0.001-0.0014 | 0.1315 +- 0.0022 | 26.85 | 0.27377 | 4.1325 | 26.68 | 0.1315 | 26.68 | 0.27377 | 4.1325 | 0.1313 | 26.68 | 4.1325 | 0.1315 | 26.85 | 0.27377 | 4.1325 | 
+main   L=16 q= 6 d0=0.334 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.015-0.02 | 1.8085 +- 0.0092 | 50.40 | 0.20010 | 5.4822 | 49.95 | 1.8082 | 49.95 | 0.20010 | 5.4822 | 1.8077 | 49.95 | 5.4822 | 1.8085 | 50.41 | 0.20010 | 5.4822 | 
+main   L=16 q= 6 d0=0.334 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.015-0.02 | 1.5092 +- 0.0077 | 32.23 | 0.24920 | 4.4943 | 32.21 | 1.5092 | 32.21 | 0.24920 | 4.4943 | 1.5063 | 32.21 | 4.4943 | 1.5092 | 32.23 | 0.24920 | 4.4943 | 
+main   L=16 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 9 | 0.0075-0.01 | 0.7882 +- 0.0062 | 23.26 | 0.29389 | 3.8812 | 23.16 | 0.7880 | 23.16 | 0.29389 | 3.8812 | 0.7879 | 23.16 | 3.8812 | 0.7882 | 23.26 | 0.29389 | 3.8812 | 
+modes  L=16 q= 6 d0=0.283 ca=1.2 nn/off k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.01-0.015 | 1.1063 +- 0.0028 | 40.00 | 0.22504 | 4.9268 | 39.49 | 1.1059 | 39.49 | 0.22504 | 4.9268 | 1.1049 | 39.49 | 4.9268 | 1.1063 | 40.00 | 0.22504 | 4.9268 | 
+modes  L=16 q= 6 d0=0.283 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.01-0.015 | 1.2766 +- 0.0019 | 44.39 | 0.21428 | 5.1505 | 43.56 | 1.2760 | 43.56 | 0.21428 | 5.1505 | 1.2766 | 43.56 | 5.1505 | 1.2766 | 44.39 | 0.21429 | 5.1505 | 
+modes  L=16 q= 6 d0=0.283 ca=1.2 rn/off k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.01-0.015 | 1.0970 +- 0.0029 | 39.95 | 0.22510 | 4.9255 | 39.47 | 1.0966 | 39.47 | 0.22510 | 4.9255 | 1.0955 | 39.47 | 4.9255 | 1.0970 | 39.95 | 0.22510 | 4.9255 | 
+modes  L=16 q= 6 d0=0.283 ca=1.2 rn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.0075-0.01 | 0.8759 +- 0.0028 | 38.82 | 0.22797 | 4.8695 | 38.48 | 0.8757 | 38.48 | 0.22797 | 4.8695 | 0.8752 | 38.48 | 4.8695 | 0.8759 | 38.82 | 0.22797 | 4.8695 | 
+modes  L=16 q= 6 d0=0.334 ca=1.7 nn/off k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.01-0.015 | 1.0391 +- 0.0066 | 23.87 | 0.29022 | 3.9245 | 23.75 | 1.0388 | 23.75 | 0.29022 | 3.9245 | 1.0376 | 23.75 | 3.9245 | 1.0391 | 23.87 | 0.29022 | 3.9245 | 
+modes  L=16 q= 6 d0=0.334 ca=1.7 rn/off k=12 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.01-0.015 | 1.3890 +- 0.0044 | 26.63 | 0.27568 | 4.1071 | 26.32 | 1.3884 | 26.32 | 0.27568 | 4.1071 | 1.3880 | 26.32 | 4.1071 | 1.3890 | 26.63 | 0.27568 | 4.1071 | 
+modes  L=16 q= 6 d0=0.334 ca=1.7 rn/off k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.01-0.015 | 1.0287 +- 0.0041 | 23.83 | 0.29028 | 3.9238 | 23.74 | 1.0285 | 23.74 | 0.29028 | 3.9238 | 1.0286 | 23.74 | 3.9238 | 1.0287 | 23.83 | 0.29028 | 3.9238 | 
+modes  L=16 q= 6 d0=0.334 ca=1.7 rn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 | 4 | 0.005-0.0075 | 0.7493 +- 0.0069 | 23.04 | 0.29467 | 3.8722 | 23.03 | 0.7493 | 23.03 | 0.29467 | 3.8722 | 0.7492 | 23.03 | 3.8722 | 0.7493 | 23.04 | 0.29467 | 3.8722 | 
+sens   L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.003 eps=0 seed=42 | 4 | 0.01-0.015 | 1.0967 +- 0.0050 | 45.95 | 0.20992 | 5.2478 | 45.38 | 1.0963 | 45.38 | 0.20992 | 5.2478 | 1.0961 | 45.38 | 5.2478 | 1.0967 | 45.95 | 0.20992 | 5.2478 | 
+sens   L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.03 eps=0 seed=42 | 5 | 0.003-0.005 | 0.4945 +- 0.0022 | 31.81 | 0.25112 | 4.4635 | 31.72 | 0.4944 | 31.72 | 0.25112 | 4.4635 | 0.4943 | 31.72 | 4.4635 | 0.4945 | 31.81 | 0.25112 | 4.4635 | 
+sens   L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0.1415 th=0.01 eps=0 seed=42 | 4 | 0.0075-0.01 | 0.8827 +- 0.0035 | 39.30 | 0.22667 | 4.8946 | 38.92 | 0.8825 | 38.92 | 0.22667 | 4.8946 | 0.8823 | 38.92 | 4.8946 | 0.8827 | 39.30 | 0.22667 | 4.8946 | 
+valid  L=27 q= 6 d0=0.300 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=11 | 1 | none: max A d^2 = 2.030 at eta 0.015 (A = 41.45) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.03 at eta = 0.015)
+valid  L=27 q= 6 d0=0.300 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=42 | 1 | none: max A d^2 = 1.990 at eta 0.015 (A = 40.60) | tsv: no crossing: A d_emit^2 < 2.0 at every eta (max 1.990 at eta = 0.015, A = 40.60)
+valid  L=27 q= 6 d0=0.300 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=7 | 1 | none: max A d^2 = 2.015 at eta 0.015 (A = 41.13) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.01 at eta = 0.015)
+valid  L=37 q= 6 d0=0.500 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=11 | 1 | none: max A d^2 = 2.087 at eta 0.05 (A = 23.24) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.09 at eta = 0.05)
+valid  L=37 q= 6 d0=0.500 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=42 | 1 | none: max A d^2 = 2.084 at eta 0.05 (A = 23.18) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.08 at eta = 0.05)
+valid  L=37 q= 6 d0=0.500 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=7 | 1 | none: max A d^2 = 2.090 at eta 0.05 (A = 23.25) | tsv: no crossing: A d_emit^2 > 2.0 at every eta (min 2.09 at eta = 0.05)
+
+=== Validation rows (run-valid-0.tsv) against the mean-field toy (mean-field-scan-signed-modulus.tsv) ===
+N=19683 d0=0.3 eta=0.015 seed=7: burn 38696, M 6000, A 41.130 (batch 0.724, naive 2.058), d_emit 0.22133, A d^2 2.0148, sc/A^2 0.779, f_rec 0.897
+N=19683 d0=0.3 eta=0.015 seed=11: burn 38635, M 6000, A 41.450 (batch 0.745, naive 1.981), d_emit 0.22129, A d^2 2.0299, sc/A^2 0.710, f_rec 0.894
+N=19683 d0=0.3 eta=0.015 seed=42: burn 38605, M 6000, A 40.597 (batch 0.653, naive 1.959), d_emit 0.22142, A d^2 1.9904, sc/A^2 0.738, f_rec 0.894
+N=50653 d0=0.5 eta=0.05 seed=7: burn 40000, M 16000, A 23.252 (batch 0.267, naive 0.521), d_emit 0.29983, A d^2 2.0903, sc/A^2 0.776, f_rec 0.670
+N=50653 d0=0.5 eta=0.05 seed=11: burn 40000, M 16000, A 23.240 (batch 0.214, naive 0.548), d_emit 0.29969, A d^2 2.0873, sc/A^2 0.851, f_rec 0.672
+N=50653 d0=0.5 eta=0.05 seed=42: burn 40000, M 16000, A 23.177 (batch 0.165, naive 0.535), d_emit 0.29985, A d^2 2.0838, sc/A^2 0.823, f_rec 0.669 | mean_field_toy.pl A 23.2 +- 0.5 (z = -0.04 with the toy's naive error; z = -0.10 with a third of it), d_emit 0.2998 (diff +0.0000), A d^2 2.08, d_rec 0.1850 vs 0.1854
+   d0 = 0.30: mean A over three seeds 41.059, seed sd 0.431, mean batch s.e. 0.707, mean naive s.e. 2.000
+   d0 = 0.50: mean A over three seeds 23.223, seed sd 0.040, mean batch s.e. 0.216, mean naive s.e. 0.535
+
+=== Flux-law bookkeeping: A against A_ex - drift (identity), A_ex recomputed, and the other forms ===
+max |(A_ex - drift)/A - 1| over 398 rows: 8.42e-06   (print precision is 6 significant figures)
+max |A_ex(recomputed from dw_mean, d_bar, eta, d_emit)/A_ex(column) - 1|: 1.61e-03
+largest |drift|/A: main   L=16 q= 2 d0=0.163 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 eta=0.002: drift/A = -0.8917; main   L=16 q= 2 d0=0.163 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 eta=0.003: drift/A = +0.6144; main   L=16 q= 6 d0=0.163 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 eta=0.002: drift/A = +0.5153; main   L=16 q= 2 d0=0.283 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 eta=0.0005: drift/A = -0.5103; main   L=16 q= 2 d0=0.283 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42 eta=0.001: drift/A = -0.4936
+The reference families at eta = 0.0075 (L = 16, seed 42): A | n_p | n_r | 1+n_p/(1-n_r) | A/A_ex-1 | A/(A_ex-drift)-1 | A/A_toy-1 | A/A_B1-1 | A_B1 with d_emit in both places: A/A'-1 | A_ex with d0 in place of <d_w> | eta A d^2
+   d0=0.283 nn/off k=6: 57.41 | 2.873 | 0.9491 | 57.41 | -0.0005 | +1.15e-06 | -0.001 | -0.163 | +0.623 | -0.001 | 0.0218
+   d0=0.283 nn/on k=6: 45.14 | 2.626 | 0.9405 | 45.14 | -0.0032 | -4.87e-07 | -0.370 | -0.552 | +0.353 | -0.372 | 0.0176
+   d0=0.283 rn/off k=6: 57.05 | 2.840 | 0.9493 | 57.05 | +0.0006 | +8.66e-07 | +0.000 | -0.160 | +0.615 | +0.001 | 0.0217
+   d0=0.283 rn/off k=12: 72.96 | 2.922 | 0.9594 | 72.96 | +0.0010 | +1.31e-06 | -0.002 | -0.215 | +0.664 | +0.001 | 0.0251
+   d0=0.283 rn/on k=6: 44.33 | 2.702 | 0.9377 | 44.33 | +0.0002 | -6.41e-07 | -0.373 | -0.556 | +0.337 | -0.380 | 0.0173
+   d0=0.334 nn/off k=6: 32.43 | 2.628 | 0.9164 | 32.43 | +0.0012 | -8.79e-07 | +0.001 | -0.081 | +0.538 | +0.001 | 0.0205
+   d0=0.334 nn/on k=6: 24.21 | 2.408 | 0.8962 | 24.21 | -0.0041 | -1.54e-06 | -0.505 | -0.611 | +0.263 | -0.503 | 0.0157
+   d0=0.334 rn/off k=6: 31.70 | 2.429 | 0.9209 | 31.70 | -0.0006 | +1.79e-06 | +0.007 | -0.079 | +0.511 | -0.001 | 0.0201
+   d0=0.334 rn/off k=12: 46.98 | 2.533 | 0.9449 | 46.98 | +0.0006 | +2.12e-06 | -0.006 | -0.130 | +0.611 | +0.001 | 0.0268
+   d0=0.334 rn/on k=6: 23.01 | 2.284 | 0.8963 | 23.01 | +0.0158 | +2.13e-06 | -0.531 | -0.628 | +0.224 | -0.524 | 0.0150
+   labels off, all non-validation rows with A >= 3 (n = 37): A/A_B1 - 1 from -0.440 to -0.077; overprediction A_B1/A - 1 from +0.084 to +0.786
+   labels on, all non-validation rows with A >= 3 (n = 296): A/A_B1 - 1 from -0.998 to -0.366; overprediction A_B1/A - 1 from +0.578 to +492.292
+   labels off, modes and corner grids only (n = 37): overprediction from +0.084 to +0.786
+   labels on, modes and corner grids only (n = 16): overprediction from +1.178 to +1.689
+   labels off: toy's form A/A_toy - 1 from -0.006 to +0.009 (n = 37)
+   labels on: toy's form A/A_toy - 1 from -0.996 to -0.115 (n = 280)
+max |(1 + n_p/(1 - n_r))/A - 1| over all rows: 6.70e-05; max n_r: 0.9946 (at A = 491.3)
+
+=== A necessary condition for marginality: c_a <= d0 ln[k (1 - f_dead)/th], with f_dead the family's mean over its eta grid ===
+   d0=0.163 ca=0.7 q=12: f_dead 0.082, bound without labels 1.043, with f_dead 1.029; ca <= bound; max A 182.2 at eta 0.002; crossing True
+   d0=0.163 ca=1.2 q=12: f_dead 0.051, bound without labels 1.043, with f_dead 1.034; ca >  bound; max A 1.6 at eta 0.002; crossing False
+   d0=0.163 ca=1.7 q=12: f_dead 0.049, bound without labels 1.043, with f_dead 1.035; ca >  bound; max A 1.0 at eta 0.002; crossing False
+   d0=0.283 ca=0.7 q=12: f_dead 0.080, bound without labels 1.810, with f_dead 1.787; ca <= bound; max A 424.5 at eta 0.002; crossing True
+   d0=0.283 ca=1.2 q=12: f_dead 0.079, bound without labels 1.810, with f_dead 1.787; ca <= bound; max A 187.0 at eta 0.002; crossing True
+   d0=0.283 ca=1.7 q=12: f_dead 0.078, bound without labels 1.810, with f_dead 1.787; ca <= bound; max A 45.2 at eta 0.001; crossing True
+   d0=0.334 ca=0.7 q=12: f_dead 0.083, bound without labels 2.137, with f_dead 2.108; ca <= bound; max A 491.3 at eta 0.002; crossing True
+   d0=0.334 ca=1.2 q=12: f_dead 0.083, bound without labels 2.137, with f_dead 2.107; ca <= bound; max A 262.8 at eta 0.002; crossing True
+   d0=0.334 ca=1.7 q=12: f_dead 0.080, bound without labels 2.137, with f_dead 2.109; ca <= bound; max A 100.3 at eta 0.002; crossing True
+   d0=0.163 ca=0.7 q=2: f_dead 0.480, bound without labels 1.043, with f_dead 0.936; ca <= bound; max A 217.0 at eta 0.0007; crossing True
+   d0=0.163 ca=1.2 q=2: f_dead 0.352, bound without labels 1.043, with f_dead 0.972; ca >  bound; max A 1.3 at eta 0.002; crossing False
+   d0=0.163 ca=1.7 q=2: f_dead 0.349, bound without labels 1.043, with f_dead 0.973; ca >  bound; max A 1.0 at eta 0.002; crossing False
+   d0=0.283 ca=0.7 q=2: f_dead 0.478, bound without labels 1.810, with f_dead 1.626; ca <= bound; max A 205.2 at eta 0.002; crossing True
+   d0=0.283 ca=1.2 q=2: f_dead 0.479, bound without labels 1.810, with f_dead 1.626; ca <= bound; max A 81.9 at eta 0.002; crossing True
+   d0=0.283 ca=1.7 q=2: f_dead 0.460, bound without labels 1.810, with f_dead 1.636; ca >  bound; max A 9.3 at eta 0.0002; crossing False
+   d0=0.334 ca=0.7 q=2: f_dead 0.482, bound without labels 2.137, with f_dead 1.917; ca <= bound; max A 243.8 at eta 0.002; crossing True
+   d0=0.334 ca=1.2 q=2: f_dead 0.478, bound without labels 2.137, with f_dead 1.920; ca <= bound; max A 122.9 at eta 0.002; crossing True
+   d0=0.334 ca=1.7 q=2: f_dead 0.474, bound without labels 2.137, with f_dead 1.922; ca <= bound; max A 36.2 at eta 0.002; crossing True
+   d0=0.163 ca=0.7 q=6: f_dead 0.161, bound without labels 1.043, with f_dead 1.014; ca <= bound; max A 159.6 at eta 0.002; crossing True
+   d0=0.163 ca=1.2 q=6: f_dead 0.101, bound without labels 1.043, with f_dead 1.025; ca >  bound; max A 1.5 at eta 0.002; crossing False
+   d0=0.163 ca=1.7 q=6: f_dead 0.097, bound without labels 1.043, with f_dead 1.026; ca >  bound; max A 1.0 at eta 0.002; crossing False
+   d0=0.283 ca=0.7 q=6: f_dead 0.161, bound without labels 1.810, with f_dead 1.761; ca <= bound; max A 382.2 at eta 0.002; crossing True
+   d0=0.283 ca=1.2 q=6: f_dead 0.163, bound without labels 1.810, with f_dead 1.760; ca <= bound; max A 164.1 at eta 0.002; crossing True
+   d0=0.283 ca=1.7 q=6: f_dead 0.157, bound without labels 1.810, with f_dead 1.762; ca <= bound; max A 33.5 at eta 0.001; crossing True
+   d0=0.334 ca=0.7 q=6: f_dead 0.163, bound without labels 2.137, with f_dead 2.077; ca <= bound; max A 440.8 at eta 0.002; crossing True
+   d0=0.334 ca=1.2 q=6: f_dead 0.163, bound without labels 2.137, with f_dead 2.077; ca <= bound; max A 231.3 at eta 0.002; crossing True
+   d0=0.334 ca=1.7 q=6: f_dead 0.163, bound without labels 2.137, with f_dead 2.077; ca <= bound; max A 83.9 at eta 0.002; crossing True
+   coefficient ln(k/th): k=6 6.397, k=12 7.090
+
+=== Cutoff scaling: slope of ln s_c (moment) against ln A per family, least squares; points with A >= 3 (as in lattice_analyze.py) and with A >= 10 ===
+   ca1    L=16 q= 2 d0=0.334 ca=1.0 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=5 slope(A>=3) 1.186; n=5 slope(A>=10) 1.186; A 12.3-44.5; sc/A^2 0.178-0.510
+   ca1    L=16 q= 6 d0=0.334 ca=1.0 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=5 slope(A>=3) 1.070; n=5 slope(A>=10) 1.070; A 21.7-81.9; sc/A^2 0.059-0.202
+   corner L=16 q= 6 d0=0.500 ca=1.2 nn/off k= 6 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.050; n=4 slope(A>=10) 1.050; A 14.1-49.6; sc/A^2 0.076-0.252
+   corner L=16 q= 6 d0=0.500 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.096; n=4 slope(A>=10) 1.096; A 11.7-40.4; sc/A^2 0.110-0.339
+   corner L=16 q= 6 d0=0.500 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.581; n=4 slope(A>=10) 1.581; A 15.9-56.3; sc/A^2 0.504-0.838
+   corner L=16 q= 6 d0=0.500 ca=1.2 rn/off k= 6 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.711; n=4 slope(A>=10) 1.711; A 14.1-49.5; sc/A^2 0.634-0.921
+   corner L=16 q= 6 d0=0.500 ca=1.2 rn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.788; n=4 slope(A>=10) 1.788; A 11.5-39.8; sc/A^2 0.753-1.001
+   main   L=16 q=12 d0=0.163 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.109; n=8 slope(A>=10) 1.094; A 8.9-182.2; sc/A^2 0.032-0.468
+   main   L=16 q=12 d0=0.283 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.033; n=9 slope(A>=10) 1.033; A 18.1-424.5; sc/A^2 0.010-0.215
+   main   L=16 q=12 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.101; n=8 slope(A>=10) 1.088; A 9.1-187.0; sc/A^2 0.030-0.455
+   main   L=16 q=12 d0=0.283 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=11 slope(A>=3) 1.936; n=5 slope(A>=10) 2.019; A 3.2-45.2; sc/A^2 1.173-1.556
+   main   L=16 q=12 d0=0.334 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.036; n=9 slope(A>=10) 1.036; A 20.9-491.3; sc/A^2 0.009-0.184
+   main   L=16 q=12 d0=0.334 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.058; n=9 slope(A>=10) 1.058; A 11.9-262.8; sc/A^2 0.018-0.329
+   main   L=16 q=12 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.432; n=7 slope(A>=10) 1.406; A 5.8-100.3; sc/A^2 0.176-0.889
+   main   L=16 q= 2 d0=0.163 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=12 slope(A>=3) 1.192; n=9 slope(A>=10) 1.136; A 4.7-217.0; sc/A^2 0.050-1.025
+   main   L=16 q= 2 d0=0.283 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.107; n=8 slope(A>=10) 1.089; A 9.6-205.2; sc/A^2 0.041-0.619
+   main   L=16 q= 2 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.239; n=6 slope(A>=10) 1.168; A 4.8-81.9; sc/A^2 0.121-1.032
+   main   L=16 q= 2 d0=0.283 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=11 slope(A>=3) 3.277; n=0 slope(A>=10) nan; A 3.1-9.3; sc/A^2 2.122-8.280
+   main   L=16 q= 2 d0=0.334 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.085; n=9 slope(A>=10) 1.085; A 10.8-243.8; sc/A^2 0.033-0.567
+   main   L=16 q= 2 d0=0.334 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.164; n=7 slope(A>=10) 1.111; A 6.3-122.9; sc/A^2 0.071-0.827
+   main   L=16 q= 2 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.638; n=4 slope(A>=10) 1.461; A 3.1-36.2; sc/A^2 0.620-1.551
+   main   L=16 q= 6 d0=0.163 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.127; n=8 slope(A>=10) 1.114; A 8.0-159.6; sc/A^2 0.040-0.548
+   main   L=16 q= 6 d0=0.283 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.042; n=9 slope(A>=10) 1.042; A 16.3-382.2; sc/A^2 0.013-0.257
+   main   L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.112; n=8 slope(A>=10) 1.096; A 8.1-164.1; sc/A^2 0.037-0.531
+   main   L=16 q= 6 d0=0.283 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=10 slope(A>=3) 1.967; n=4 slope(A>=10) 2.041; A 3.6-33.5; sc/A^2 1.363-1.531
+   main   L=16 q= 6 d0=0.334 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.037; n=9 slope(A>=10) 1.037; A 18.8-440.8; sc/A^2 0.011-0.224
+   main   L=16 q= 6 d0=0.334 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.077; n=9 slope(A>=10) 1.077; A 10.8-231.3; sc/A^2 0.023-0.386
+   main   L=16 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=9 slope(A>=3) 1.457; n=7 slope(A>=10) 1.426; A 5.3-83.9; sc/A^2 0.220-0.977
+   modes  L=16 q= 6 d0=0.283 ca=1.2 nn/off k= 6 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.078; n=4 slope(A>=10) 1.078; A 29.7-85.2; sc/A^2 0.059-0.157
+   modes  L=16 q= 6 d0=0.283 ca=1.2 rn/off k=12 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.468; n=4 slope(A>=10) 1.468; A 37.2-108.7; sc/A^2 0.350-0.614
+   modes  L=16 q= 6 d0=0.283 ca=1.2 rn/off k= 6 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.609; n=4 slope(A>=10) 1.609; A 29.4-84.7; sc/A^2 0.502-0.737
+   modes  L=16 q= 6 d0=0.283 ca=1.2 rn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.675; n=4 slope(A>=10) 1.675; A 23.1-66.0; sc/A^2 0.593-0.858
+   modes  L=16 q= 6 d0=0.334 ca=1.7 nn/off k= 6 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.439; n=4 slope(A>=10) 1.439; A 17.1-47.3; sc/A^2 0.268-0.474
+   modes  L=16 q= 6 d0=0.334 ca=1.7 rn/off k=12 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.645; n=4 slope(A>=10) 1.645; A 24.5-70.0; sc/A^2 0.585-0.864
+   modes  L=16 q= 6 d0=0.334 ca=1.7 rn/off k= 6 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.755; n=4 slope(A>=10) 1.755; A 16.8-46.5; sc/A^2 0.841-1.079
+   modes  L=16 q= 6 d0=0.334 ca=1.7 rn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: n=4 slope(A>=3) 1.775; n=4 slope(A>=10) 1.775; A 12.7-34.1; sc/A^2 0.964-1.219
+
+=== Spread of d_emit across each main-scan family's eta grid (max/min - 1), and the invariant eta A d^2 ===
+   main   L=16 q=12 d0=0.163 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.1310-0.1312 (0.13%), A 8.9-182.2; invariant 0.0062-0.0077 (spread 23%); I/2 at the nearest grid point 0.003 predicts eta* = 0.312% against 0.312%
+   main   L=16 q=12 d0=0.283 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.1792-0.1806 (0.80%), A 18.1-424.5; invariant 0.0273-0.0296 (spread 8%); I/2 at the nearest grid point 0.015 predicts eta* = 1.395% against 1.392%
+   main   L=16 q=12 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2262-0.2264 (0.10%), A 9.1-187.0; invariant 0.0192-0.0234 (spread 22%); I/2 at the nearest grid point 0.01 predicts eta* = 1.001% against 1.001%
+   main   L=16 q=12 d0=0.283 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2644-0.2723 (3.00%), A 3.2-45.2; invariant 0.0034-0.0110 (spread 229%); I/2 at the nearest grid point 0.002 predicts eta* = 0.185% against 0.183%
+   main   L=16 q=12 d0=0.334 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.1983-0.2000 (0.89%), A 20.9-491.3; invariant 0.0386-0.0418 (spread 8%); I/2 at the nearest grid point 0.02 predicts eta* = 1.990% against 1.989%
+   main   L=16 q=12 d0=0.334 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2476-0.2485 (0.38%), A 11.9-262.8; invariant 0.0322-0.0369 (spread 14%); I/2 at the nearest grid point 0.015 predicts eta* = 1.665% against 1.677%
+   main   L=16 q=12 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2902-0.2926 (0.80%), A 5.8-100.3; invariant 0.0172-0.0246 (spread 43%); I/2 at the nearest grid point 0.01 predicts eta* = 0.923% against 0.915%
+   main   L=16 q= 2 d0=0.163 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.1349-0.1366 (1.30%), A 4.7-217.0; invariant 0.0028-0.0043 (spread 52%); I/2 at the nearest grid point 0.0014 predicts eta* = 0.146% against 0.146%
+   main   L=16 q= 2 d0=0.283 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.1865-0.1869 (0.19%), A 9.6-205.2; invariant 0.0143-0.0167 (spread 17%); I/2 at the nearest grid point 0.0075 predicts eta* = 0.730% against 0.729%
+   main   L=16 q= 2 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2333-0.2355 (0.94%), A 4.8-81.9; invariant 0.0091-0.0130 (spread 43%); I/2 at the nearest grid point 0.005 predicts eta* = 0.459% against 0.459%
+   main   L=16 q= 2 d0=0.334 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2064-0.2073 (0.42%), A 10.8-243.8; invariant 0.0206-0.0233 (spread 13%); I/2 at the nearest grid point 0.01 predicts eta* = 1.051% against 1.050%
+   main   L=16 q= 2 d0=0.334 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2566-0.2573 (0.31%), A 6.3-122.9; invariant 0.0163-0.0207 (spread 27%); I/2 at the nearest grid point 0.0075 predicts eta* = 0.843% against 0.845%
+   main   L=16 q= 2 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2976-0.3044 (2.29%), A 3.1-36.2; invariant 0.0067-0.0139 (spread 108%); I/2 at the nearest grid point 0.003 predicts eta* = 0.352% against 0.357%
+   main   L=16 q= 6 d0=0.163 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.1318-0.1320 (0.17%), A 8.0-159.6; invariant 0.0056-0.0069 (spread 24%); I/2 at the nearest grid point 0.003 predicts eta* = 0.280% against 0.280%
+   main   L=16 q= 6 d0=0.283 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.1803-0.1818 (0.83%), A 16.3-382.2; invariant 0.0247-0.0269 (spread 9%); I/2 at the nearest grid point 0.015 predicts eta* = 1.265% against 1.259%
+   main   L=16 q= 6 d0=0.283 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2276-0.2279 (0.14%), A 8.1-164.1; invariant 0.0170-0.0211 (spread 24%); I/2 at the nearest grid point 0.01 predicts eta* = 0.880% against 0.879%
+   main   L=16 q= 6 d0=0.283 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2666-0.2741 (2.82%), A 3.6-33.5; invariant 0.0025-0.0077 (spread 204%); I/2 at the nearest grid point 0.0014 predicts eta* = 0.133% against 0.132%
+   main   L=16 q= 6 d0=0.334 ca=0.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.1997-0.2013 (0.80%), A 18.8-440.8; invariant 0.0352-0.0381 (spread 8%); I/2 at the nearest grid point 0.02 predicts eta* = 1.814% against 1.808%
+   main   L=16 q= 6 d0=0.334 ca=1.2 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2491-0.2498 (0.28%), A 10.8-231.3; invariant 0.0287-0.0336 (spread 17%); I/2 at the nearest grid point 0.015 predicts eta* = 1.509% against 1.509%
+   main   L=16 q= 6 d0=0.334 ca=1.7 nn/on  k= 6 dreg=0 th=0.01 eps=0 seed=42: d_emit 0.2915-0.2947 (1.09%), A 5.3-83.9; invariant 0.0146-0.0224 (spread 54%); I/2 at the nearest grid point 0.0075 predicts eta* = 0.785% against 0.788%

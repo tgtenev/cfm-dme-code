@@ -1,0 +1,7 @@
+0. exterior shear energy E_ext = 2*e**2*mu*v/3  (Paper II Eq. (11): (2/3) mu0 eps_u^2 v_u)
+   general: Z1 = e**2/delta**2  i.e. (e/delta)^2
+1. interior of stiffness +|K0| carrying the misfit: expressed dilation e = delta/2 ; Z1 = 1/4
+2. signed interior: u(e) = -2*delta**2*mu*v/3 + 4*delta*e*mu*v/3 ; coefficient of e^2 = 0 ; du/de = 4*delta*mu*v/3 (no stationary point)
+   the general equilibrium e = 3 K delta/(3 K + 4 mu) has denominator 0 at K = K0
+3. continuum energy of a compatible dilation e, E_int + E_ext: 0 (passive at a zero P-wave modulus)
+   with the unit holding its free volume: e = delta for every k > 0; total stored energy 0 ; delivered E_ext = 2*delta**2*mu*v/3 ; Z1 = 1

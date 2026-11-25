@@ -1,0 +1,25 @@
+The gas-layer baseline test, T11 (the empirical function), input 'model'.
+Delta chi^2 SDs from 300 galaxy-bootstrap draws; slope SDs from 2000.
+================================================================================================================
+   153 galaxies, 3168 points; validity masks identical: True
+
+Part 1. The three models fitted to the data (M is the relation's fit of aqual-refit-main-T11-results.txt)
+   M midplane relation:        a0 = 0.9909e-10, chi^2 = 4269.66
+   R gas-layer relation:       a0 = 0.9848e-10, chi^2 = 4149.80
+   F gas-layer full solution:  a0 = 0.8951e-10, chi^2 = 4493.57  [150 s]
+   Delta chi^2 F minus R    +343.8 +/-  161.6 (+2.13 SD)
+   Delta chi^2 R minus M    -119.9 +/-   51.0 (-2.35 SD)
+   Delta chi^2 F minus M    +223.9 +/-  181.8 (+1.23 SD)
+   [part 1: 171 s]
+
+Part 2. The baseline test: R (gas-layer relation) as the baseline, F (gas-layer full solution) as the alternative
+   mock of F: R refitted a0 = 0.9027e-10, chi^2 = 434.32; F refitted a0 = 0.8952e-10, chi^2 = 0.06; expected Delta chi^2 (F minus R) -434.3
+   mock of R: R refitted a0 = 0.9849e-10, chi^2 = 0.06; F refitted a0 = 0.9035e-10, chi^2 = 436.28; expected Delta chi^2 (F minus R) +436.2
+   observed +343.8 +/- 161.6: from F's expectation +4.82 SD, from R's expectation -0.57 SD  [251 s]
+   Slope test, refit residuals of R on the unabsorbed AQUAL part (1 if F is right, 0 if R is): slope +0.395 +/- 0.196; rejection of F 3.1 SD, of R +2.0 SD; rms of the unabsorbed part 0.0439 dex (3166 points)
+      the unabsorbed part: median |.| 0.0074 dex, points beyond 0.05 dex 299, beyond 0.1 dex 114
+   Reverse slope test, refit residuals of F on the unabsorbed -(AQUAL part) (1 if R is right, 0 if F is): slope +0.514 +/- 0.218; rejection of R 2.2 SD, of F +2.4 SD; rms 0.0418 dex
+   Scatter of the residuals about each model: R 0.1036 dex, F 0.1022 dex
+   [part 2: 423 s]
+
+[run time 423 s]

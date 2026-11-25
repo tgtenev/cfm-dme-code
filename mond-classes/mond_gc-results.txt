@@ -1,0 +1,35 @@
+MOND'S BOOSTS OF THE GLOBULAR CLUSTERS' DYNAMICAL MASS-TO-LIGHT RATIOS
+==============================================================================================================
+data folder: data; the ambient rescaling factor P at the catchment length 58.254 pc, NGC 2419's Jeans ratio and
+the fit of the validation from globular-clusters/gc_dynamical-figdata.tsv
+
+THE 133 GLOBULAR CLUSTERS WITH RICH KINEMATICS
+--------------------------------------------------------------------------------------------------------------
+  sample: 133 clusters (N_PM > 0 or N_RV >= 50, nonzero quoted error), NGC 2419 at its Jeans ratio 2.150; errors raised to the floor sqrt(2/N)
+  validation: P at 58.254 pc against gc_dynamical.py's figure data: largest difference 5.0e-05; the ratios: 0.0e+00
+  validation, the slope of log Y on log P(58.254 pc), scatter fitted: -0.201 (68% -0.282 to -0.121), Delta lnL (slope 0 against 1) +60.25; population values 1.9026 and 2.2601
+  gc_dynamical.py at 58.254 pc: -0.201 (-0.282 to -0.121), +60.25; 1.9026 and 2.2601
+
+  MOND's prediction: the Newtonian-inferred ratio is Y_* B, with B the boost of the field at the 3D half-mass radius
+  (catalog rh,m) for baryons Y_* L, Y_* = 1.903 (the flat fit), the simple function at 1.2e-10 m/s^2 and the
+  Galaxy's field as the external field, at least 3 kpc out for field A. For each treatment: the range and median of B;
+  the slope of the noise-free prediction Y_* B against log P(58.254 pc), from the same fit that gives the measured
+  slope of -0.20; and Delta lnL, Newton (flat) minus MOND (log Y = a + log B), with the population value Y
+  and the scatter s fitted under each.
+  field A, the Galaxy's field for a flat rotation curve of 230 km/s, QUMOND monopole
+     B 1.016 to 2.127, median 1.147; the slope fitted to Y_* B +0.162 (+0.124 to +0.199, the scatter of the prediction about the line 0.032 dex)
+     Delta lnL Newton minus MOND +14.17 (Y 1.903, s 0.104; Y 1.631, s 0.119)
+  field B, the Newtonian field of the Galaxy as a point mass of 6.5e10 Msun, QUMOND monopole
+     B 1.004 to 2.510, median 1.079; the slope fitted to Y_* B +0.270 (+0.232 to +0.308, the scatter of the prediction about the line 0.038 dex)
+     Delta lnL Newton minus MOND +23.85 (Y 1.903, s 0.104; Y 1.679, s 0.130)
+  field A, the one-dimensional QUMOND formula of Famaey and McGaugh 2012
+     B 1.003 to 1.580, median 1.024; the slope fitted to Y_* B +0.093 (+0.071 to +0.116, the scatter of the prediction about the line 0.005 dex)
+     Delta lnL Newton minus MOND +4.84 (Y 1.903, s 0.104; Y 1.817, s 0.108)
+  field A, QUMOND monopole, the internal field from the catalog mass
+     B 1.010 to 2.126, median 1.147; the slope fitted to Y_* B +0.171 (+0.135 to +0.208, the scatter of the prediction about the line 0.031 dex)
+     Delta lnL Newton minus MOND +18.55 (Y 1.903, s 0.104; Y 1.628, s 0.124)
+  no external field
+     B 1.016 to 4.018, median 1.162; the slope fitted to Y_* B +0.256 (+0.188 to +0.325, the scatter of the prediction about the line 0.085 dex)
+     Delta lnL Newton minus MOND +28.96 (Y 1.903, s 0.104; Y 1.498, s 0.137)
+  The slopes fitted to Y_* B over the five treatments: +0.093 to +0.270
+

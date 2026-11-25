@@ -1,0 +1,27 @@
+# The data
+
+The scripts read eleven datasets.
+SPARC is redistributed in `sparc/` under its authors' CC BY 4.0 license.
+The other ten are public, but they are not redistributed here.
+Each is fetched from its source into the folder named below, where `SHA256SUMS` gives the SHA-256 of every file as it was fetched on the date given, so that a new fetch can be checked with `sha256sum -c SHA256SUMS` run inside the folder.
+A catalog that its host updates in place may differ from the copy used, and the checksums show where.
+Git ignores everything in these folders except the checksum files.
+
+| Folder | Dataset | Source | Fetched | Read by |
+|---|---|---|---|---|
+| `sparc/` | SPARC, the rotation curves and mass models of 175 disk galaxies: Table 1 (`SPARC_Lelli2016c.mrt`), Table 2 (`MassModels_Lelli2016c.mrt`) and one file per galaxy (`rotmod_ltg/`). F. Lelli, S. S. McGaugh and J. M. Schombert, AJ 152, 157 (2016) | Zenodo, doi:10.5281/zenodo.16284118, identical to the distribution at astroweb.cwru.edu/SPARC/ | 2026-07-13 | `rotation-curves/` |
+| `act-dr6/` | The ACT DR6 lensing likelihood data, version 1.2: the archive and its contents in `v1.2/` | https://lambda.gsfc.nasa.gov/data/suborbital/ACT/ACT_dr6/likelihood/data/ACT_dr6_likelihood_v1.2.tgz | 2026-11-06 | `mond-classes/` |
+| `kids1000/` | The KiDS-1000 cosmic-shear data release: the archive, its ξ± file extracted under the archive's own folder name, and a copy of that file named `xipm_k1000.fits` | https://kids.strw.leidenuniv.nl/DR4/data_files/KiDS1000_cosmic_shear_data_release.tgz | 2026-11-06 | `mond-classes/` |
+| `kids1000-shear-catalogue/` | The KiDS-1000 gold weak-lensing shear catalogue of KiDS DR4.1, M. Giblin et al., A&A 645, A105 (2021), 21,262,011 sources (`KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits`, 17.7 GB), and the source redshift distributions of H. Hildebrandt et al., A&A 647, A124 (2021) (`KiDS1000_SOM_N_of_Z.tar.gz`) | https://kids.strw.leidenuniv.nl/DR4/data_files/ | 2026-11-07 | `mond-classes/groups_stack.py` |
+| `gama-dr4-g3c/` | The GAMA group catalogue G3C v10 of A. S. G. Robotham et al., MNRAS 416, 2640 (2011), from GAMA DR4 (S. P. Driver et al., MNRAS 513, 439 (2022)): the groups (`G3CFoFGroupv10.fits`) and their member galaxies (`G3CGalv10.fits`) | https://www.gama-survey.org/dr4/data/cat/GroupFinding/v10/ | 2026-11-07 | `mond-classes/groups_stack.py` |
+| `viola2015/` | The arXiv source of M. Viola et al., MNRAS 452, 3529 (2015), the KiDS lensing of the GAMA groups: the archive and, extracted from it, `x/M3K_paperFinal_v2.1_accepted.tex`, whose Tables 1 and 3 the script reads | https://export.arxiv.org/src/1507.00735v2 | 2026-11-06 | `mond-classes/groups_stack.py` |
+| `planck2018-lensing/` | The Planck 2018 lensing bandpowers in the conservative multipole range, marginalized over the CMB, with their covariance, fiducial correction (`smicadx12_Dec5_ftl_mv2_ndclpp_p_teb_consext8*`) and windows (`win/`, `lensdelta/`) | https://github.com/CobayaSampler/planck_supp_data_and_covmats, folder `lensing/2018` | 2026-11-06 | `mond-classes/` |
+| `vikhlinin2006/` | The arXiv source of A. Vikhlinin et al., ApJ 640, 691 (2006), the Chandra clusters: the archive `src.tar.gz` and its contents in `x/`, of which the scripts read `x/mprof.tex` | the arXiv source of astro-ph/0507092, from export.arxiv.org | 2026-11-06 | `mond-classes/` |
+| `harris-mwgc-2010-2026-11-15/` | W. E. Harris, the catalog of parameters for Milky Way globular clusters, 2010 edition, cited as Harris 1996 (2010 edition), AJ 112, 1487, saved as `mwgc.dat.txt` | https://physics.mcmaster.ca/~harris/mwgc.dat, fetched by hand because the host refuses automated agents | 2026-11-15 | `globular-clusters/` |
+| `sparc-velocities-2026-11-22/` | Positions and heliocentric velocities of the SPARC galaxies: the replies of the Sesame name resolver (`sesame/`) and of three VizieR catalogs (`vizier/`): the Updated Nearby Galaxy Catalog (J/AJ/145/101), the ALFALFA HI source catalog (J/ApJ/861/49) and the homogenized HI data of HYPERLEDA (VII/238), with a manifest of every request | the VizieR mirror at the Harvard-Smithsonian Center for Astrophysics, https://vizier.cfa.harvard.edu, queried by the four `fetch_*.py` scripts in `rotation-curves/` | 2026-11-22 | `rotation-curves/layer_direction_test.py` |
+| `baumgardt-gc/` | The globular-cluster database of H. Baumgardt and M. Hilker, MNRAS 478, 1520 (2018), with its later updates: the combined table `combined_table.txt` (fetched 2026-07-17) and, in `pages/`, the velocity-dispersion page `veldis.html`, the N-body fit figures `rvfit/<cluster>_rvfit.pdf` and the stellar velocities of NGC 2419 `rv/ngc2419.txt` (fetched 2026-10-10) | https://people.smp.uq.edu.au/HolgerBaumgardt/globular/ | 2026-07-17 and 2026-10-10 | `globular-clusters/`, `mond-classes/` |
+
+The archives of ACT DR6, KiDS-1000, Vikhlinin et al. and Viola et al. are kept with their extracted contents, so that both can be checked.
+The checksums of every dataset but the Baumgardt database were recorded when it was fetched.
+No checksums were recorded for the Baumgardt database: `SHA256SUMS` gives those of the table and the velocity-dispersion page as the host served them on 2026-11-23, when both matched the copies used line for line, of the N-body figures as fetched, and of the stellar velocities of NGC 2419 with LF line endings.
+The files in this folder are kept byte for byte, without conversion of line endings.

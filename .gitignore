@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+# The data that are not redistributed are fetched into their folders, as data/README.md describes.
+/data/*/**
+!/data/*/SHA256SUMS
+!/data/sparc/**
+# The checkpoints of the groups' stacking, about 190 MB, a subset of the shear catalogue among them.
+/mond-classes/groups-stack-checkpoints/
+# Intermediates that a script rebuilds: the ladders of the catalog-distance fits and a merged table.
+/rotation-curves/catalog-distances-nodes/
+/rotation-curves/coarse-gamma-B100-T3-merged.csv
+# Outputs that copy values from the globular-cluster database, which is not redistributed.
+/globular-clusters/gc_dynamical-figdata.tsv
+/globular-clusters/gc_dynamical-rich-sample.tsv

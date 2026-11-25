@@ -1,0 +1,49 @@
+stability_threshold_calc.py results
+==============================================================================
+1. Lattice sums S_p = sum over j of (r_nn / r_j)^p, distances in nearest-neighbour units
+   sc (z = 6): p=12:   6.2021  p=6:   8.4019  p=5:  10.3775  p=4:  16.5323
+   bcc (z = 8): p=12:   9.1142  p=6:  12.2537  p=5:  14.7585  p=4:  22.6386
+   fcc (z = 12): p=12:  12.1319  p=6:  14.4539  p=5:  16.9675  p=4:  25.3383
+   validation against the published Lennard-Jones sums (Jones and Ingham 1925):
+      sc p=6: computed 8.40192, published 8.40192, difference +0.00000
+      bcc p=6: computed 12.25367, published 12.25330, difference +0.00037
+      fcc p=6: computed 14.45392, published 14.45392, difference +0.00000
+      sc p=12: computed 6.20215, published 6.20215, difference -0.00000
+      bcc p=12: computed 9.11418, published 9.11418, difference +0.00000
+      fcc p=12: computed 12.13188, published 12.13188, difference +0.00000
+
+2. Ordering temperatures in units of the pair coupling J (kT_c / J)
+   Monte Carlo (stability_threshold_mc.py), Ising: sc 4.4915 (spread 0.0282), fcc 9.7494 (spread 0.1312)
+   published Ising: sc 4.5115, fcc 9.7944
+      Monte Carlo minus published: sc -0.0200 (-0.44%), fcc -0.0450 (-0.46%)
+   value used for the face-centred Ising threshold: 9.749
+
+   Mean-field values kT_c/J = z_eff / m, m = number of components (Ising 1, XY 2, Heisenberg 3),
+   and the ratio of the three-dimensional value to the mean-field value where it is known:
+      ising sc: mean field  6.000, three-dimensional 4.492, ratio 0.749
+      ising bcc: mean field  8.000, three-dimensional 6.355, ratio 0.794
+      ising fcc: mean field 12.000, three-dimensional 9.749, ratio 0.812
+      xy    sc: mean field  3.000, three-dimensional 2.202, ratio 0.734
+      xy    bcc: mean field  4.000, three-dimensional   -  , ratio   -  
+      xy    fcc: mean field  6.000, three-dimensional   -  , ratio   -  
+      heis  sc: mean field  2.000, three-dimensional 1.443, ratio 0.722
+      heis  bcc: mean field  2.667, three-dimensional 2.054, ratio 0.770
+      heis  fcc: mean field  4.000, three-dimensional 3.178, ratio 0.795
+      nematic (Lebwohl-Lasher, sc): mean field 1.321, three-dimensional 1.1232, ratio 0.850
+
+3. The threshold T* on Theta/J for staying disordered, J the pair well (J <= u_mis)
+     9.749   central: Ising, z = 12 (close packed), three-dimensional fluctuations, per-pair bound
+     4.403   XY symmetry (sign and phase), z = 12, fluctuation ratio of sc XY
+     3.178   Heisenberg symmetry, z = 12
+     4.492   Ising, z = 6 (sc)
+     6.355   Ising, z = 8 (bcc)
+    11.374   Ising, z = 14 (bcc first and second shells), mean field x fcc ratio
+    12.593   Ising, z = 15.5 (Poisson-Voronoi faces), mean field x fcc ratio
+    15.500   Ising, z = 15.5, mean field (top of the plausible band)
+    12.000   Ising, z = 12, mean field (no fluctuation reduction)
+    14.454   Ising, fcc with a 1/r^6 tail, mean field
+    16.968   Ising, fcc with a 1/r^5 tail, mean field
+     4.875   well defined against anti-alignment (J = well/2)
+
+   plausible band (symmetry XY to Ising, z = 12 to 15.5, fluctuations on or off, 1/r^6 tail): 4.40 to 15.50
+   band relative to the central value: x0.45 to x1.59

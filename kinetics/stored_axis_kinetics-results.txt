@@ -1,0 +1,31 @@
+
+====================================================================================================
+PART 1. THE INTERVAL BETWEEN SMOOTHINGS
+====================================================================================================
+the law: mean excess delta (1 - phi) / phi, with (1 - phi) / phi roughenings between two smoothings of a domain
+  the crossover, boost 2           boost    2.0, guided share 0.15966,    5.3 roughenings between smoothings, 1.19e+03 to 4.07e+03 yr between smoothings
+  boost 28                         boost   28.0, guided share 0.00699,  142.1 roughenings between smoothings, 2.72e+04 to 9.30e+04 yr between smoothings
+
+====================================================================================================
+PART 2. THE TIME FOR THE STRETCH TO FORM IN UNLAYERED FABRIC
+====================================================================================================
+an isolated body of 10^10.57 solar masses of baryons, with no ambient field; fields in units of a0 = 9.4260e-11 m/s^2
+  radius | baryons' field | steady boost | layered share from zero: t50, t90 (renewal events; yr at 190 and 650) | every domain layered: t50, t90
+      20 kpc | 1.374e-01 |     3.3 |        29,        55 (1.0e+04 to 3.6e+04 yr) |         8,        21
+      50 kpc | 2.198e-02 |     7.5 |       101,       174 (3.3e+04 to 1.1e+05 yr) |        20,        54
+     100 kpc | 5.494e-03 |    14.6 |       249,       404 (7.7e+04 to 2.6e+05 yr) |        40,       108
+     200 kpc | 1.374e-03 |    28.7 |       599,       916 (1.7e+05 to 6.0e+05 yr) |        81,       218
+     400 kpc | 3.434e-04 |    56.9 |      1401,      2044 (3.9e+05 to 1.3e+06 yr) |       162,       436
+    1000 kpc | 5.494e-05 |   141.5 |      4183,      5804 (1.1e+06 to 3.8e+06 yr) |       407,      1092
+
+====================================================================================================
+PART 3. THE TRAIL OF THE STORED AXES BEHIND A MOVING GALAXY
+====================================================================================================
+a domain keeps the axis of its last smoothing, so the arrangement of the axes trails a body that moves at v.
+With each new layer laid across the transmitted flux the trail is Delta = 2 v T, with T the interval between
+smoothings at the steady boost. The isolated body of Part 2, at 300 km/s; ranges run over the tightened window.
+  radius | steady boost | interval between smoothings (yr) | trail Delta (pc) | Delta over the radius
+      20 kpc |    3.3 | 2.50e+03 to 8.55e+03 | 1.53 to 5.25 | 0.0001 to 0.0003
+     100 kpc |   14.6 | 1.37e+04 to 4.70e+04 | 8.44 to 28.9 | 0.0001 to 0.0003
+     400 kpc |   56.9 | 5.60e+04 to 1.92e+05 | 34.4 to 118 | 0.0001 to 0.0003
+    1000 kpc |  141.5 | 1.41e+05 to 4.81e+05 | 86.3 to 295 | 0.0001 to 0.0003

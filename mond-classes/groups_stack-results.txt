@@ -1,0 +1,44 @@
+THE GAMA GROUPS STACKED IN THE KiDS-1000 SHEAR: THE PROFILES, THEIR VALIDATION AND THE HALO FITS
+==============================================================================================================
+data folder: data; geometry flat, Omega_m = 0.3152, H0 = 67.36 km/s/Mpc; radii physical (Mpc); ESD in Msun/pc^2
+
+1. THE DATA
+  sources: KiDS-1000 gold, 21,262,011 with weight > 0 and 0.1 < Z_B <= 1.2; in the GAMA source boxes G09 1,241,996, G12 2,309,556, G15 2,225,487
+  additive bias removed per tomographic bin, e1, e2: bin 1 -0.00059, +0.00044; bin 2 +0.00024, +0.00093; bin 3 +0.00079, +0.00072; bin 4 +0.00054, +0.00074; bin 5 -0.00006, +0.00128
+  SOM n(z) means per bin: 0.257, 0.403, 0.564, 0.792, 0.984
+  lenses: G3C v10, Nfof >= 5, z >= 0.02, BCG in G09, G12 or G15: 2751; random points: 55020
+  shear convention B, the one with the larger mean ESD at 0.1 to 1 Mpc over all lenses: A -0.31, B 32.22
+  log LumB edges (h^-2 Lsun) of the bins L1 to L6, matched to the group fractions of Viola et al.: 9.400, 11.044, 11.238, 11.383, 11.619, 11.898, 12.700
+
+2. THE VALIDATION
+  the Hankel route over the direct projection for a truncated NFW of 10^13.8 Msun (used for the miscentring and the
+  two-halo term only): 1.000, 1.000, 1.000, 1.000, 1.000, 1.001, 0.998, 1.003, 0.996, 1.009, 0.992, 1.040
+  bin   N     z      log M200m fitted         in their definition (h^-1)   Viola et al. (h^-1)    sigma   chi2/dof   cross chi2/12  random/signal
+  L1   1048  0.117  13.087 +0.093/-0.097       12.915                       13.15 +0.13/-0.15       -1.33     5.2/11      4.8         0.074
+  L2    502  0.178  13.593 +0.057/-0.073       13.421                       13.52 +0.13/-0.15       -0.61    10.3/11      5.9         0.119
+  L3    345  0.215  13.708 +0.082/-0.118       13.536                       13.83 +0.11/-0.12       -2.02    10.2/11      3.5         0.082
+  L4    452  0.250  13.946 +0.054/-0.056       13.774                       13.76 +0.10/-0.12       +0.13     6.7/11      6.1         0.026
+  L5    276  0.263  14.282 +0.048/-0.052       14.110                       14.13 +0.09/-0.10       -0.18    27.6/11     16.3         0.055
+  L6    128  0.313  14.523 +0.066/-0.084       14.352                       14.55 +0.10/-0.10       -1.65    22.4/11      7.5         0.083
+  M1    353  0.120  (mass-proxy bin, no published mass)                                             4.1         0.117
+  M2    677  0.145  (mass-proxy bin, no published mass)                                             8.9         0.085
+  M3    796  0.179  (mass-proxy bin, no published mass)                                             8.7         0.063
+  M4    524  0.225  (mass-proxy bin, no published mass)                                            12.7         0.030
+  M5    239  0.267  (mass-proxy bin, no published mass)                                             6.9         0.050
+  luminosity bins beyond 2 sigma: 1 of 6; the test passes with at most one: passed
+
+3. THE HALO FIT WITH EACH BIN'S OWN BCG, WRITTEN TO groups-stack-profiles.json
+  stars 2 Msun/Lsun times the mean LumB; BCG 2 Msun/Lsun times the mean BCG luminosity (M_sun,r = 4.65); point mass 2.06 times the BCG
+  bin   log M200m fitted         chi2/dof   change from the validation fit   Mstar_tot (Msun)   Mc (Msun)
+  L1  13.155 +0.075/-0.095         4.4/11     +0.068                          2.854e+11          9.193e+10
+  L2  13.624 +0.046/-0.064         7.5/11     +0.030                          6.142e+11          1.386e+11
+  L3  13.735 +0.085/-0.105         9.1/11     +0.027                          9.013e+11          1.591e+11
+  L4  13.964 +0.045/-0.055        10.3/11     +0.018                          1.391e+12          1.853e+11
+  L5  14.288 +0.052/-0.048        30.8/11     +0.006                          2.458e+12          2.210e+11
+  L6  14.537 +0.073/-0.087        20.5/11     +0.013                          6.090e+12          2.790e+11
+  M1  12.992 +0.148/-0.182         8.7/11        n/a                          3.389e+11          9.123e+10
+  M2  13.398 +0.072/-0.078        12.8/11        n/a                          5.233e+11          1.152e+11
+  M3  13.715 +0.045/-0.065        15.9/11        n/a                          8.430e+11          1.492e+11
+  M4  14.021 +0.039/-0.041         7.2/11        n/a                          1.681e+12          1.902e+11
+  M5  14.327 +0.032/-0.048        35.5/11        n/a                          3.502e+12          2.423e+11
+

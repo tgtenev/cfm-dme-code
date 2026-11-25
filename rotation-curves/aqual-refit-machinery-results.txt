@@ -1,0 +1,17 @@
+AQUAL refit: the numpy port of the fit machinery (refit_core.py) against two_constant_fit.pl
+==============================================================================================================
+Sample: 153 galaxies, 3168 points, 31 with a bulge (SPARC, quality flag not 3, inclination at least 30 degrees, at least 3 points).
+   T3 (the boost law) at delta = 0.2953, a0 = 0.92459e-10: total objective 4319.2221; two_constant_fit.pl 4319.22 (two_constant_fit-results.txt, section B)
+   T11 with catalog distances and inclinations (frozen), a0 = 0.8127e-10: 6701.4300; two_constant_fit.pl 6701.430 (two_constant_fit-frozen-results.txt)
+   T11 (the empirical function) a0 refitted on the ladder: a0 = 1.0475e-10 +/- 0.0296 (stat), chi^2 4326.6711; two_constant_fit.pl 1.0475 +/- 0.0296, 4326.672
+   Per-galaxy objective at the T11 best fit: this port at its own best fit, against the converged column of
+   two_constant_fit-results.txt, section L:
+      UGC06787    75.36872 (Yd 0.5556, Yb 0.3373, q 1.2985); two_constant_fit.pl 75.36872
+      NGC5371     68.89333 (Yd 1.2783, Yb nan, q 0.6447); two_constant_fit.pl 68.89333
+      UGC02953    78.40555 (Yd 0.4816, Yb 0.5176, q 1.1555); two_constant_fit.pl 78.40555
+      IC4202     245.82529 (Yd 1.1366, Yb 0.2179, q 0.9052); two_constant_fit.pl 245.82530
+      UGC09133    42.88147 (Yd 0.8904, Yb 0.9142, q 0.8586); two_constant_fit.pl 42.88147
+      NGC7331     11.46839 (Yd 0.3529, Yb 0.6061, q 1.0344); two_constant_fit.pl 11.46839
+   [machinery: 19 s]
+
+[run time 19 s]

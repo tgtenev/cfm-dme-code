@@ -1,0 +1,22 @@
+FIGURE DATA FOR PAPER I, FIGURE 4 (SPARC's field, the algebraic relation, H0 = 67.4 km/s/Mpc)
+  the constrained fit: a0 = 0.9725e-10 m/s^2, chi^2 = 4323.12 (constrained_fit-results.txt, the fit of record evaluated directly at the minimum: 4323.12); 3165 points; scatter 0.1102 dex; wrote rotation-curves/rar-law.tsv
+  MOND's simple function: a0 = 1.0796e-10 m/s^2, chi^2 = 4350.30 (constrained_fit-results.txt, the fit of record at equal freedom: 4350.30); 3165 points; scatter 0.1105 dex; wrote rotation-curves/rar-simple.tsv
+  binned mean residual (dex) in 0.25-dex bins of lg g_bar from -12.6, bins with 8 points or more for both laws:
+    [-12.35,-12.10)  constrained    8 -0.0274   simple    8 -0.0264
+    [-12.10,-11.85)  constrained   34 -0.0593   simple   34 -0.0591
+    [-11.85,-11.60)  constrained  113 -0.0022   simple  115 -0.0018
+    [-11.60,-11.35)  constrained  252 -0.0100   simple  256 -0.0122
+    [-11.35,-11.10)  constrained  473 -0.0201   simple  482 -0.0174
+    [-11.10,-10.85)  constrained  429 -0.0012   simple  423 -0.0014
+    [-10.85,-10.60)  constrained  361 -0.0063   simple  368 -0.0074
+    [-10.60,-10.35)  constrained  268 -0.0106   simple  277 -0.0044
+    [-10.35,-10.10)  constrained  313 -0.0083   simple  312 -0.0098
+    [-10.10, -9.85)  constrained  302 +0.0090   simple  296 +0.0024
+    [ -9.85, -9.60)  constrained  196 -0.0115   simple  197 -0.0087
+    [ -9.60, -9.35)  constrained  157 -0.0112   simple  148 -0.0172
+    [ -9.35, -9.10)  constrained  121 -0.0131   simple  119 -0.0213
+    [ -9.10, -8.85)  constrained   75 +0.0156   simple   72 +0.0276
+    [ -8.85, -8.60)  constrained   39 +0.0244   simple   36 +0.0391
+    [ -8.60, -8.35)  constrained   21 +0.0660   simple   19 +0.0736
+  largest |bin offset|: the constrained fit 0.0660 dex (bin from -8.60), MOND's simple function 0.0736 dex (bin from -8.60)
+  the constrained fit: delta_fv 0.1966, lambda 0.1795, dilute slope s 0.9129, s^-1/2 1.0466

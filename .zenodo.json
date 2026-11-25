@@ -1,0 +1,21 @@
+{
+  "upload_type": "software",
+  "title": "Code and data for the dark-matter effect in the Cosmic Fabric Model, Papers I and II",
+  "creators": [
+    {
+      "name": "Tenev, Tichomir G.",
+      "affiliation": "Independent Researcher",
+      "orcid": "0000-0003-2778-6157"
+    }
+  ],
+  "description": "The code and the outputs behind Papers I and II of the series on the dark-matter effect in the Cosmic Fabric Model: the derived law for galaxies and its fits to the SPARC rotation curves, and the law's field theory and kinetics.",
+  "license": "MIT",
+  "keywords": [
+    "dark-matter effect",
+    "MOND",
+    "rotation curves",
+    "SPARC",
+    "Cosmic Fabric Model"
+  ],
+  "language": "eng"
+}

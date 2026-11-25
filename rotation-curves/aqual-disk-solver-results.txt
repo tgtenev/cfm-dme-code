@@ -1,0 +1,16 @@
+The exact AQUAL solutions in the disks: the departure from the algebraic relation at the SPARC points of sample A
+========================================================================================================
+Sample A: 2696 points in 147 galaxies; predictions on the midplane at the data radii.
+Empirical function at a0 = 1.2e-10 m/s^2; mass-to-light ratios 0.5 (disk) and 0.7 (bulge).
+
+1. THE BARYONIC MODELS AND THE FULL SOLUTIONS
+   Newtonian V^2 of the solver's model over SPARC's V_bar^2 (Ups 0.5/0.7): median 0.987, 16-84 percent 0.936 to 1.021; points beyond 10 percent: 307 of 2696.
+   Full solution minus the algebraic relation, log10 g_full - log10[nu(y) g_bar] with SPARC's g_bar, by y bin:
+     y bin        N    AQUAL median [16, 84]           QUMOND median     points denser than 0.1: AQUAL median
+     [0.01,0.1)    946   -0.0111 [-0.0693, +0.0068]   -0.0119          -0.1704 (4 points)
+     [0.1,1)   1112   -0.0111 [-0.0502, +0.0014]   -0.0115          -0.0547 (194 points)
+     [1,4)    420   -0.0071 [-0.0182, +0.0015]   -0.0074          -0.0107 (269 points)
+     [4,1e+09)    207   -0.0014 [-0.0058, +0.0023]   -0.0013          -0.0014 (207 points)
+   Mean observed residual, clustered: from the algebraic relation -0.0037 +/- 0.0110; from the full AQUAL solution +0.0173 +/- 0.0107.
+
+[run time 1 s]

@@ -1,0 +1,315 @@
+THE GLOBULAR-CLUSTER TEST ON DYNAMICAL DATA: NEWTON AGAINST AMBIENT RESCALING
+============================================================================================================
+Catalog: data/baumgardt-gc/combined_table.txt (167 rows, 167 usable). Dispersions and N-body curves:
+data/baumgardt-gc/pages/ (fetched 2026-10-10). Delta lnL = lnL(Newton) - lnL(ambient rescaling);
+positive favors Newton, that is the scale-selective coupling. Ambient rescaling is the isotropic form of the
+ambient-stretch coupling of Paper II section 6.3.
+
+0. CONVENTIONS
+------------------------------------------------------------------------------------------------------------
+Eq. (1): y_sun = 1.123, nu_sun = 1.5679 at the Sun's 8.2 kpc.
+Baseline of high-acceleration clusters: N = 25, Y_base = 2.158, s_base = 0.085 dex.
+Median P over the baseline: 0.6851 at 49 pc, 0.6852 at 58.254 pc, 0.6853 at 90 pc, 0.6853 at 100 pc, 0.6853 at 200 pc. The baseline's inner clusters sit at P of 0.64 to 0.80 (49 pc), because
+their ambient field exceeds the solar one. Anchored on the baseline, the population value under rescaling
+is Y_LC = Y_base / median P = 3.150 at 49 pc, 3.150 at 58.254 pc, 3.149 at 90 pc, 3.149 at 100 pc, 3.149 at 200 pc.
+A second anchoring takes the stellar value 1.8 for both accounts, as Paper II's Figure 3(a) draws it: Newton
+flat at 1.8, rescaling 1.8 P.
+Remote set (internal and Galactic fields below a0): 27 clusters.
+Range of the boost P at each catchment length, for the 8 remote clusters with P(49 pc) > 3.5 (Laevens 3, Sagittarius II, Pal 14, Eridanus, Pal 3, Pal 4, AM 1, Crater)
+and across the 133 clusters with rich kinematics (max / min):
+    l_c  49 pc: remote 3.69 to 6.92; rich 0.64 to 1.89, a factor 2.95
+    l_c 58.254 pc: remote 3.91 to 7.62; rich 0.64 to 2.05, a factor 3.20
+    l_c  90 pc: remote 4.31 to 9.14; rich 0.64 to 2.40, a factor 3.74
+    l_c 100 pc: remote 4.38 to 9.44; rich 0.64 to 2.47, a factor 3.84
+    l_c 200 pc: remote 4.61 to 10.61; rich 0.64 to 3.96, a factor 6.17
+
+A. THE REMOTE CLUSTERS WITH TABULATED DISPERSIONS
+------------------------------------------------------------------------------------------------------------
+Each tabulated bin of the database is compared with sqrt(k) times the database's N-body curve at the bin
+radius. k is the mass the dispersion implies over the catalog mass, so the dispersion-based ratio is
+Y_kin = k Y_cat. Provenance: 'sc>' marks a catalog mass from star counts whose model dispersion lies well
+below the measured one, by the factor sqrt(k) that A1 gives; 'mix' a
+faint cluster whose model meets its dispersion within about 1.5 errors; 'rich' N_PM > 0 or N_RV >= 50;
+'lum' a mass estimated from the luminosity. The Y_kin interval is where lnL is within 0.5 of its peak.
+Single values are quoted at l_c = 58.254 pc, the floor of the window and the conservative end for rescaling;
+49, 90, 100 and 200 pc follow in A5.
+
+A1. Anchored on the baseline (Newton Y = 2.158; rescaling Y_LC P with Y_LC = 3.150), l_c = 58.254 pc.
+    Columns: P; catalog ratio and provenance; k and Y_kin with their intervals; the two predicted ratios;
+    Delta lnL with the dispersions as measured, then with a binary dispersion marginalized up to 0.5, 1.0 and
+    1.5 km/s; then Delta lnL at the stellar value 1.8 (1.8 and 1.8 P), as measured.
+    cluster            P  Ycat prov    N            k (68%)          Y_kin (68%)   Y_N Y_LC P |    meas   b<0.5   b<1.0   b<1.5 |  at 1.8
+    Crater          7.62  1.29 sc>    33 13.58 [ 5.53,30.76]  17.52 [ 7.14, 39.68]  2.16  24.01 |   -2.18   -1.88   -1.23   -0.68 |   -2.56
+    Pal_4           6.10  0.81 mix    23  1.58 [ 1.03, 2.38]   1.28 [ 0.84,  1.93]  2.16  19.21 |  +20.34  +20.38  +20.38  +20.38 |  +12.42
+    Pal_3           5.69  1.45 sc>    22  6.10 [ 4.14, 9.12]   8.84 [ 6.00, 13.22]  2.16  17.91 |   -4.69   -3.68   -1.03   +0.59 |   -7.67
+    Pal_14          4.57  1.70 mix    16  1.59 [ 1.02, 2.49]   2.70 [ 1.74,  4.24]  2.16  14.40 |   +5.68   +6.02   +6.16   +6.16 |   +2.19
+    Laevens_3       4.56  1.80 lum     9  2.62 [ 0.00,27.26]   4.71 [ 0.00, 49.07]  2.16  14.37 |   +0.06   +0.09   +0.11   +0.13 |   -0.02
+    Sagittarius_II  3.91  2.43 sc>    23  4.05 [ 2.78, 6.03]   9.83 [ 6.75, 14.66]  2.16  12.32 |   -7.65   -5.53   -1.60   -0.29 |   -9.76
+    Pyxis           2.91  2.41 mix    43  1.64 [ 1.27, 2.14]   3.94 [ 3.06,  5.16]  2.16   9.16 |   +1.25   +2.19   +3.27   +3.35 |   -2.81
+    Pal_15          2.71  3.62 few     5  1.31 [ 0.47, 3.51]   4.75 [ 1.70, 12.71]  2.16   8.54 |   -0.12   -0.03   +0.11   +0.22 |   -0.43
+    Pal_13          2.14  1.79 sc>    20  6.24 [ 4.08, 9.78]  11.18 [ 7.30, 17.51]  2.16   6.75 |   -6.91   -3.25   -0.70   -0.38 |   -6.75
+    NGC_7492        2.04  1.02 mix    25  1.26 [ 0.93, 1.75]   1.28 [ 0.95,  1.79]  2.16   6.42 |   +7.04   +7.07   +7.09   +7.08 |   +3.09
+    Arp_2           1.86  1.89 few    49  2.19 [ 1.67, 2.89]   4.14 [ 3.16,  5.46]  2.16   5.87 |   -1.46   -1.12   -0.22   +0.43 |   -3.07
+    Ter_8           1.76  2.19 rich   73  0.99 [ 0.81, 1.23]   2.17 [ 1.77,  2.68]  2.16   5.53 |   +5.06   +5.27   +5.55   +5.60 |   +0.60
+    Rup_106         1.65  1.38 rich   31  1.14 [ 0.80, 1.63]   1.57 [ 1.10,  2.26]  2.16   5.20 |   +3.93   +3.99   +4.07   +4.10 |   +1.14
+    Pal_1           1.64  2.15 few     7  0.57 [ 0.18, 1.59]   1.23 [ 0.40,  3.42]  2.16   5.15 |   +0.85   +0.86   +0.84   +0.84 |   +0.28
+    NGC_5053        1.62  2.16 rich   55  0.99 [ 0.79, 1.25]   2.13 [ 1.71,  2.69]  2.16   5.11 |   +3.95   +4.22   +4.49   +4.51 |   +0.33
+    Pal_5           1.61  1.66 sc>    39  5.38 [ 4.04, 7.21]   8.94 [ 6.71, 11.97]  2.16   5.09 |   -7.57   -5.12   -1.16   -0.40 |   -6.00
+    Ter_7           1.58  2.00 few    45  0.64 [ 0.50, 0.83]   1.27 [ 0.99,  1.66]  2.16   4.97 |   +6.71   +6.77   +6.78   +6.78 |   +2.30
+    NGC_2419        1.57  1.61 rich  183  1.00 [ 0.89, 1.12]   1.60 [ 1.43,  1.80]  2.16   4.96 |  +11.43  +11.49  +11.57  +11.59 |   +3.00
+    NGC_5466        1.53  1.35 rich   68  0.98 [ 0.80, 1.21]   1.33 [ 1.08,  1.64]  2.16   4.82 |   +8.39   +8.59   +8.72   +8.72 |   +2.62
+    Pal_12          1.48  1.25 mix    24  2.07 [ 1.10, 3.60]   2.59 [ 1.37,  4.50]  2.16   4.67 |   +0.48   +0.63   +0.80   +0.83 |   -0.15
+    IC_4499         1.43  2.21 rich   68  0.95 [ 0.78, 1.17]   2.10 [ 1.72,  2.58]  2.16   4.52 |   +3.56   +3.65   +3.87   +4.02 |   +0.10
+    NGC_6426        1.39  2.03 rich   33  0.96 [ 0.64, 1.44]   1.95 [ 1.30,  2.93]  2.16   4.39 |   +1.58   +1.61   +1.69   +1.76 |   +0.14
+    sum, all 22:             +49.73  +62.21  +79.57  +85.35 |  -11.00
+    sum without NGC 2419:    +38.30  +50.72  +68.00  +73.76 |  -14.00   (NGC 2419 is tested by its Jeans fit in B)
+    As measured, 14 clusters lean toward Newton (+68.89 in total): Pal 4, Pal 14, Laevens 3, Pyxis, NGC 7492, Ter 8, Rup 106, Pal 1, NGC 5053, Ter 7, NGC 5466, Pal 12, IC 4499, NGC 6426.
+    7 lean toward rescaling (-30.58 in total): Crater, Pal 3, Sagittarius II, Pal 15, Pal 13, Arp 2, Pal 5.
+    without the five 'sc>' clusters                                  +67.31 (binaries to 1.0 km/s: +73.72)
+    without Pal 4                                                    +17.97 (binaries to 1.0 km/s: +47.62)
+    without the 'sc>' five and Pal 4                                 +46.97 (binaries to 1.0 km/s: +53.34)
+    The five 'sc>' clusters: Crater -2.18 (binaries to 1.0 km/s -1.23), Pal 3 -4.69 (binaries to 1.0 km/s -1.03), Pal 5 -7.57 (binaries to 1.0 km/s -1.16), Pal 13 -6.91 (binaries to 1.0 km/s -0.70), Sagittarius II -7.65 (binaries to 1.0 km/s -1.60).
+    Their measured dispersions over the dispersions of their star-count models, sqrt(k): 2.01 to 3.69.
+
+A2. The binary dispersion each account needs (anchored values, l_c = 58.254 pc): the sb in km/s that maximizes
+    the likelihood at the predicted k, and the measured dispersion's position relative to the prediction.
+    Binaries can only raise a measured dispersion, so they reconcile an account only where the data lie above it.
+    Crater         Newton: data above, sb 1.84; rescaling: data below, sb 0.00
+    Pal_4          Newton: data below, sb 0.00; rescaling: data below, sb 0.00
+    Pal_3          Newton: data above, sb 1.48; rescaling: data below, sb 0.00
+    Pal_14         Newton: data above, sb 0.32; rescaling: data below, sb 0.00
+    Laevens_3      Newton: data above, sb 0.52; rescaling: data below, sb 0.00
+    Sagittarius_II Newton: data above, sb 1.24; rescaling: data below, sb 0.00
+    Pyxis          Newton: data above, sb 0.71; rescaling: data below, sb 0.00
+    Pal_15         Newton: data above, sb 0.97; rescaling: data below, sb 0.00
+    Pal_13         Newton: data above, sb 0.89; rescaling: data above, sb 0.62
+    NGC_7492       Newton: data below, sb 0.00; rescaling: data below, sb 0.00
+    Arp_2          Newton: data above, sb 1.16; rescaling: data below, sb 0.00
+    Ter_8          Newton: data above, sb 0.00; rescaling: data below, sb 0.00
+    Rup_106        Newton: data below, sb 0.00; rescaling: data below, sb 0.00
+    Pal_1          Newton: data below, sb 0.00; rescaling: data below, sb 0.00
+    NGC_5053       Newton: data below, sb 0.23; rescaling: data below, sb 0.00
+    Pal_5          Newton: data above, sb 1.07; rescaling: data above, sb 0.80
+    Ter_7          Newton: data below, sb 0.00; rescaling: data below, sb 0.00
+    NGC_2419       Newton: data below, sb 0.00; rescaling: data below, sb 0.00
+    NGC_5466       Newton: data below, sb 0.00; rescaling: data below, sb 0.00
+    Pal_12         Newton: data above, sb 0.36; rescaling: data below, sb 0.00
+    IC_4499        Newton: data below, sb 0.00; rescaling: data below, sb 0.00
+    NGC_6426       Newton: data below, sb 0.00; rescaling: data below, sb 0.00
+    'above' and 'below' compare the best-fitting k with the predicted one.
+
+A3. Population value fitted to the group (one common factor per account), without
+    NGC 2419, l_c = 58.254 pc. First with the scatter held at s_base, then with the scatter free.
+    as measured                        scatter s_base  Delta lnL   -3.63 (Newton Y 2.88; rescaling Y 1.35, so Y P runs 1.9 to 10.3; scatter 0.08 / 0.08 dex)
+    as measured                        scatter free    Delta lnL   -1.26 (Newton Y 2.99; rescaling Y 1.33, so Y P runs 1.9 to 10.2; scatter 0.28 / 0.28 dex)
+    binaries marginalized to 1.0 km/s  scatter s_base  Delta lnL   +0.91 (Newton Y 1.77; rescaling Y 0.92, so Y P runs 1.3 to 7.1; scatter 0.08 / 0.08 dex)
+    binaries marginalized to 1.0 km/s  scatter free    Delta lnL   -0.67 (Newton Y 1.86; rescaling Y 0.92, so Y P runs 1.3 to 7.0; scatter 0.16 / 0.20 dex)
+    Per cluster at the fitted values (scatter s_base, as measured):
+      Crater -1.57; Pal 4 +7.73; Pal 3 -3.57; Pal 14 +1.41; Laevens 3 -0.01; Sagittarius II -3.73; Pyxis -0.50
+      Pal 15 -0.09; Pal 13 -0.07; NGC 7492 -0.20; Arp 2 +0.52; Ter 8 -0.42; Rup 106 -0.71; Pal 1 -0.18
+      NGC 5053 -0.46; Pal 5 +3.16; Ter 7 -1.72; NGC 5466 -2.37; Pal 12 +0.05; IC 4499 -0.56; NGC 6426 -0.37
+
+A4. Each faint cluster's own catalog ratio as its stellar value, l_c = 58.254 pc: Newton
+    predicts k = 1 and rescaling k = P, with the quoted fractional error in dex as the width of the prior. The
+    catalog ratios of the 'sc>' clusters are star-count values. For Pal 4 and Pal 14 the anchor is partly circular,
+    since their models meet their dispersions. Six clusters, then Sagittarius II.
+    Crater          k 13.58, P 7.62: Delta lnL   -3.04 as measured,   -1.59 with binaries to 1.0 km/s
+    Pal_3           k  6.10, P 5.69: Delta lnL  -10.51 as measured,   -3.46 with binaries to 1.0 km/s
+    Pal_13          k  6.24, P 2.14: Delta lnL   -6.89 as measured,   -0.38 with binaries to 1.0 km/s
+    Pal_5           k  5.38, P 1.61: Delta lnL   -6.79 as measured,   -0.62 with binaries to 1.0 km/s
+    Pal_4           k  1.58, P 6.10: Delta lnL   +4.36 as measured,   +5.30 with binaries to 1.0 km/s
+    Pal_14          k  1.59, P 4.57: Delta lnL   +1.84 as measured,   +2.69 with binaries to 1.0 km/s
+    Sagittarius_II  k  4.05, P 3.91: Delta lnL   -6.08 as measured,   -1.64 with binaries to 1.0 km/s
+    The six together: -21.02 as measured, +1.94 with binaries to 1.0 km/s; with Sagittarius II: -27.10 and +0.30.
+
+A5. The sums at each catchment length, 49 and 90 pc and the window's 58.254, 100 and 200 pc (without
+    NGC 2419): anchored on the inner clusters, as measured and with binaries to 1.0 km/s; at the stellar value 1.8;
+    fitted with the scatter at s_base, as measured and with binaries to 1.0 km/s.
+    l_c  49 pc: anchored  +35.18 (binaries  +64.81); at 1.8  -15.47; fitted   -4.27 (binaries  +0.65; rescaling Y 1.38)
+    l_c 58.254 pc: anchored  +38.30 (binaries  +68.00); at 1.8  -14.00; fitted   -3.63 (binaries  +0.91; rescaling Y 1.35)
+    l_c  90 pc: anchored  +43.83 (binaries  +73.61); at 1.8  -11.20; fitted   -2.33 (binaries  +1.50; rescaling Y 1.31)
+    l_c 100 pc: anchored  +44.73 (binaries  +74.52); at 1.8  -10.72; fitted   -2.10 (binaries  +1.62; rescaling Y 1.30)
+    l_c 200 pc: anchored  +47.95 (binaries  +77.77); at 1.8   -8.95; fitted   -1.22 (binaries  +2.06; rescaling Y 1.27)
+    Window ranges (58.254 to 200 pc): anchored +38.3 to +47.9; binaries +68.0 to +77.8; at 1.8 -14.0 to -9.0;
+    fitted -3.6 to -1.2; fitted with binaries +0.9 to +2.1.
+    own field from the baryonic mass Y_LC L under rescaling instead of the catalog mass (58.254 pc, anchored):  +29.26
+    a flat-curve field A (230 km/s, R floored at 3 kpc) in place of the point mass (58.254 pc): baseline median P 0.767, Y_LC 2.81;
+        anchored  +10.61; fitted   -4.18 (rescaling Y 1.62)
+
+A6. The correlation with P (criterion F-II.4) within the remote clusters with dispersions (without NGC 2419):
+    log Y_kin = a + b log P, with the intrinsic scatter s and the intercept a fitted. b = 0 is Newton and b = 1
+    rescaling. Each cluster enters through its likelihood in k, smoothed by the scatter. Spearman's rho is over
+    the best-fitting Y_kin.
+    all, as measured                 l_c  49 pc: slope +0.675 (68% +0.350 to +1.000); Delta lnL (slope 0 against 1)  -1.39; rho +0.49
+    all, as measured                 l_c 58.254 pc: slope +0.650 (68% +0.325 to +0.950); Delta lnL (slope 0 against 1)  -1.19; rho +0.48
+    all, as measured                 l_c  90 pc: slope +0.575 (68% +0.300 to +0.875); Delta lnL (slope 0 against 1)  -0.87; rho +0.49
+    all, as measured                 l_c 100 pc: slope +0.575 (68% +0.300 to +0.850); Delta lnL (slope 0 against 1)  -0.82; rho +0.48
+    all, as measured                 l_c 200 pc: slope +0.550 (68% +0.275 to +0.800); Delta lnL (slope 0 against 1)  -0.60; rho +0.48
+    all, binaries to 1.0 km/s        l_c  49 pc: slope +0.600 (68% +0.275 to +0.950); Delta lnL (slope 0 against 1)  -0.78; rho +0.49
+    all, binaries to 1.0 km/s        l_c 58.254 pc: slope +0.575 (68% +0.250 to +0.900); Delta lnL (slope 0 against 1)  -0.67; rho +0.48
+    all, binaries to 1.0 km/s        l_c  90 pc: slope +0.525 (68% +0.250 to +0.825); Delta lnL (slope 0 against 1)  -0.41; rho +0.49
+    all, binaries to 1.0 km/s        l_c 100 pc: slope +0.525 (68% +0.250 to +0.825); Delta lnL (slope 0 against 1)  -0.36; rho +0.48
+    all, binaries to 1.0 km/s        l_c 200 pc: slope +0.525 (68% +0.250 to +0.800); Delta lnL (slope 0 against 1)  -0.16; rho +0.48
+    without the five 'sc>' clusters  l_c 58.254 pc: slope +0.150 (68% -0.125 to +0.450); Delta lnL (slope 0 against 1)  +3.67; rho +0.34
+    without the five 'sc>' clusters  l_c 100 pc: slope +0.150 (68% -0.125 to +0.400); Delta lnL (slope 0 against 1)  +4.33; rho +0.36
+    Unresolved binaries add a dispersion of fixed size, so they raise k most in the clusters with the smallest
+    intrinsic dispersions, the low-mass remote clusters at the largest P. They can therefore make a positive slope.
+
+B. NGC 2419: THE NORMALIZATION OF ITS NEWTONIAN-SHAPED PROFILE
+------------------------------------------------------------------------------------------------------------
+Under ambient rescaling the whole cluster is rescaled by one factor P, one P per cluster, so its profile is
+Newtonian-shaped with dynamical ratio Y_LC P. The shape cannot separate the two accounts and only the
+normalization can. The Newtonian Jeans likelihood in M/L is computed from the multi-Gaussian
+photometry of Ibata et al. 2011 Table 2, Osipkov-Merritt anisotropy from 2 to 500 pc and isotropy, the stability
+priors, the 158-star window sample with a uniform contaminant up to 10 percent) and profiled over the anisotropy.
+Photometric luminosity 4.6682e+05 Lsun. Window sample: 158 stars.
+Newtonian Jeans fit: lnL -432.114 at M/L 2.150, r_a 18.9 pc;
+68 percent interval of the dynamical ratio 1.83 to 2.60.
+    l_c  49 pc: P 1.39; anchored: Newton 2.16, rescaling 4.39, Delta lnL  +3.42; at the stellar value 1.8: 1.8 against 2.51,  -0.14;
+               rescaling needs a stellar ratio of 1.54 (68 percent 1.31 to 1.87).
+    l_c 58.254 pc: P 1.57; anchored: Newton 2.16, rescaling 4.96, Delta lnL  +4.70; at the stellar value 1.8: 1.8 against 2.83,  +0.21;
+               rescaling needs a stellar ratio of 1.37 (68 percent 1.16 to 1.65).
+    l_c  90 pc: P 2.18; anchored: Newton 2.16, rescaling 6.88, Delta lnL  +9.04; at the stellar value 1.8: 1.8 against 3.93,  +2.17;
+               rescaling needs a stellar ratio of 0.98 (68 percent 0.84 to 1.19).
+    l_c 100 pc: P 2.37; anchored: Newton 2.16, rescaling 7.46, Delta lnL +10.34; at the stellar value 1.8: 1.8 against 4.26,  +2.89;
+               rescaling needs a stellar ratio of 0.91 (68 percent 0.77 to 1.10).
+    l_c 200 pc: P 3.96; anchored: Newton 2.16, rescaling 12.46, Delta lnL +20.64; at the stellar value 1.8: 1.8 against 7.13,  +9.33;
+               rescaling needs a stellar ratio of 0.54 (68 percent 0.46 to 0.66).
+Globular clusters with well-measured masses show ratios of about 1.4 to 2.5 (Baumgardt, Sollima and Hilker 2020).
+Those are Newtonian-dynamical ratios, so under rescaling they are not an independent stellar range. The needed
+stellar ratio is therefore compared with the stellar value 1.8 and with the inner anchor of rescaling,
+Y_LC = 3.15. At 49 pc the needed ratio is consistent with 1.8 within its 68 percent range. Inside the window,
+58.254 to 200 pc, it lies below both 1.8 and the inner anchor.
+Two conditions qualify this. Rescaling of the whole cluster by one factor is assumed. Were only a sphere about
+the centre rescaled, the outskirts beyond 90 to 100 pc, about 8 percent of the light and the outer stars to 194 pc,
+would lie outside the catchment and be unscreened. And the inner anchor of 3.15 is the
+calibration of rescaling on the inner clusters, so it inherits the radial systematic of Part C.
+
+C. THE CLUSTERS WITH RICH KINEMATICS: THE CORRELATION OF DYNAMICAL MASSES WITH P (CRITERION F-II.4)
+------------------------------------------------------------------------------------------------------------
+Sample: N_PM > 0 or N_RV >= 50 ('kinematically rich'), with a nonzero quoted error (luminosity-based masses
+carry none). For these clusters the database's model reproduces the measured dispersions, so the catalog ratio
+is a dynamical one. Each error is raised to the sampling floor sqrt(2/N), N = N_RV + 2 N_PM. Rescaling predicts
+log Y = log Y_pop + 1.0 log P, Newton a slope of 0.
+NGC 2419 enters with its Jeans ratio from B (2.15, 68 percent 1.83 to 2.60), since the database's model misses
+its profile shape and its catalog ratio is 1.61. 'catalog NGC 2419' rows keep the catalog ratio,
+and 'without NGC 2419' rows leave it out.
+Velocities and proper motions per cluster in the sample: median 694; 18 clusters have fewer than 100.
+
+C1. The slope of log Y on log P, the population value and the scatter fitted (Delta lnL: slope 0 against 1).
+  all            l_c  49 pc: N 133, P 0.64 to 1.89; Spearman -0.19; slope -0.22 (68% -0.30 to -0.13);
+                              Delta lnL   +57.5 (Y 1.90, s 0.104; Y 2.28, s 0.182); with the scatter held at s_base  +129.5
+  all            l_c 58.254 pc: N 133, P 0.64 to 2.05; Spearman -0.18; slope -0.20 (68% -0.28 to -0.12);
+                              Delta lnL   +60.2 (Y 1.90, s 0.104; Y 2.26, s 0.186); with the scatter held at s_base  +139.3
+  all            l_c  90 pc: N 133, P 0.64 to 2.40; Spearman -0.18; slope -0.17 (68% -0.25 to -0.10);
+                              Delta lnL   +65.8 (Y 1.90, s 0.104; Y 2.23, s 0.196); with the scatter held at s_base  +160.5
+  all            l_c 100 pc: N 133, P 0.64 to 2.47; Spearman -0.18; slope -0.17 (68% -0.24 to -0.10);
+                              Delta lnL   +66.9 (Y 1.90, s 0.104; Y 2.22, s 0.198); with the scatter held at s_base  +164.8
+  all            l_c 200 pc: N 133, P 0.64 to 3.96; Spearman -0.17; slope -0.14 (68% -0.21 to -0.08);
+                              Delta lnL   +72.3 (Y 1.90, s 0.104; Y 2.20, s 0.207); with the scatter held at s_base  +186.6
+  R_GC > 8 kpc   l_c  49 pc: N  35, P 0.97 to 1.89; Spearman +0.08; slope -0.01 (68% -0.20 to +0.18);
+                              Delta lnL   +10.3 (Y 1.74, s 0.073; Y 1.41, s 0.106); with the scatter held at s_base   +11.1
+  R_GC > 8 kpc   l_c 58.254 pc: N  35, P 0.98 to 2.05; Spearman +0.13; slope +0.01 (68% -0.17 to +0.19);
+                              Delta lnL   +10.9 (Y 1.74, s 0.073; Y 1.37, s 0.108); with the scatter held at s_base   +12.0
+  R_GC > 8 kpc   l_c  90 pc: N  35, P 1.00 to 2.40; Spearman +0.15; slope +0.04 (68% -0.11 to +0.20);
+                              Delta lnL   +13.1 (Y 1.74, s 0.073; Y 1.29, s 0.116); with the scatter held at s_base   +15.4
+  R_GC > 8 kpc   l_c 100 pc: N  35, P 1.00 to 2.47; Spearman +0.15; slope +0.05 (68% -0.10 to +0.20);
+                              Delta lnL   +13.7 (Y 1.74, s 0.073; Y 1.28, s 0.119); with the scatter held at s_base   +16.4
+  R_GC > 8 kpc   l_c 200 pc: N  35, P 1.01 to 3.96; Spearman +0.15; slope +0.07 (68% -0.05 to +0.19);
+                              Delta lnL   +17.7 (Y 1.74, s 0.073; Y 1.22, s 0.135); with the scatter held at s_base   +23.7
+  R_GC > 15 kpc  l_c  49 pc: N  16, P 1.03 to 1.89; Spearman -0.16; slope -0.34 (68% -0.60 to -0.07);
+                              Delta lnL    +6.5 (Y 1.75, s 0.046; Y 1.22, s 0.093); with the scatter held at s_base    +4.9
+  R_GC > 15 kpc  l_c 58.254 pc: N  16, P 1.11 to 2.05; Spearman -0.06; slope -0.28 (68% -0.56 to +0.01);
+                              Delta lnL    +5.9 (Y 1.75, s 0.046; Y 1.16, s 0.087); with the scatter held at s_base    +4.2
+  R_GC > 15 kpc  l_c  90 pc: N  16, P 1.32 to 2.40; Spearman +0.09; slope -0.01 (68% -0.29 to +0.27);
+                              Delta lnL    +5.2 (Y 1.75, s 0.046; Y 1.06, s 0.077); with the scatter held at s_base    +3.5
+  R_GC > 15 kpc  l_c 100 pc: N  16, P 1.37 to 2.47; Spearman +0.10; slope +0.04 (68% -0.23 to +0.31);
+                              Delta lnL    +5.3 (Y 1.75, s 0.046; Y 1.05, s 0.076); with the scatter held at s_base    +3.6
+  R_GC > 15 kpc  l_c 200 pc: N  16, P 1.47 to 3.96; Spearman +0.15; slope +0.16 (68% -0.03 to +0.33);
+                              Delta lnL    +7.9 (Y 1.75, s 0.046; Y 0.97, s 0.095); with the scatter held at s_base    +6.3
+The boost tracks galactocentric radius: Spearman rank correlation of log P (58.254 pc) with log R_GC over the sample
++0.998, and log P departs from a cubic in log R_GC by 0.025 dex rms over a range of 0.51 dex.
+
+C2. Sensitivity to a radial trend of the stellar ratio, to population covariates and to the definition of rich
+    kinematics. Delta lnL (slope 0 against 1), population value and scatter fitted, at the window's 58.254, 100 and
+    200 pc. A free power law is a covariate log R_GC; the cubic adds (log R_GC)^2 and (log R_GC)^3; the bounded
+    power laws hold |c| <= 0.1 and <= 0.2 in Y_* ~ R_GC^c, a factor of 1.6 and 2.7 across the sample's 0.7 to
+    96 kpc. 'MF' is the catalog's mass-function slope (column 29). 'Table precision' defines rich kinematics as
+    a mass precision of 0.20 or better from the database's own dispersion table, all bins combined.
+                                                   all clusters             R_GC > 8 kpc            
+    run                                            58.254 pc  100 pc  200 pc  58.254 pc  100 pc  200 pc
+    none                                             +60.2   +66.9   +72.3    +10.9   +13.7   +17.7
+    free power law in R_GC                           +13.5   +13.5   +14.5     +6.8    +4.2    +1.3
+    cubic in log R_GC                                 +5.9    +4.1    +2.4     +3.9    +1.8    +0.6
+    power law bounded, factor 1.6 (|c| <= 0.1)       +42.9   +49.5   +55.1     +8.7   +10.5   +14.1
+    power law bounded, factor 2.7 (|c| <= 0.2)       +25.3   +30.7   +35.9     +7.3    +7.5   +10.2
+    MF slope                                         +63.9   +70.0   +75.0    +12.7   +15.3   +18.8
+    MF slope, log mass and lg Trh                    +61.3   +67.5   +72.2    +12.7   +17.4   +22.2
+    log mass and lg Trh                              +60.6   +66.9   +71.6    +14.8   +19.2   +23.4
+    table precision <= 0.20 (110 clusters)           +58.6   +66.1   +72.1    +10.8   +13.9   +17.9
+    without NGC 2419                                 +59.3   +64.8   +68.0    +11.0   +13.2   +15.0
+    catalog NGC 2419                                 +61.1   +68.2   +74.1    +11.7   +15.5   +20.4
+    flat-curve field A in place of the point mass, 58.254 pc: +40.2 (slope -0.29), beyond 8 kpc +7.2
+    With the free power law (58.254 pc) the fitted trend of the stellar ratio is R_GC^-0.06 under Newton and R_GC^-0.34
+    under rescaling. Rescaling needs its stellar ratio to fall by a factor 5.4 across the sample's 0.7 to 96 kpc.
+
+C4. Binned medians of the dynamical ratio against P (58.254 pc), all 133 clusters with rich kinematics:
+    P in [0.0, 0.7): N  47, median 1.93, quartiles 1.53 to 2.54
+    P in [0.7, 0.8): N  31, median 1.97, quartiles 1.81 to 2.34
+    P in [0.8, 0.9): N  10, median 1.86, quartiles 1.75 to 2.07
+    P in [0.9, 1.1): N  21, median 1.61, quartiles 1.45 to 1.98
+    P in [1.1, 1.5): N  14, median 1.92, quartiles 1.68 to 2.04
+    P in [1.5, 2.5): N  10, median 1.80, quartiles 1.42 to 2.16
+Systematics: the catalog snapshot has no metallicity column, and P tracks galactocentric radius, so the slope
+inherits any radial trend of the stellar-population ratio. C2 shows how much of the preference a radial trend
+of a given size absorbs. The rise that rescaling predicts across the sample is a factor 3.2 at 58.254 pc and 6.2 at 200 pc.
+
+C5. The outer-halo clusters (R_GC > 15 kpc) with rich kinematics outside the remote set, one by one,
+    anchored as in A1, errors raised to the floor, Delta lnL from the log-normal likelihood.
+    Pal_2      R_GC  34.2  M/L 1.26 +- 0.23  P 2.05: Newton 2.16, rescaling 6.47; Delta lnL +16.76 (100 pc +21.21, 200 pc +23.91)
+    NGC_5694   R_GC  29.2  M/L 1.79 +- 0.26  P 1.85: Newton 2.16, rescaling 5.83; Delta lnL +11.54 (100 pc +15.10, 200 pc +17.25)
+    NGC_5634   R_GC  21.8  M/L 2.37 +- 0.48  P 1.65: Newton 2.16, rescaling 5.20; Delta lnL  +3.86 (100 pc  +4.94, 200 pc  +5.50)
+    NGC_1904   R_GC  19.1  M/L 1.81 +- 0.10  P 1.59: Newton 2.16, rescaling 5.00; Delta lnL +12.26 (100 pc +13.86, 200 pc +14.60)
+    NGC_1261   R_GC  18.3  M/L 1.54 +- 0.06  P 1.56: Newton 2.16, rescaling 4.90; Delta lnL +15.57 (100 pc +17.22, 200 pc +17.96)
+    NGC_2298   R_GC  15.1  M/L 1.70 +- 0.11  P 1.44: Newton 2.16, rescaling 4.55; Delta lnL +10.84 (100 pc +11.11, 200 pc +11.22)
+    NGC_1851   R_GC  16.7  M/L 1.48 +- 0.06  P 1.42: Newton 2.16, rescaling 4.46; Delta lnL +13.63 (100 pc +15.62, 200 pc +16.56)
+    NGC_5824   R_GC  25.4  M/L 1.99 +- 0.17  P 1.41: Newton 2.16, rescaling 4.45; Delta lnL  +7.09 (100 pc +11.65, 200 pc +15.41)
+    NGC_5024   R_GC  19.0  M/L 1.95 +- 0.08  P 1.40: Newton 2.16, rescaling 4.41; Delta lnL  +8.29 (100 pc +11.16, 200 pc +12.83)
+    NGC_6715   R_GC  18.5  M/L 1.87 +- 0.11  P 1.11: Newton 2.16, rescaling 3.51; Delta lnL  +4.56 (100 pc  +8.22, 200 pc +11.56)
+    sum over 10: +104.4 at 58.254 pc, +130.1 at 100 pc, +146.8 at 200 pc (49 pc: +94.1).
+    Not counted (fewer than 50 velocities and no proper motions, or a luminosity mass): NGC_7006 (N_RV 41, M/L 1.54 +- 0.41), NGC_6229 (N_RV 20, M/L 1.67 +- 0.55), NGC_4147 (N_RV 41, M/L 1.89 +- 0.46), RLGC_1 (N_RV 0, M/L 1.80 +- 0.00).
+
+D. CLUSTERS NOT COUNTED
+------------------------------------------------------------------------------------------------------------
+Remote clusters with no tabulated dispersion (their catalog ratios rest on star counts or the luminosity):
+    IC_1257         N_RV   5, catalog M/L 1.80 +- 0.00, P(58.254 pc) 1.75
+    AM_4            N_RV  14, catalog M/L 3.59 +- 0.74, P(58.254 pc) 2.15
+    Whiting_1       N_RV   3, catalog M/L 0.34 +- 0.07, P(58.254 pc) 2.91
+    Eridanus        N_RV  14, catalog M/L 0.74 +- 0.15, P(58.254 pc) 6.02
+    AM_1            N_RV   2, catalog M/L 0.83 +- 0.17, P(58.254 pc) 6.17
+Seven remote clusters of the lowest fields, on their dispersions (58.254 pc: anchored, fitted, at 1.8):
+    AM_1            no tabulated dispersion: not evidence either way
+    Eridanus        no tabulated dispersion: not evidence either way
+    Pal_3           Y_kin 8.84 (6.00 to 13.22) against Newton 2.16 and rescaling 17.91: anchored -4.69, fitted -3.57, at 1.8 -7.67
+    Pal_4           Y_kin 1.28 (0.84 to 1.93) against Newton 2.16 and rescaling 19.21: anchored +20.34, fitted +7.73, at 1.8 +12.42
+    Crater          Y_kin 17.52 (7.14 to 39.68) against Newton 2.16 and rescaling 24.01: anchored -2.18, fitted -1.57, at 1.8 -2.56
+    Pal_14          Y_kin 2.70 (1.74 to 4.24) against Newton 2.16 and rescaling 14.40: anchored +5.68, fitted +1.41, at 1.8 +2.19
+    Sagittarius_II  Y_kin 9.83 (6.75 to 14.66) against Newton 2.16 and rescaling 12.32: anchored -7.65, fitted -3.73, at 1.8 -9.76
+
+E. SUMMARY (positive favors Newton, the scale-selective coupling; single values at 58.254 pc, ranges over 58.254 to 200 pc)
+------------------------------------------------------------------------------------------------------------
+Remote clusters with dispersions, without NGC 2419 (21 clusters, Sagittarius II included):
+    anchored (Y_N 2.16, Y_LC 3.15): +38.3 (window +38.3 to +47.9); binaries to 1.0 km/s +68.0 (+68.0 to +77.8)
+    at 1.8: -14.0 (-14.0 to -9.0); fitted, scatter s_base: -3.6 (-3.6 to -1.2); fitted with binaries: +0.9 (+0.9 to +2.1)
+    49 pc: anchored +35.2, at 1.8 -15.5, fitted -4.3, fitted with binaries +0.7
+    fitted with the scatter free: -1.3; with binaries -0.7
+    own star-count ratios, the six of A4: -21.0 (binaries +1.9); with Sagittarius II: -27.1 (+0.3)
+    within-sample slope of Y_kin on P: +0.65 (+0.33 to +0.95) at 58.254 pc; +0.57 at 100 pc, +0.55 at 200 pc; with binaries to 1.0 km/s +0.57;
+    without the five 'sc>' clusters +0.15.
+NGC 2419 (Jeans normalization): anchored +4.7 / +10.3 / +20.6 at 58.254 / 100 / 200 pc; at 1.8 +0.2 / +2.9 / +9.3;
+    rescaling needs a stellar ratio of 0.54 to 1.37 across the window.
+Rich kinematics, 133 clusters: slope -0.20 (-0.28 to -0.12) at 58.254 pc against +1; Delta lnL +60.2 (+60.2 to +72.3 over
+    the window); beyond 8 kpc +10.9 (+10.9 to +17.7).
+    radial condition, all / beyond 8 kpc at 58.254 pc: free power law +13.5 / +6.8; cubic +5.9 / +3.9;
+    bounded to a factor 1.6 +42.9 / +8.7; to a factor 2.7 +25.3 / +7.3; MF slope +63.9; MF, mass, Trh +61.3;
+    table-precision definition (110 clusters) +58.6.

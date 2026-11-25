@@ -1,0 +1,85 @@
+THE KINETIC WINDOW, RELAXATION, RESIDENCE SCREEN, RENEWAL DOMAINS AND STABILITY MARGIN
+================================================================================================================
+free volume delta = 0.19 at H0 = 67.4 km/s/Mpc, Omega_Lambda = 0.6847
+c H_dS = 5.4185e-10 m/s^2; 3 H_dS = 1.7111e-10 /yr; c = 0.306601 pc/yr; tau_fast = 1000 yr; l_c ceilings 3000 and 200 pc
+xi* = 0.65728 (exp(xi) - 1 = sqrt(2) xi)
+
+S1. THE LAW'S CONSTANTS
+----------------------------------------------------------------------------------------------------------------
+[S1.1] lambda = ln(1 + delta): 0.1740
+[S1.2] divisor D = 1/lambda against c H_dS (kappa = 1): 5.749 || Paper II, section 5.2 and Table 2: 5.75; agrees at the paper's rounding: yes
+[S1.3] dilute slope s = lambda/delta: 0.9155 || Paper I, section 3.5; Paper II, section 5.1: 0.92; agrees at the paper's rounding: yes
+[S1.4] onset of the hardening, xi*/lambda: 3.778 || Paper I, section 3.5; Paper II, section 5.1: 3.8; agrees at the paper's rounding: yes
+[S1.5] avalanche amplification A = 2/(Z1 delta^2), Z1 = 1: 55.40 || Paper II, section 2: 55; agrees at the paper's rounding: yes
+
+S2. THE KINETIC WINDOW
+----------------------------------------------------------------------------------------------------------------
+[S2.1] memory time, ceiling at l_c = 3 kpc (yr): 9784.7 || Paper II, section 4.1: 9,800; agrees at the paper's rounding: yes
+[S2.2] set-point strain, ceiling 3 H_dS tau_c(3 kpc): 1.674e-06 || Paper II, section 4.1: 1.7e-6; agrees at the paper's rounding: yes
+[S2.3] equilibration time, slow edge tau_c(3 kpc)/delta (yr): 5.15e+04 || Paper II, section 4.1 and Table 2: 5.2e4; agrees at the paper's rounding: no
+       the paper's 5.2e4 yr is the rounded 9,800 yr over 0.19; at full precision the edge is 5.15e4 yr
+[S2.4] memory time, floor delta tau_fast (yr): 190.0 || Paper II, section 4.1: 190; agrees at the paper's rounding: yes
+[S2.5] catchment length, floor c delta tau_fast (pc): 58.25 || Paper II, section 4.1: 58; agrees at the paper's rounding: yes
+[S2.6] set-point strain, floor 3 H_dS delta tau_fast: 3.251e-08 || Paper II, section 4.1: 3.3e-8; agrees at the paper's rounding: yes
+[S2.7] memory time, tightened ceiling at 200 pc (yr): 652.3 || Paper I, section 3.4; Paper II, section 4.1: 650; agrees at the paper's rounding: yes
+[S2.8] set-point strain, tightened ceiling: 1.116e-07 || Paper II, section 4.1: 1.1e-7; agrees at the paper's rounding: yes
+[S2.9] equilibration time, tightened slow edge (yr): 3433 || Paper II, section 4.1: 3.4e3; agrees at the paper's rounding: yes
+[S2.10] renewal events per domain in one memory time, top of the tightened window: 3.433 || Paper I, section 3.4; Paper II, section 4.1 (1 to 3.4): 3.4; agrees at the paper's rounding: yes
+[S2.11] interval between renewal events of a domain, 1/Gamma = b/(3 H_dS), in the tightened window: 190 to 652 yr || Paper II, section 4.1: every 10^2 to 10^3 yr
+
+S3. THE RELAXATION TIME AND THE RESIDENCE SCREEN
+----------------------------------------------------------------------------------------------------------------
+[S3.1] tau_rel/tau_eq at the crossover X = 1: 0.7704 || Paper II, section 4.1: 0.77; agrees at the paper's rounding: yes
+[S3.2] tau_rel/tau_eq at X = 0.1: 5.7282 || Paper II, section 4.2, for X >= 0.1: at most 6; within the bound: yes
+[S3.3] tau_rel at X = 1 at the slow edge (yr): 3.967e+04 || Paper II, section 4.1: 4.0e4; agrees at the paper's rounding: yes
+[S3.4] tau_rel at X = 0.1 at the slow edge (yr): 2.95e+05 || Paper II, section 4.1, 6.5 and Table 4: 3.0e5; agrees at the paper's rounding: no
+       the paper's 3.0e5 yr follows from the rounded slow edge of S2.3; at full precision it is 2.95e5 yr
+[S3.5] tau_rel at X = 1 at the tightened slow edge (yr): 2645 || Paper II, section 4.1: 2.6e3; agrees at the paper's rounding: yes
+[S3.6] tau_rel at X = 0.1 at the tightened slow edge (yr): 1.967e+04 || Paper II, section 4.1: 2.0e4; agrees at the paper's rounding: yes
+[S3.7] tau_rel at X = 1 at the fast edge (yr): 770.4 || Paper II, section 4.1 (near): 770; agrees at the paper's rounding: yes
+[S3.8] galactic dynamical times of 1e8 and 1e9 yr over tau_rel at X = 0.1 at the slow edge: 339 and 3390 || Paper II, section 6.5: three orders of magnitude
+[S3.9] tau_rel/tau_eq at X = 2 (the Galaxy's field near the Sun): 0.4716
+[S3.10] tau_rel at X = 2 at the fast edge (yr): 471.6 || Paper II, section 4.2: 470; agrees at the paper's rounding: yes
+[S3.11] residence of a wide binary 1e4 AU across at 369.8 km/s (yr): 128.2 || Paper II, section 4.2: 130; agrees at the paper's rounding: yes
+[S3.12] the binary's margin, tau_rel(X = 2) over its residence: 3.679 || Paper II, section 4.2: 3.7; agrees at the paper's rounding: yes
+[S3.13] the binary's pattern at most 1 - exp(-1/margin): 0.2380 || Paper II, section 4.2 (24 percent): 0.24; agrees at the paper's rounding: yes
+[S3.14] the Sun's crossover shell, radius sqrt(G M_sun / a0) at a0 = 0.973e-10 m/s^2 (AU): 7807 || Paper II, section 4.2 (about): 7,800; agrees at the paper's rounding: yes
+       that is 0.0378 pc (Paper I, section 3.7: near 0.038 pc)
+[S3.15] the shell's residence 2 r / (370 km/s) (yr): 200.0 || Paper II, section 4.2 (roughly): 200; agrees at the paper's rounding: yes
+[S3.16] the shell's pattern at most 1 - exp(-t_res/tau_rel) at the fast edge, from X = 1 (the Sun's own field at the shell) to X = 3 (with the Galaxy's X of about 2): 0.2287 to 0.4215 || Paper II, section 4.2: 23 to 42 percent
+       at the scale 0.9426e-10 m/s^2 of the fiducial free volume: radius 7932 AU, residence 203.2 yr, 0.2319 to 0.4266
+
+S4. THE NESTING OF THE RESIDENCE SCREEN INSIDE THE SCREEN BELOW THE CATCHMENT LENGTH
+----------------------------------------------------------------------------------------------------------------
+[S4.1] nesting bound 6 v/(c delta) at 370 km/s: 0.0390 || Paper II, section 4.2 (3.9 percent): 0.039; agrees at the paper's rounding: yes
+[S4.2] nesting bound 6 v/(c delta) at 600 km/s: 0.0632 || Paper II, section 4.2 (6.3 percent): 0.063; agrees at the paper's rounding: yes
+[S4.3] the bound at 370 km/s in the tightened window, at 200 pc (pc): 7.79 || Paper II, section 4.2: 7.8; agrees at the paper's rounding: yes
+[S4.4] the bound at 600 km/s in the tightened window, at 200 pc (pc): 12.64 || Paper II, section 4.2: 12.6; agrees at the paper's rounding: yes
+[S4.5] speed below which the nesting holds at drives above 0.1, c delta/6 (km/s): 9493 || Paper II, section 4.2: 9,500; agrees at the paper's rounding: yes
+[S4.6] drive down to which the nesting holds at 600 km/s: 0.00577 || Paper II, section 4.2: 0.006; agrees at the paper's rounding: yes
+[S4.7] radius below which the residence 2R/v at 600 km/s is under the fast edge, v tau_fast / 2 (pc): 0.307 || Paper II, caption of Figure 2 (about): 0.3; agrees at the paper's rounding: yes
+
+S5. THE RENEWAL DOMAINS
+----------------------------------------------------------------------------------------------------------------
+[S5.1] avalanche cutoff 2 A^2 at the amplification of S1.5: 6138.7
+       Appendix C's 6,050 to 6,500 is 2 A^2 at A = 55 and at the rod's A = 57: 6050 and 6498
+[S5.2] l_c / a = (2 A^2)^(1/3): 18.310
+[S5.3] largest domain width over the catchment length, (2 A^2)^(-1/3): 0.0546 || Paper II, Appendix C: 0.055; agrees at the paper's rounding: yes
+[S5.4] domain width at the catchment floor (pc): 3.18 || Paper II, Appendix C: 3.2; agrees at the paper's rounding: yes
+[S5.5] domain width at 200 pc (pc): 10.92 || Paper II, Appendix C: 11; agrees at the paper's rounding: yes
+
+S6. THE STABILITY MARGIN OF THE RENEWAL'S NOISE
+----------------------------------------------------------------------------------------------------------------
+[S6.1] margin n Z at n = 1 (Z = 2/delta^2), misfit energies per domain: 55.40 || Paper II, section 5.3: 55; agrees at the paper's rounding: yes
+[S6.2] margin n Z at the tightened window's top: 190.21 || Paper II, section 5.3: 190; agrees at the paper's rounding: yes
+[S6.3] factor by which it passes the ordering point of 9.7494, n = 1: 5.683 || Paper II, section 5.3 and Table 1: 5.7; agrees at the paper's rounding: yes
+[S6.4] the same at the tightened window's top: 19.510 || Paper II, section 5.3: 19.5; agrees at the paper's rounding: yes
+[S6.5] factor at n = 1 against the top of the band of the ordering point, 15.50: 3.574 || Paper II, section 5.3 and Table 1: 3.6; agrees at the paper's rounding: yes
+
+S7. THE TILT TOLERANCE AND THE BOOSTS OF 28 AND 90
+----------------------------------------------------------------------------------------------------------------
+[S7.1] tilt that trims a boost of 28 by 10 percent (degrees): 0.683 || Paper II, section 7.3 (0.2 to 0.7): 0.7; agrees at the paper's rounding: yes
+[S7.2] tilt that trims a boost of 90 by 10 percent (degrees): 0.212 || Paper II, section 7.3 (0.2 to 0.7): 0.2; agrees at the paper's rounding: yes
+[S7.3] radius of a boost of 28 about an isolated galaxy of 10^10.57 solar masses, a0 = 0.9426e-10 (kpc): 195.3 || Paper II, section 3.1 and 7.3 (about): 200; agrees at the paper's rounding: yes
+[S7.4] radius of a boost of 90 about the same galaxy (kpc): 635.1 || Paper II, section 7.3 (about): 600; agrees at the paper's rounding: yes
+       the paper's 600 kpc holds at one significant figure; at two the radius is 640 kpc

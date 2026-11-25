@@ -1,0 +1,69 @@
+A MOND-TYPE LAW AGAINST THE CLUSTER CORES, THE GROUPS AND THE WEB
+==============================================================================================================
+data folder: data
+The law: MOND's simple interpolation function, nu(y) = 1/2 + sqrt(1/4 + 1/y) with y = g_N/a0, at
+a0 = 1.2e-10 m/s^2 (mond_law.py). In the web, one prescription lets the field of structure act as an external field.
+
+0. CHECKS OF THE LAW
+--------------------------------------------------------------------------------------------------------------
+  the inverse of the simple relation: largest relative error 4.4e-16
+  the deep and Newtonian limits: g/sqrt(g_N a0) at g_N = 1e-16 m/s^2 is 1.00046; g/g_N at g_N = 1e-7 m/s^2 is 1.00120
+
+1. THE CORES OF SEVEN RELAXED CHANDRA CLUSTERS (Vikhlinin et al. 2006)
+--------------------------------------------------------------------------------------------------------------
+The paper's gas models and average temperature profile, the stars of Giodini et al. (2009) (cluster_models.py);
+the law's field of the gas and the stars over the hydrostatic field, g/g_HSE, at x = r/r500, median of the seven clusters.
+  x = r/r500                                              0.05    0.10    0.20    0.30    0.50    0.75    1.00
+  MOND, algebraic                                        0.324   0.253   0.264   0.309   0.406   0.480   0.587
+  MOND gives 0.25, 0.31 and 0.59 of the hydrostatic field at 0.1, 0.3 and 1 r500.
+  Per cluster, MOND at 0.1, 0.3 and 1 r500: A133 0.309, 0.336, 0.622; A383 0.266, 0.323, 0.684; A478 0.242, 0.281, 0.581; A907 0.253, 0.309, 0.642; A1413 0.258, 0.292, 0.570; A1795 0.241, 0.334, 0.554; A2029 0.208, 0.297, 0.587
+
+2. THE GAMA GROUPS STACKED IN THE KiDS-1000 SHEAR
+--------------------------------------------------------------------------------------------------------------
+Each bin's baryons (group_models.py): the bin's stars and BCG at 2 Msun/Lsun in the halo fitted to its profile,
+and the hot gas of Lovisari et al. (2015) at the fitted M500c, truncated at r200c. They are boosted by the law and
+projected to the excess surface density. Model over data from the amplitude fit with the jackknife covariance
+(Hartlap-corrected) in each band, +- its error, and the chi2 of the model as computed for the band's radial bins.
+The gas fraction is scanned from half to twice the relation.
+
+  bin  M500c (1e13 Msun)  z      in range | 0.1-0.3 Mpc                 | 0.3-1 Mpc                   | 1-3 Mpc                    
+  MOND, algebraic
+   L1     0.76           0.117  no      | 0.83 +- 0.15 (  1.9/3)      | 1.33 +- 0.23 (  4.1/4)      | 1.60 +- 0.44 (  4.9/3)     
+   L2     2.21           0.178  yes     | 0.76 +- 0.14 (  1.9/3)      | 1.04 +- 0.17 (  1.5/4)      | 1.40 +- 0.26 (  4.7/3)     
+   L3     2.87           0.215  yes     | 0.60 +- 0.15 (  4.3/3)      | 0.87 +- 0.14 (  1.2/4)      | 1.00 +- 0.18 (  0.8/3)     
+   L4     4.85           0.250  yes     | 0.52 +- 0.09 (  7.7/3)      | 0.84 +- 0.10 (  2.1/4)      | 1.22 +- 0.21 (  3.0/3)     
+   L5    10.03           0.263  no      | 0.37 +- 0.06 ( 22.9/3)      | 0.83 +- 0.11 ( 17.9/4)      | 0.94 +- 0.09 (  1.7/3)     
+   L6    17.74           0.313  no      | 0.57 +- 0.21 (  4.1/3)      | 0.68 +- 0.10 (  7.1/4)      | 0.83 +- 0.11 (  7.0/3)     
+   M1     0.53           0.120  no      | 0.93 +- 0.33 (  6.1/3)      | 1.48 +- 0.42 (  3.2/4)      | 2.14 +- 1.31 (  4.9/3)     
+   M2     1.32           0.145  yes     | 0.63 +- 0.10 (  6.5/3)      | 1.22 +- 0.21 (  2.3/4)      | 1.45 +- 0.33 (  4.9/3)     
+   M3     2.71           0.179  yes     | 0.96 +- 0.22 (  2.8/3)      | 1.12 +- 0.14 (  2.7/4)      | 1.34 +- 0.17 (  7.2/3)     
+   M4     5.46           0.225  yes     | 0.53 +- 0.08 (  9.2/3)      | 0.90 +- 0.10 (  7.0/4)      | 1.12 +- 0.11 (  4.7/3)     
+   M5    10.96           0.267  no      | 0.31 +- 0.04 ( 32.3/3)      | 0.78 +- 0.09 ( 16.4/4)      | 0.94 +- 0.09 (  7.4/3)     
+
+  Over the 6 bins with M500c of 1e13 to 1e14 Msun (L2, L3, L4, M2, M3, M4): the median model over data, the
+  range over the bins, the range over the gas scan, the summed chi2.
+  MOND, algebraic                0.61 (0.52 to 0.96; gas 0.44 to 1.15; chi2 32.4/18) | 0.97 (0.84 to 1.22; gas 0.66 to 1.55; chi2 16.7/24) | 1.28 (1.00 to 1.45; gas 0.79 to 1.85; chi2 25.1/18)
+
+3. THE LENSING OF THE WEB: THE BARYONS' FIELD OF STRUCTURE UNDER THE LAW
+--------------------------------------------------------------------------------------------------------------
+The lensing contrast is f_b nu_b(k, z) delta_m: the baryons, a share f_b = 0.0493/0.3152 of the matter, trace the
+standard matter field delta_m of the Planck 2018 template, and nu_b is the law's boost of the baryons' own
+Newtonian field, either per scale or with the rms field smoothed at 2 Mpc acting as an external field with the
+QUMOND response. The distances and the lensing kernels use the template's flat background, Omega_m = 0.3152 (background.py).
+  the per-scale boost of the baryons at k = 0.03 /Mpc: z = 0.5: 28.5, z = 2.0: 19.4
+  the boost in the external field (independent of k): z = 0.0: 23.60, z = 0.5: 18.11, z = 2.0: 12.41
+
+  CMB lensing: the amplitude of the data relative to the model (data = alpha x model), its error, chi2 at alpha = 1;
+  model over data in power = 1/alpha, and in the lensing amplitude (the boost of the contrast) = 1/sqrt(alpha).
+  model                 Planck alpha        chi2 (9)    1/alpha  1/sqrt   ACT alpha           chi2 (10)   1/alpha  1/sqrt
+  standard               1.0018 +/- 0.0261         9.0     1.00    1.00    1.0079 +/- 0.0255        13.8     0.99    1.00
+  MOND, external field   0.2302 +/- 0.0060     16368.6     4.34    2.08    0.2459 +/- 0.0062     14624.0     4.07    2.02
+  MOND, per scale        0.0812 +/- 0.0022    182486.2    12.32    3.51    0.0902 +/- 0.0023    157915.5    11.08    3.33
+
+  KiDS-1000 cosmic shear, 225 points of xi+ and xi-, survey cuts, intrinsic alignment off: alpha = data/model
+  (the amplitude of xi), chi2 at alpha = 1 and at the best alpha, model over data = 1/alpha.
+  model                 alpha       chi2 at 1        chi2 at best   1/alpha
+  standard                0.6804           342.4       274.6       1.47
+  MOND, external field    0.0694         55006.2       280.7      14.40
+  MOND, per scale         0.0041       8891600.3       438.5     246.73
+

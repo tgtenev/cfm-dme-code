@@ -1,0 +1,21 @@
+A POINT MASS IN A MEDIUM WITH A UNIFORM AXIS: Phi = - G M / sqrt(R^2 + z^2/mu^2)
+====================================================================================================
+1. Gauss: the flux of A grad Phi through spheres, over 4 pi G M
+   mu = 0.70: r = 0.5: 1.000000, r = 1: 1.000000, r = 7: 1.000000
+   mu = 0.30: r = 0.5: 1.000000, r = 1: 1.000000, r = 7: 1.000000
+   mu = 0.10: r = 0.5: 1.000000, r = 1: 1.000000, r = 7: 1.000000
+   mu = 0.05: r = 0.5: 1.000000, r = 1: 1.000000, r = 7: 1.000000
+
+2. The field over Newton's at unit distance: across the axis and along it
+   mu = 0.70: across 1.0000, along 0.7000; the potential along the axis is 0.7000 of Newton's
+   mu = 0.30: across 1.0000, along 0.3000; the potential along the axis is 0.3000 of Newton's
+   mu = 0.10: across 1.0000, along 0.1000; the potential along the axis is 0.1000 of Newton's
+   mu = 0.05: across 1.0000, along 0.0500; the potential along the axis is 0.0500 of Newton's
+
+3. The angle of the field from the axis, at a place chi from the axis (degrees)
+   mu    | chi = 10      30      45      60      80      89
+   0.70  |     4.938  15.796  26.105  40.321  70.209  87.960
+   0.30  |     0.909   2.975   5.143   8.860  27.040  79.024
+   0.10  |     0.101   0.331   0.573   0.992   3.246  29.808
+   0.05  |     0.025   0.083   0.143   0.248   0.812   8.151
+   (the closed form is atan(mu^2 tan chi): a share mu^2 of a small offset)

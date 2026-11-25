@@ -1,0 +1,23 @@
+Table 1 rows: 175; rotmod files: 175; files without a Table 1 row: none
+all points in all rotmod files: 3391
+Q = 3: 12 galaxies; inc < 30: 12; both: 2; removed by either: 22
+galaxies with fewer than 3 points after the two cuts: none
+SAMPLE: 153 galaxies, 3168 points
+points with g_bar > 0 at the prior centres (0.5, 0.7): 3166
+
+R < 1.0 kpc:  309 points (9.8% of 3168), 111 galaxies hold them, 2 of these galaxies lie wholly inside; g_bar > 0: 307; share of the summed fit weight 1/(eV^2+(0.05V)^2): 26.8%
+R < 0.5 kpc:  124 points (3.9% of 3168),  62 galaxies hold them, 0 of these galaxies lie wholly inside; g_bar > 0: 122; share of the summed fit weight 1/(eV^2+(0.05V)^2): 9.4%
+
+Departure of the window mean of the total field from its local value, |<g>/g - 1|, at every point, on the
+observed curve V_obs^2/R (linear interpolation; a window one catchment length long, centred on the point, along the radius):
+  catchment length 200 pc, R in [0.0, 0.5) kpc: n =  124, >1%:  106, >10%:   31, median 0.0490, max 0.687
+  catchment length 200 pc, R in [0.5, 1.0) kpc: n =  185, >1%:  126, >10%:    3, median 0.0158, max 0.308
+  catchment length 200 pc, R in [1.0, 2.0) kpc: n =  339, >1%:  118, >10%:    0, median 0.0067, max 0.068
+  catchment length 200 pc, R in [2.0, inf) kpc: n = 2520, >1%:   83, >10%:    0, median 0.0009, max 0.088
+
+Departure of the window mean of the total field from its local value, |<g>/g - 1|, at every point, on the
+model total field nu_simple(g_bar/a0) g_bar (linear interpolation; a window one catchment length long, centred on the point, along the radius):
+  catchment length 200 pc, R in [0.0, 0.5) kpc: n =  122, >1%:   92, >10%:   21, median 0.0472, max 0.253
+  catchment length 200 pc, R in [0.5, 1.0) kpc: n =  185, >1%:   85, >10%:    1, median 0.0088, max 0.231
+  catchment length 200 pc, R in [1.0, 2.0) kpc: n =  339, >1%:   51, >10%:    0, median 0.0030, max 0.042
+  catchment length 200 pc, R in [2.0, inf) kpc: n = 2520, >1%:   19, >10%:    0, median 0.0004, max 0.024

@@ -1,0 +1,233 @@
+The boost law (T3), fixed-delta ladders (a0 refitted at each), corrected Gamma, mass-to-light ratios fitted within 0.10 dex priors.
+q fit = distances and inclinations profiled within their catalog priors (as in two_constant_fit.pl); q 1 = catalog values held fixed.
+kappa = (c H0/a0) ln(1 + delta); kappa_dS = sqrt(Omega_L) kappa, Omega_L = 0.6847, sqrt = 0.8275. Galaxy bootstrap: 2000 draws, seed 20261013.
+kappa_dS = D ln(1 + delta), with D = c H_dS/a0, is the counting factor that the fitted pair implies; the constrained fit holds it at 1.
+
+sparc-full-qfit  (8 scan nodes, 12 ladders in all)
+   delta     a0(1e-10)    chi2      -min   kappa(67.4) kappa(73)  kappa_dS(67.4) kappa_dS(73)
+   0.0030    0.9908     4559.02    +0.00   0.020       0.021      0.016          0.018
+   0.0050    0.9896     4559.10    +0.08   0.033       0.036      0.027          0.030
+   0.0100    0.9863     4559.31    +0.30   0.066       0.072      0.055          0.059
+   0.0300    0.9737     4560.25    +1.24   0.199       0.215      0.164          0.178
+   0.1000    0.9333     4562.98    +3.96   0.669       0.724      0.553          0.599
+   0.1377    0.9140     4565.50    +6.49   0.924       1.001      0.765          0.828  (extra ladder)
+   0.1490    0.9087     4566.47    +7.46   1.001       1.084      0.828          0.897  (extra ladder)
+   0.1661    0.9007     4568.12    +9.11   1.117       1.210      0.924          1.001  (extra ladder)
+   0.1797    0.8946     4569.59   +10.57   1.210       1.310      1.001          1.084  (extra ladder)
+   0.2000    0.8859     4572.06   +13.05   1.348       1.460      1.115          1.208
+   0.3000    0.8479     4589.01   +29.99   2.026       2.195      1.677          1.816
+   0.4000    0.8169     4614.76   +55.74   2.697       2.921      2.232          2.417
+   minimum over the scan nodes: delta = 0.003 (at the edge of the scan)
+   at the minimum (scan rule): a0 = 0.9908e-10, chi2 = 4559.02; kappa 0.020 (67.4), 0.021 (73); kappa_dS 0.016 (67.4), 0.018 (73)
+   refined over all 12 ladders: parabola minimum delta = 0.0030 (edge); lowest ladder delta 0.003, chi2 4559.02, a0 0.9908e-10, kappa 0.020/0.021, kappa_dS 0.016/0.018 (67.4/73)
+   bootstrap of the minimum (2000 draws): delta 16-84 percent 0.0030 to 0.1503, median 0.0030; draws at the lowest node 63.9 percent, at the highest 0.2 percent
+      kappa (H0 67.4) at the draws' minima: 16-84 percent 0.019 to 0.973; draws reaching 1: 15.4 percent
+      kappa (H0 73) at the draws' minima: 16-84 percent 0.021 to 1.054; draws reaching 1: 17.5 percent
+      kappa_dS (H0 67.4) at the draws' minima: 16-84 percent 0.016 to 0.805; draws reaching 1: 9.0 percent
+      kappa_dS (H0 73) at the draws' minima: 16-84 percent 0.017 to 0.872; draws reaching 1: 12.2 percent
+   kappa = 1 at H0 67.4: delta = 0.1489 (ladder at 0.149: a0 0.9087e-10, kappa 1.001); cost Delta chi^2 = +7.46; clustered SD 13.5 (0.55 SD; 28.9 percent of draws favour the unity point); statistical 2.73 sigma
+   kappa = 1 at H0 73: delta = 0.1376 (ladder at 0.1377: a0 0.9140e-10, kappa 1.001); cost Delta chi^2 = +6.49; clustered SD 12.5 (0.52 SD; 29.9 percent of draws favour the unity point); statistical 2.55 sigma
+   kappa_dS = 1 at H0 67.4: delta = 0.1795 (ladder at 0.1797: a0 0.8946e-10, kappa_dS 1.001); cost Delta chi^2 = +10.57; clustered SD 16.2 (0.65 SD; 25.5 percent of draws favour the unity point); statistical 3.25 sigma
+   kappa_dS = 1 at H0 73: delta = 0.1659 (ladder at 0.1661: a0 0.9007e-10, kappa_dS 1.001); cost Delta chi^2 = +9.11; clustered SD 15.0 (0.61 SD; 27.0 percent of draws favour the unity point); statistical 3.02 sigma
+
+sparc-rel-qfit  (8 scan nodes, 13 ladders in all)
+   delta     a0(1e-10)    chi2      -min   kappa(67.4) kappa(73)  kappa_dS(67.4) kappa_dS(73)
+   0.0030    1.0774     4349.80   +30.57   0.018       0.020      0.015          0.016
+   0.0050    1.0761     4349.46   +30.23   0.030       0.033      0.025          0.027
+   0.0100    1.0727     4348.61   +29.38   0.061       0.066      0.050          0.054
+   0.0300    1.0593     4345.26   +26.03   0.183       0.198      0.151          0.164
+   0.1000    1.0159     4334.19   +14.97   0.614       0.665      0.508          0.551
+   0.1498    0.9888     4327.64    +8.42   0.924       1.001      0.765          0.828  (extra ladder)
+   0.1621    0.9827     4326.27    +7.04   1.001       1.084      0.828          0.897  (extra ladder)
+   0.1806    0.9736     4324.44    +5.21   1.117       1.209      0.924          1.001  (extra ladder)
+   0.1953    0.9666     4323.17    +3.94   1.209       1.309      1.000          1.083  (extra ladder)
+   0.2000    0.9643     4322.80    +3.57   1.238       1.341      1.024          1.110
+   0.2972    0.9238     4319.22    +0.00   1.844       1.998      1.526          1.653  (extra ladder)
+   0.3000    0.9227     4319.23    +0.01   1.862       2.017      1.541          1.669
+   0.4000    0.8885     4323.21    +3.99   2.480       2.686      2.052          2.223
+   minimum over the scan nodes: delta = 0.2972 (three-lowest-node parabola, value 4319.23)
+   at the minimum (scan rule): a0 = 0.9238e-10, chi2 = 4319.22; kappa 1.844 (67.4), 1.998 (73); kappa_dS 1.526 (67.4), 1.653 (73)
+   refined over all 13 ladders: parabola minimum delta = 0.2948 (value 4319.22); lowest ladder delta 0.2972, chi2 4319.22, a0 0.9238e-10, kappa 1.844/1.998, kappa_dS 1.526/1.653 (67.4/73)
+   bootstrap of the minimum (2000 draws): delta 16-84 percent 0.1885 to 0.4000, median 0.2999; draws at the lowest node 1.5 percent, at the highest 31.3 percent
+      kappa (H0 67.4) at the draws' minima: 16-84 percent 1.169 to 2.447; draws reaching 1: 10.8 percent
+      kappa (H0 73) at the draws' minima: 16-84 percent 1.266 to 2.650; draws reaching 1: 8.9 percent
+      kappa_dS (H0 67.4) at the draws' minima: 16-84 percent 0.967 to 2.025; draws reaching 1: 17.2 percent
+      kappa_dS (H0 73) at the draws' minima: 16-84 percent 1.048 to 2.193; draws reaching 1: 13.9 percent
+   kappa = 1 at H0 67.4: delta = 0.1619 (ladder at 0.1621: a0 0.9827e-10, kappa 1.001); cost Delta chi^2 = +7.04; clustered SD 11.0 (0.64 SD; 26.5 percent of draws favour the unity point); statistical 2.65 sigma
+   kappa = 1 at H0 73: delta = 0.1496 (ladder at 0.1498: a0 0.9888e-10, kappa 1.001); cost Delta chi^2 = +8.42; clustered SD 12.0 (0.70 SD; 24.3 percent of draws favour the unity point); statistical 2.90 sigma
+   kappa_dS = 1 at H0 67.4: delta = 0.1953 (ladder at 0.1953: a0 0.9666e-10, kappa_dS 1.000); cost Delta chi^2 = +3.94; clustered SD 8.2 (0.48 SD; 31.6 percent of draws favour the unity point); statistical 1.99 sigma
+   kappa_dS = 1 at H0 73: delta = 0.1805 (ladder at 0.1806: a0 0.9736e-10, kappa_dS 1.001); cost Delta chi^2 = +5.21; clustered SD 9.4 (0.55 SD; 29.2 percent of draws favour the unity point); statistical 2.28 sigma
+
+model-full-qfit  (8 scan nodes, 12 ladders in all)
+   delta     a0(1e-10)    chi2      -min   kappa(67.4) kappa(73)  kappa_dS(67.4) kappa_dS(73)
+   0.0030    0.9349     4518.17    +0.00   0.021       0.023      0.017          0.019
+   0.0050    0.9337     4518.59    +0.41   0.035       0.038      0.029          0.031
+   0.0100    0.9307     4519.63    +1.46   0.070       0.076      0.058          0.063
+   0.0300    0.9188     4524.05    +5.87   0.211       0.228      0.174          0.189
+   0.1000    0.8809     4539.72   +21.55   0.709       0.767      0.586          0.635
+   0.1300    0.8660     4547.05   +28.88   0.924       1.001      0.765          0.828  (extra ladder)
+   0.1406    0.8610     4549.69   +31.52   1.000       1.084      0.828          0.897  (extra ladder)
+   0.1567    0.8535     4553.76   +35.58   1.117       1.210      0.924          1.001  (extra ladder)
+   0.1695    0.8477     4557.04   +38.86   1.210       1.310      1.001          1.084  (extra ladder)
+   0.2000    0.8342     4564.91   +46.74   1.431       1.550      1.184          1.283
+   0.3000    0.7950     4590.80   +72.62   2.161       2.341      1.788          1.937
+   0.4000    0.7620     4618.10   +99.92   2.892       3.132      2.393          2.591
+   minimum over the scan nodes: delta = 0.003 (at the edge of the scan)
+   at the minimum (scan rule): a0 = 0.9349e-10, chi2 = 4518.17; kappa 0.021 (67.4), 0.023 (73); kappa_dS 0.017 (67.4), 0.019 (73)
+   refined over all 12 ladders: parabola minimum delta = 0.0030 (edge); lowest ladder delta 0.003, chi2 4518.17, a0 0.9349e-10, kappa 0.021/0.023, kappa_dS 0.017/0.019 (67.4/73)
+   bootstrap of the minimum (2000 draws): delta 16-84 percent 0.0030 to 0.0030, median 0.0030; draws at the lowest node 98.6 percent, at the highest 0.1 percent
+      kappa (H0 67.4) at the draws' minima: 16-84 percent 0.019 to 0.023; draws reaching 1: 0.4 percent
+      kappa (H0 73) at the draws' minima: 16-84 percent 0.021 to 0.025; draws reaching 1: 0.4 percent
+      kappa_dS (H0 67.4) at the draws' minima: 16-84 percent 0.016 to 0.019; draws reaching 1: 0.2 percent
+      kappa_dS (H0 73) at the draws' minima: 16-84 percent 0.017 to 0.021; draws reaching 1: 0.4 percent
+   kappa = 1 at H0 67.4: delta = 0.1405 (ladder at 0.1406: a0 0.8610e-10, kappa 1.000); cost Delta chi^2 = +31.52; clustered SD 12.6 (2.50 SD; 0.7 percent of draws favour the unity point); statistical 5.61 sigma
+   kappa = 1 at H0 73: delta = 0.1299 (ladder at 0.13: a0 0.8660e-10, kappa 1.001); cost Delta chi^2 = +28.88; clustered SD 11.7 (2.47 SD; 0.7 percent of draws favour the unity point); statistical 5.37 sigma
+   kappa_dS = 1 at H0 67.4: delta = 0.1694 (ladder at 0.1695: a0 0.8477e-10, kappa_dS 1.001); cost Delta chi^2 = +38.86; clustered SD 15.0 (2.58 SD; 0.6 percent of draws favour the unity point); statistical 6.23 sigma
+   kappa_dS = 1 at H0 73: delta = 0.1566 (ladder at 0.1567: a0 0.8535e-10, kappa_dS 1.001); cost Delta chi^2 = +35.58; clustered SD 14.0 (2.55 SD; 0.7 percent of draws favour the unity point); statistical 5.97 sigma
+
+model-rel-qfit  (8 scan nodes, 13 ladders in all)
+   delta     a0(1e-10)    chi2      -min   kappa(67.4) kappa(73)  kappa_dS(67.4) kappa_dS(73)
+   0.0030    1.0185     4263.64    +0.21   0.019       0.021      0.016          0.017
+   0.0050    1.0175     4263.60    +0.18   0.032       0.035      0.027          0.029
+   0.0100    1.0143     4263.53    +0.11   0.064       0.070      0.053          0.058
+   0.0267    1.0036     4263.43    +0.00   0.172       0.186      0.142          0.154  (extra ladder)
+   0.0300    1.0017     4263.43    +0.01   0.193       0.209      0.160          0.173
+   0.1000    0.9613     4265.31    +1.89   0.649       0.703      0.537          0.582
+   0.1418    0.9398     4267.83    +4.41   0.924       1.001      0.765          0.828  (extra ladder)
+   0.1534    0.9341     4268.70    +5.28   1.000       1.084      0.828          0.897  (extra ladder)
+   0.1709    0.9256     4270.15    +6.73   1.116       1.209      0.924          1.000  (extra ladder)
+   0.1849    0.9190     4271.40    +7.98   1.209       1.309      1.000          1.083  (extra ladder)
+   0.2000    0.9119     4272.84    +9.41   1.309       1.418      1.083          1.173
+   0.3000    0.8695     4284.34   +20.91   1.976       2.140      1.635          1.771
+   0.4000    0.8332     4297.77   +34.35   2.644       2.864      2.188          2.370
+   minimum over the scan nodes: delta = 0.0267 (three-lowest-node parabola, value 4263.43)
+   at the minimum (scan rule): a0 = 1.0036e-10, chi2 = 4263.43; kappa 0.172 (67.4), 0.186 (73); kappa_dS 0.142 (67.4), 0.154 (73)
+   refined over all 13 ladders: parabola minimum delta = 0.0263 (value 4263.43); lowest ladder delta 0.0267, chi2 4263.43, a0 1.0036e-10, kappa 0.172/0.186, kappa_dS 0.142/0.154 (67.4/73)
+   bootstrap of the minimum (2000 draws): delta 16-84 percent 0.0030 to 0.1702, median 0.0235; draws at the lowest node 42.1 percent, at the highest 3.8 percent
+      kappa (H0 67.4) at the draws' minima: 16-84 percent 0.019 to 1.085; draws reaching 1: 18.2 percent
+      kappa (H0 73) at the draws' minima: 16-84 percent 0.021 to 1.175; draws reaching 1: 20.2 percent
+      kappa_dS (H0 67.4) at the draws' minima: 16-84 percent 0.016 to 0.897; draws reaching 1: 13.5 percent
+      kappa_dS (H0 73) at the draws' minima: 16-84 percent 0.017 to 0.972; draws reaching 1: 15.4 percent
+   kappa = 1 at H0 67.4: delta = 0.1533 (ladder at 0.1534: a0 0.9341e-10, kappa 1.000); cost Delta chi^2 = +5.28; clustered SD 10.9 (0.49 SD; 31.2 percent of draws favour the unity point); statistical 2.30 sigma
+   kappa = 1 at H0 73: delta = 0.1417 (ladder at 0.1418: a0 0.9398e-10, kappa 1.001); cost Delta chi^2 = +4.41; clustered SD 9.9 (0.45 SD; 32.6 percent of draws favour the unity point); statistical 2.10 sigma
+   kappa_dS = 1 at H0 67.4: delta = 0.1848 (ladder at 0.1849: a0 0.9190e-10, kappa_dS 1.000); cost Delta chi^2 = +7.98; clustered SD 13.5 (0.59 SD; 27.3 percent of draws favour the unity point); statistical 2.82 sigma
+   kappa_dS = 1 at H0 73: delta = 0.1708 (ladder at 0.1709: a0 0.9256e-10, kappa_dS 1.000); cost Delta chi^2 = +6.73; clustered SD 12.3 (0.55 SD; 29.0 percent of draws favour the unity point); statistical 2.59 sigma
+
+sparc-full-q1  (8 scan nodes, 15 ladders in all)
+   delta     a0(1e-10)    chi2      -min   kappa(67.4) kappa(73)  kappa_dS(67.4) kappa_dS(73)
+   0.0030    0.8276     6697.86   +19.18   0.024       0.026      0.020          0.021
+   0.0050    0.8268     6697.29   +18.62   0.040       0.043      0.033          0.035
+   0.0100    0.8248     6695.92   +17.24   0.079       0.086      0.065          0.071
+   0.0300    0.8170     6690.98   +12.30   0.237       0.257      0.196          0.212
+   0.0500    0.8096     6686.48    +7.80   0.395       0.427      0.327          0.354  (extra ladder)
+   0.0750    0.8008     6682.24    +3.56   0.591       0.641      0.489          0.530  (extra ladder)
+   0.1000    0.7926     6679.60    +0.93   0.787       0.853      0.652          0.706
+   0.1174    0.7870     6678.77    +0.10   0.924       1.000      0.764          0.828  (extra ladder)
+   0.1273    0.7840     6678.68    +0.00   1.001       1.084      0.828          0.897  (extra ladder)
+   0.1422    0.7796     6679.01    +0.33   1.117       1.209      0.924          1.001  (extra ladder)
+   0.1542    0.7762     6679.69    +1.01   1.210       1.310      1.001          1.084  (extra ladder)
+   0.1750    0.7704     6681.71    +3.03   1.371       1.485      1.134          1.228  (extra ladder)
+   0.2000    0.7638     6685.52    +6.84   1.563       1.693      1.293          1.401
+   0.3000    0.7404     6712.71   +34.03   2.320       2.513      1.920          2.080
+   0.4000    0.7206     6755.71   +77.03   3.058       3.312      2.530          2.740
+   minimum over the scan nodes: delta = 0.1273 (three-lowest-node parabola, value 6678.63)
+   at the minimum (scan rule): a0 = 0.7840e-10, chi2 = 6678.68; kappa 1.001 (67.4), 1.084 (73); kappa_dS 0.828 (67.4), 0.897 (73)
+   refined over all 15 ladders: parabola minimum delta = 0.1261 (value 6678.68); lowest ladder delta 0.1273, chi2 6678.68, a0 0.7840e-10, kappa 1.001/1.084, kappa_dS 0.828/0.897 (67.4/73)
+   bootstrap of the minimum (2000 draws): delta 16-84 percent 0.0527 to 0.1864, median 0.1262; draws at the lowest node 6.3 percent, at the highest 0.1 percent
+      kappa (H0 67.4) at the draws' minima: 16-84 percent 0.426 to 1.444; draws reaching 1: 48.3 percent
+      kappa (H0 73) at the draws' minima: 16-84 percent 0.461 to 1.564; draws reaching 1: 45.0 percent
+      kappa_dS (H0 67.4) at the draws' minima: 16-84 percent 0.353 to 1.195; draws reaching 1: 29.8 percent
+      kappa_dS (H0 73) at the draws' minima: 16-84 percent 0.382 to 1.294; draws reaching 1: 38.8 percent
+   kappa = 1 at H0 67.4: delta = 0.1272 (ladder at 0.1273: a0 0.7840e-10, kappa 1.001); cost Delta chi^2 = +0.00; the unity point is the minimum's own ladder
+   kappa = 1 at H0 73: delta = 0.1174 (ladder at 0.1174: a0 0.7870e-10, kappa 1.000); cost Delta chi^2 = +0.10; clustered SD 1.6 (0.06 SD; 49.1 percent of draws favour the unity point); statistical 0.31 sigma
+   kappa_dS = 1 at H0 67.4: delta = 0.1540 (ladder at 0.1542: a0 0.7762e-10, kappa_dS 1.001); cost Delta chi^2 = +1.01; clustered SD 4.1 (0.25 SD; 39.2 percent of draws favour the unity point); statistical 1.00 sigma
+   kappa_dS = 1 at H0 73: delta = 0.1421 (ladder at 0.1422: a0 0.7796e-10, kappa_dS 1.001); cost Delta chi^2 = +0.33; clustered SD 2.3 (0.14 SD; 43.5 percent of draws favour the unity point); statistical 0.57 sigma
+
+sparc-rel-q1  (8 scan nodes, 13 ladders in all)
+   delta     a0(1e-10)    chi2      -min   kappa(67.4) kappa(73)  kappa_dS(67.4) kappa_dS(73)
+   0.0030    0.8185     6777.08   +72.25   0.024       0.026      0.020          0.021
+   0.0050    0.8178     6775.96   +71.12   0.040       0.043      0.033          0.036
+   0.0100    0.8158     6773.17   +68.33   0.080       0.087      0.066          0.072
+   0.0300    0.8083     6762.45   +57.61   0.239       0.259      0.198          0.215
+   0.1000    0.7845     6731.33   +26.49   0.796       0.862      0.658          0.713
+   0.1162    0.7795     6725.80   +20.96   0.923       1.000      0.764          0.828  (extra ladder)
+   0.1260    0.7766     6722.78   +17.94   1.001       1.084      0.828          0.897  (extra ladder)
+   0.1408    0.7723     6718.69   +13.85   1.117       1.210      0.924          1.001  (extra ladder)
+   0.1526    0.7690     6715.84   +11.00   1.209       1.310      1.001          1.084  (extra ladder)
+   0.2000    0.7565     6707.84    +3.00   1.578       1.709      1.306          1.414
+   0.2577    0.7428     6704.83    +0.00   2.021       2.189      1.673          1.812  (extra ladder)
+   0.3000    0.7336     6706.62    +1.78   2.342       2.536      1.938          2.099
+   0.4000    0.7143     6721.30   +16.46   3.085       3.341      2.553          2.765
+   minimum over the scan nodes: delta = 0.2577 (three-lowest-node parabola, value 6705.19)
+   at the minimum (scan rule): a0 = 0.7428e-10, chi2 = 6704.83; kappa 2.021 (67.4), 2.189 (73); kappa_dS 1.673 (67.4), 1.812 (73)
+   refined over all 13 ladders: parabola minimum delta = 0.2565 (value 6704.83); lowest ladder delta 0.2577, chi2 6704.83, a0 0.7428e-10, kappa 2.021/2.189, kappa_dS 1.673/1.812 (67.4/73)
+   bootstrap of the minimum (2000 draws): delta 16-84 percent 0.1935 to 0.3311, median 0.2595; draws at the lowest node 0.1 percent, at the highest 10.0 percent
+      kappa (H0 67.4) at the draws' minima: 16-84 percent 1.523 to 2.559; draws reaching 1: 1.6 percent
+      kappa (H0 73) at the draws' minima: 16-84 percent 1.650 to 2.771; draws reaching 1: 1.2 percent
+      kappa_dS (H0 67.4) at the draws' minima: 16-84 percent 1.260 to 2.117; draws reaching 1: 5.5 percent
+      kappa_dS (H0 73) at the draws' minima: 16-84 percent 1.365 to 2.293; draws reaching 1: 3.4 percent
+   kappa = 1 at H0 67.4: delta = 0.1259 (ladder at 0.126: a0 0.7766e-10, kappa 1.001); cost Delta chi^2 = +17.94; clustered SD 17.5 (1.03 SD; 16.2 percent of draws favour the unity point); statistical 4.24 sigma
+   kappa = 1 at H0 73: delta = 0.1162 (ladder at 0.1162: a0 0.7795e-10, kappa 1.000); cost Delta chi^2 = +20.96; clustered SD 19.0 (1.10 SD; 14.1 percent of draws favour the unity point); statistical 4.58 sigma
+   kappa_dS = 1 at H0 67.4: delta = 0.1525 (ladder at 0.1526: a0 0.7690e-10, kappa_dS 1.001); cost Delta chi^2 = +11.00; clustered SD 13.6 (0.81 SD; 21.4 percent of draws favour the unity point); statistical 3.32 sigma
+   kappa_dS = 1 at H0 73: delta = 0.1407 (ladder at 0.1408: a0 0.7723e-10, kappa_dS 1.001); cost Delta chi^2 = +13.85; clustered SD 15.3 (0.90 SD; 19.1 percent of draws favour the unity point); statistical 3.72 sigma
+
+model-full-q1  (8 scan nodes, 16 ladders in all)
+   delta     a0(1e-10)    chi2      -min   kappa(67.4) kappa(73)  kappa_dS(67.4) kappa_dS(73)
+   0.0030    0.8201     6570.98    +0.60   0.024       0.026      0.020          0.021
+   0.0050    0.8193     6570.88    +0.50   0.040       0.043      0.033          0.036
+   0.0100    0.8173     6570.67    +0.29   0.080       0.086      0.066          0.071
+   0.0200    0.8134     6570.43    +0.04   0.159       0.173      0.132          0.143  (extra ladder)
+   0.0259    0.8112     6570.38    +0.00   0.206       0.224      0.171          0.185  (extra ladder)
+   0.0300    0.8096     6570.40    +0.01   0.239       0.259      0.198          0.214
+   0.0500    0.8022     6570.49    +0.11   0.398       0.431      0.330          0.357  (extra ladder)
+   0.0700    0.7950     6571.38    +0.99   0.557       0.604      0.461          0.499  (extra ladder)
+   0.1000    0.7849     6574.15    +3.76   0.795       0.861      0.658          0.713
+   0.1162    0.7796     6576.33    +5.95   0.923       1.000      0.764          0.827  (extra ladder)
+   0.1260    0.7765     6577.89    +7.50   1.001       1.084      0.828          0.897  (extra ladder)
+   0.1407    0.7720     6580.54   +10.15   1.117       1.209      0.924          1.001  (extra ladder)
+   0.1525    0.7685     6582.93   +12.54   1.209       1.310      1.001          1.084  (extra ladder)
+   0.2000    0.7551     6594.69   +24.31   1.581       1.713      1.308          1.417
+   0.3000    0.7304     6628.35   +57.96   2.352       2.548      1.946          2.108
+   0.4000    0.7094     6672.10  +101.72   3.106       3.364      2.570          2.784
+   minimum over the scan nodes: delta = 0.0259 (three-lowest-node parabola, value 6570.38)
+   at the minimum (scan rule): a0 = 0.8112e-10, chi2 = 6570.38; kappa 0.206 (67.4), 0.224 (73); kappa_dS 0.171 (67.4), 0.185 (73)
+   refined over all 16 ladders: parabola minimum delta = 0.0263 (value 6570.38); lowest ladder delta 0.0259, chi2 6570.38, a0 0.8112e-10, kappa 0.206/0.224, kappa_dS 0.171/0.185 (67.4/73)
+   bootstrap of the minimum (2000 draws): delta 16-84 percent 0.0030 to 0.1167, median 0.0204; draws at the lowest node 38.9 percent, at the highest 0.0 percent
+      kappa (H0 67.4) at the draws' minima: 16-84 percent 0.024 to 0.918; draws reaching 1: 13.1 percent
+      kappa (H0 73) at the draws' minima: 16-84 percent 0.026 to 0.994; draws reaching 1: 15.8 percent
+      kappa_dS (H0 67.4) at the draws' minima: 16-84 percent 0.019 to 0.759; draws reaching 1: 6.7 percent
+      kappa_dS (H0 73) at the draws' minima: 16-84 percent 0.021 to 0.823; draws reaching 1: 9.1 percent
+   kappa = 1 at H0 67.4: delta = 0.1259 (ladder at 0.126: a0 0.7765e-10, kappa 1.001); cost Delta chi^2 = +7.50; clustered SD 16.8 (0.45 SD; 30.0 percent of draws favour the unity point); statistical 2.74 sigma
+   kappa = 1 at H0 73: delta = 0.1162 (ladder at 0.1162: a0 0.7796e-10, kappa 1.000); cost Delta chi^2 = +5.95; clustered SD 15.3 (0.39 SD; 33.0 percent of draws favour the unity point); statistical 2.44 sigma
+   kappa_dS = 1 at H0 67.4: delta = 0.1524 (ladder at 0.1525: a0 0.7685e-10, kappa_dS 1.001); cost Delta chi^2 = +12.54; clustered SD 20.6 (0.61 SD; 25.2 percent of draws favour the unity point); statistical 3.54 sigma
+   kappa_dS = 1 at H0 73: delta = 0.1406 (ladder at 0.1407: a0 0.7720e-10, kappa_dS 1.001); cost Delta chi^2 = +10.15; clustered SD 19.0 (0.54 SD; 27.2 percent of draws favour the unity point); statistical 3.19 sigma
+
+model-rel-q1  (8 scan nodes, 13 ladders in all)
+   delta     a0(1e-10)    chi2      -min   kappa(67.4) kappa(73)  kappa_dS(67.4) kappa_dS(73)
+   0.0030    0.8148     6561.11   +31.18   0.024       0.026      0.020          0.022
+   0.0050    0.8141     6560.43   +30.50   0.040       0.043      0.033          0.036
+   0.0100    0.8121     6558.76   +28.83   0.080       0.087      0.066          0.072
+   0.0300    0.8046     6552.56   +22.63   0.241       0.261      0.199          0.216
+   0.1000    0.7806     6536.72    +6.79   0.799       0.866      0.662          0.717
+   0.1156    0.7757     6534.47    +4.54   0.923       1.000      0.764          0.828  (extra ladder)
+   0.1253    0.7728     6533.31    +3.38   1.000       1.083      0.828          0.897  (extra ladder)
+   0.1400    0.7683     6531.87    +1.94   1.117       1.209      0.924          1.001  (extra ladder)
+   0.1517    0.7650     6531.01    +1.08   1.209       1.310      1.000          1.084  (extra ladder)
+   0.1926    0.7537     6529.93    +0.00   1.530       1.658      1.266          1.372  (extra ladder)
+   0.2000    0.7517     6530.03    +0.10   1.588       1.720      1.314          1.423
+   0.3000    0.7277     6539.05    +9.13   2.361       2.557      1.954          2.116
+   0.4000    0.7074     6559.21   +29.28   3.115       3.373      2.577          2.791
+   minimum over the scan nodes: delta = 0.1926 (three-lowest-node parabola, value 6529.99)
+   at the minimum (scan rule): a0 = 0.7537e-10, chi2 = 6529.93; kappa 1.530 (67.4), 1.658 (73); kappa_dS 1.266 (67.4), 1.372 (73)
+   refined over all 13 ladders: parabola minimum delta = 0.1880 (value 6529.91); lowest ladder delta 0.1926, chi2 6529.93, a0 0.7537e-10, kappa 1.530/1.658, kappa_dS 1.266/1.372 (67.4/73)
+   bootstrap of the minimum (2000 draws): delta 16-84 percent 0.0971 to 0.2686, median 0.1888; draws at the lowest node 2.2 percent, at the highest 3.2 percent
+      kappa (H0 67.4) at the draws' minima: 16-84 percent 0.781 to 2.095; draws reaching 1: 24.6 percent
+      kappa (H0 73) at the draws' minima: 16-84 percent 0.846 to 2.270; draws reaching 1: 21.1 percent
+      kappa_dS (H0 67.4) at the draws' minima: 16-84 percent 0.647 to 1.734; draws reaching 1: 34.4 percent
+      kappa_dS (H0 73) at the draws' minima: 16-84 percent 0.700 to 1.878; draws reaching 1: 29.8 percent
+   kappa = 1 at H0 67.4: delta = 0.1253 (ladder at 0.1253: a0 0.7728e-10, kappa 1.000); cost Delta chi^2 = +3.38; clustered SD 9.5 (0.36 SD; 37.8 percent of draws favour the unity point); statistical 1.84 sigma
+   kappa = 1 at H0 73: delta = 0.1156 (ladder at 0.1156: a0 0.7757e-10, kappa 1.000); cost Delta chi^2 = +4.54; clustered SD 11.0 (0.41 SD; 35.5 percent of draws favour the unity point); statistical 2.13 sigma
+   kappa_dS = 1 at H0 67.4: delta = 0.1516 (ladder at 0.1517: a0 0.7650e-10, kappa_dS 1.000); cost Delta chi^2 = +1.08; clustered SD 5.6 (0.19 SD; 43.7 percent of draws favour the unity point); statistical 1.04 sigma
+   kappa_dS = 1 at H0 73: delta = 0.1399 (ladder at 0.14: a0 0.7683e-10, kappa_dS 1.001); cost Delta chi^2 = +1.94; clustered SD 7.3 (0.27 SD; 41.1 percent of draws favour the unity point); statistical 1.39 sigma
+
+TODO none

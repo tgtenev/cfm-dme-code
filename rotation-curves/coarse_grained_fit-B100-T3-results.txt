@@ -1,0 +1,43 @@
+AQUAL refit: the full AQUAL solution against the algebraic relation, T3 (the boost law, a0 and delta free)
+==============================================================================================================
+Fit machinery of two_constant_fit.pl as ported in refit_core.py: 153 SPARC galaxies, 3,168 points; disk
+ratio and each bulge ratio free under 0.10 dex priors about 0.5 and 0.7; distance and inclination through q, profiled
+within their catalog priors; converged per-galaxy fits; a0 by a ladder in log10 a0; errors clustered by galaxy.
+The algebraic relation predicts g = nu(g_b/a0) g_b; the full AQUAL solution g = nu(g_b/a0) g_b 10^Gamma, Gamma from the
+disk solver (aqual-disk-solver.py) for the model at the current a0 (and delta), carried to the fitted ratios by
+Gamma(s rho, a0) = Gamma(rho, a0/s) plus, point by point, its remaining error against direct solutions at other disk and bulge ratios (mode 'corrected'). Both models see the same points.
+Coarse-grained tables: 3168 points from coarse-gamma-B100-T11-0.csv, coarse-gamma-B100-T11-1.csv, coarse-gamma-B100-T11-2.csv, coarse-gamma-B100-T3-merged.csv; 56 columns replaced; 0 points without coarse-grained rows keep plain AQUAL's Gamma
+Bootstrap draws: 500 (aqual-refit-fit.py: 2000). Tag: B100-T3
+Points where the model's field or Gamma is undefined (excluded from both models): 0
+
+INPUT 1: THE MODEL'S OWN NEWTONIAN FIELD WITH THICKNESS FOR BOTH MODELS (model mismatch cancels)
+      scan nodes (delta: chi^2 at its refitted a0): 0.03: 4263.4, 0.05: 4263.6, 0.1: 4265.3, 0.15: 4268.4, 0.2: 4272.8, 0.25: 4278.2, 0.3: 4284.3, 0.35: 4290.9, 0.4: 4297.8, 0.45: 4304.8, 0.5: 4312.0
+   relation: a0 = 1.0016e-10, delta = 0.0300 (minimum on the edge of the delta grid), chi^2 = 4263.43  [77 s]
+      scan nodes (delta: chi^2 at its refitted a0): 0.03: 4518.0, 0.05: 4522.3, 0.1: 4533.9, 0.15: 4546.4, 0.2: 4559.4, 0.25: 4572.6, 0.3: 4585.6, 0.35: 4599.6, 0.4: 4613.2, 0.45: 4626.6, 0.5: 4639.8
+   full solution: a0 = 0.9208e-10, delta = 0.0300 (minimum on the edge of the delta grid), chi^2 = 4517.96  [620 s]
+   probe below the scan's lower stop for the relation (Gamma's quartic in delta extrapolated below its lowest node): delta 0.015: chi^2 4263.5 (a0 1.0109e-10); delta 0.008: chi^2 4263.6 (a0 1.0154e-10); delta 0.004: chi^2 4263.6 (a0 1.0182e-10)
+   probe below the scan's lower stop for the full solution (Gamma's quartic in delta extrapolated below its lowest node): delta 0.015: chi^2 4514.6 (a0 0.9296e-10); delta 0.008: chi^2 4513.1 (a0 0.9339e-10); delta 0.004: chi^2 4512.2 (a0 0.9363e-10)
+   full solution at the relation's best-fit constants (no refit): chi^2 4527.36, Delta +263.9; the refit recovers 9.4 of it
+   Delta chi^2 = full minus relation at the respective best fits: +254.5 +/- 147.4 (galaxy-clustered SD, 500 draws; 16-84 half-width 144.1; delta-method 140.3); +1.73 SD.
+   Clustered SD of delta over the draws: relation 0.0909, full 0.0221; draws with the minimum on the grid edge are taken at the edge node (as in two_constant_fit.pl)
+   (--nomock: mock expectations, slope tests and point tables skipped)
+   [model: 1109 s]
+
+INPUT 2: SPARC'S TABULATED g_bar, Gamma AS A PREDICTED CHANGE ON THE RELATION
+      scan nodes (delta: chi^2 at its refitted a0): 0.05: 4342.0, 0.1: 4334.2, 0.15: 4327.6, 0.2: 4322.8, 0.25: 4320.0, 0.3: 4319.2, 0.35: 4320.4, 0.4: 4323.2, 0.45: 4327.5, 0.5: 4333.1
+   relation: a0 = 0.9246e-10, delta = 0.2952, chi^2 = 4319.22  [149 s]
+      scan nodes (delta: chi^2 at its refitted a0): 0.03: 4553.4, 0.05: 4554.1, 0.1: 4556.4, 0.15: 4560.2, 0.2: 4565.9, 0.25: 4573.6, 0.3: 4583.2, 0.35: 4595.5, 0.4: 4609.2, 0.45: 4623.9, 0.5: 4639.4
+   full solution: a0 = 0.9757e-10, delta = 0.0300 (minimum on the edge of the delta grid), chi^2 = 4553.41  [627 s]
+   probe below the scan's lower stop for the full solution (Gamma's quartic in delta extrapolated below its lowest node): delta 0.015: chi^2 4552.6 (a0 0.9851e-10); delta 0.008: chi^2 4552.3 (a0 0.9896e-10); delta 0.004: chi^2 4552.1 (a0 0.9922e-10)
+   full solution at the relation's best-fit constants (no refit): chi^2 4591.51, Delta +272.3; the refit recovers 38.1 of it
+   Delta chi^2 = full minus relation at the respective best fits: +234.2 +/- 139.1 (galaxy-clustered SD, 500 draws; 16-84 half-width 134.8; delta-method 135.9); +1.68 SD.
+   Clustered SD of delta over the draws: relation 0.1126, full 0.0768; draws with the minimum on the grid edge are taken at the edge node (as in two_constant_fit.pl)
+   (--nomock: mock expectations, slope tests and point tables skipped)
+   [sparc: 2014 s]
+
+SUMMARY
+   model : relation a0 = 1.0016e-10, delta = 0.0300 (minimum on the edge of the delta grid), chi^2 = 4263.43; full a0 = 0.9208e-10, delta = 0.0300 (minimum on the edge of the delta grid), chi^2 = 4517.96; Delta chi^2 fixed calibration +263.9, refitted +254.5 +/- 147.4 (+1.73 SD); expected +nan (full right), +nan (relation right); rejection of the full solution nan SD
+   sparc : relation a0 = 0.9246e-10, delta = 0.2952, chi^2 = 4319.22; full a0 = 0.9757e-10, delta = 0.0300 (minimum on the edge of the delta grid), chi^2 = 4553.41; Delta chi^2 fixed calibration +272.3, refitted +234.2 +/- 139.1 (+1.68 SD); expected +nan (full right), +nan (relation right); rejection of the full solution nan SD
+   [main: 2014 s]
+
+[run time 2014 s]

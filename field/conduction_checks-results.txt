@@ -1,0 +1,16 @@
+1. The readout under an uneven store
+   check, uniform excess 1.9 in 3D: crimp boost 2.9000 against 2.9
+   2D, 160 x 160, two realizations: nbar | 1+<e> | harmonic mean of 1+e | crimp | interfaces | isotropic | fibres | whole layers reset
+       1 | 1.19 | 1.15 | 1.17 (0.98) | 1.17 (0.98) | 1.17 (0.99) | 1.19 (1.00) | 0.992 of its own 1+<e>
+       5 | 1.95 | 1.59 | 1.77 (0.91) | 1.78 (0.92) | 1.80 (0.92) | 1.94 (1.00) | 0.984 of its own 1+<e>
+      30 | 6.70 | 3.47 | 4.86 (0.73) | 5.02 (0.75) | 5.33 (0.79) | 6.67 (1.00) | 0.990 of its own 1+<e>
+     150 | 29.43 | 9.52 | 17.42 (0.59) | 18.47 (0.63) | 21.54 (0.73) | 29.26 (0.99) | 0.997 of its own 1+<e>
+   3D, 40^3: nbar | 1+<e> | harmonic mean | crimp | isotropic
+       5 | 1.95 | 1.60 | 1.75 (0.90) | 1.77 (0.91)
+      30 | 6.67 | 3.48 | 4.68 (0.70) | 4.99 (0.75)
+     150 | 29.58 | 9.62 | 16.91 (0.57) | 19.62 (0.66)
+
+2. Guidance by a random threshold of mean 1 in units of x = g/(cH_dS)
+   exponential: crossover at x = 0.1740; largest departure from Paper I's Eq. (8) for Y = 1e-3 to 10: 0.000 dex; X/sqrt(Y) at Y = 1e-3: 1.060
+   half-normal: crossover at x = 0.2525; largest departure from Paper I's Eq. (8) for Y = 1e-3 to 10: 0.017 dex; X/sqrt(Y) at Y = 1e-3: 1.100
+   uniform on [0, 2]: crossover at x = 0.3193; largest departure from Paper I's Eq. (8) for Y = 1e-3 to 10: 0.035 dex; X/sqrt(Y) at Y = 1e-3: 1.104

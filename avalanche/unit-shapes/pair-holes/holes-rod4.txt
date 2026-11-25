@@ -1,0 +1,4 @@
+# rod4: fresh sites over 4 for a re-laying from orientation a (row) to b (column)
+0.000000 0.750000 0.750000
+0.750000 0.000000 0.750000
+0.750000 0.750000 0.000000

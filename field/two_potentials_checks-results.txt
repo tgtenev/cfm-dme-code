@@ -1,0 +1,23 @@
+1. lap(Phi) - 4 pi G (rho_hat + rho_ph) = 0 -> Psi = Phi solves the reweighted constraint for any symmetric C^ij(x)
+2. lensing mass over dynamical mass if the bend follows the baryons alone (free volume 0.19, a0 = 9.70e-11 m/s^2)
+   g_bar = 1e-09 m/s^2: nu =   1.04, M_lens/M_dyn = 0.983 (-0.01 dex)
+   g_bar = 1e-10 m/s^2: nu =   1.58, M_lens/M_dyn = 0.816 (-0.09 dex)
+   g_bar = 3e-11 m/s^2: nu =   2.39, M_lens/M_dyn = 0.709 (-0.15 dex)
+   g_bar = 1e-11 m/s^2: nu =   3.74, M_lens/M_dyn = 0.634 (-0.20 dex)
+   g_bar = 3e-12 m/s^2: nu =   6.41, M_lens/M_dyn = 0.578 (-0.24 dex)
+   g_bar = 1e-12 m/s^2: nu =  10.76, M_lens/M_dyn = 0.546 (-0.26 dex)
+   g_bar = 1e-13 m/s^2: nu =  33.01, M_lens/M_dyn = 0.515 (-0.29 dex)
+   at the crossover, X = 1, nu = 2 exactly, so the ratio is 0.75
+3. linearized Einstein tensor: G_00 = 2 lap Psi: True; G_ij = (delta_ij lap - d_i d_j)(Phi - Psi): True; G_0i = 0: True
+4. spherical, any M(r) and l(r):
+   lapse law integrated, d/dr(r^2 Phi'/l) - 4 pi G rho r^2 with 4 pi rho r^2 = M': 0
+   bend counted on its flux: u - r Phi'/c^2 = 0 ; its law, d/dr(r u/l) - 4 pi G rho r^2/c^2 = 0
+   bend left on the baryons: u/(r Phi'/c^2) = 1/ell(r) ; bend counted on its slope: u/(r Phi'/c^2) = ell(r)
+   the slope of the counted bend, w' = sqrt(2u): sqrt(2)*sqrt(G)*sqrt(M(r)*ell(r))/(c*sqrt(r)) ; the per-path slope w'/l squared over 2 equals u/l^2: True
+5. a point mass of 1e11 solar masses; r0 = sqrt(GM/a0) = 12.0 kpc
+   r =  0.5 r0: rho_ph = 9.39e-22 kg/m^3; bend left on the baryons: energy density 0, p_r/(rho_ph c^2) = 0.410, p_t/(rho_ph c^2) = 0.295, (p_r + 2 p_t)/(rho_ph c^2) = 1.000
+   r =  1.0 r0: rho_ph = 2.98e-22 kg/m^3; bend left on the baryons: energy density 0, p_r/(rho_ph c^2) = 0.623, p_t/(rho_ph c^2) = 0.188, (p_r + 2 p_t)/(rho_ph c^2) = 1.000
+   r =  3.0 r0: rho_ph = 3.59e-23 kg/m^3; bend left on the baryons: energy density 0, p_r/(rho_ph c^2) = 0.845, p_t/(rho_ph c^2) = 0.078, (p_r + 2 p_t)/(rho_ph c^2) = 1.000
+   r = 10.0 r0: rho_ph = 3.26e-24 kg/m^3; bend left on the baryons: energy density 0, p_r/(rho_ph c^2) = 0.949, p_t/(rho_ph c^2) = 0.025, (p_r + 2 p_t)/(rho_ph c^2) = 1.000
+   r = 30.0 r0: rho_ph = 3.63e-25 kg/m^3; bend left on the baryons: energy density 0, p_r/(rho_ph c^2) = 0.983, p_t/(rho_ph c^2) = 0.009, (p_r + 2 p_t)/(rho_ph c^2) = 1.000
+   bend counted on its flux: Psi = Phi, so T_ij = 0 and the phantom is a density rho_ph without stress

@@ -1,0 +1,5 @@
+astropy
+camb
+numpy
+scipy
+sympy

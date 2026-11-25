@@ -1,0 +1,19 @@
+machinery: the per-galaxy fit of two_constant_fit.pl (converged; bulge free per galaxy); MOND's simple function at a0 = 1.0796e-10
+
+                                    Q=1        Q=2
+galaxies                             93         60
+median chi2/N                      0.66       0.81
+median per-gal RAR rms (dex)     0.0681     0.0768
+pooled rms, deep (y<1)           0.0893     0.1209
+  deep points                      1583        854
+pooled rms, high (y>=1)          0.1308     0.1441
+  high points                       477        251
+median per-gal deep/high          0.452      0.648
+
+discriminant: slow re-equilibration would give Q=2 a larger deep/high than Q=1;
+noise from poorer data inflates Q=2 at every y alike.
+
+galaxy bootstrap (4000 draws within each class):
+  ratio of the median per-galaxy deep/high, Q=2 over Q=1: 1.434, SD 0.712, 16-84 1.094 to 2.030, 2.5-97.5 0.737 to 3.651; fraction of draws <= 1: 0.1232
+  ratio of the pooled deep/high rms, Q=2 over Q=1: 1.230, SD 0.384, 16-84 0.909 to 1.630, 2.5-97.5 0.678 to 2.165; fraction of draws <= 1: 0.2517
+done.

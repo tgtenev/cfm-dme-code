@@ -1,0 +1,319 @@
+THE DIRECTION OF A NEW LAYER AGAINST THE INNER ROTATION CURVES AND THE SPEEDS THROUGH THE FABRIC
+======================================================================================================================
+law: the boost law of Paper I, Eq. (8), at delta = 0.19, a0 = 9.76e-11 m/s^2, on SPARC's tabulated field; the fit
+machinery of refit_core.py refits every galaxy's ratios, distance and inclination over all points with g_bar > 0.
+153 galaxies, total chi^2 4323.67.
+trail: Delta = F 2 v T nu^p, T = (1/Gamma) (nu - 1 + delta)/delta, 1/Gamma the mean interval between renewal events,
+190 to 650 yr; the gradient rule p = 1, F 1.0 to 2.6; the flux rule p = 0, F 0.85 to 0.92.
+frame: the Sun 369.82 km/s toward (l, b) = (264.021, 48.253); the Local Group 627 km/s toward (276, 30);
+H0 = 73.0 km/s/Mpc for the Hubble flow at SPARC's distance; relative transverse velocity 200 km/s per component.
+
+1. THE SAMPLE: THE LAW'S BOOST nu(g_bar/a0) AT THE INNERMOST VALID POINT, AT THE FITTED RATIOS
+   boost above 10: 9 galaxies; above 5: 32 galaxies (of 153 with two or more valid points)
+   galaxy        f_D  D (Mpc)   r_in (kpc)  boost   nu(X_obs)  residual  sigma_obs | 2nd point: r, boost, residual
+   CamB           2    3.36 +/-  0.26   0.16     9.73    56.77   -0.801   0.656   |  0.41   6.68 -0.622
+   D512-2         1   15.20 +/-  4.56   0.96     5.52     5.68   -0.014   0.112   |  1.92   5.43 +0.006
+   D564-8         2    8.79 +/-  0.28   0.51     8.11    15.25   -0.299   0.162   |  1.02   7.99 -0.112
+   DDO064         1    6.80 +/-  2.04   0.10    23.45     8.91   +0.450   0.639   |  0.30   8.96 +0.214   *
+   DDO154         2    4.04 +/-  0.20   0.49     5.79     8.71   -0.203   0.110   |  0.99   5.78 -0.121
+   DDO170         1   15.40 +/-  4.62   1.87     5.42     6.27   -0.075   0.104   |  3.36   5.51 +0.049
+   F565-V2        1   51.80 +/- 10.40   1.26     6.94    11.89   -0.260   0.403   |  2.51   6.04 -0.092
+   F568-3         1   82.40 +/-  8.24   0.64     5.29    14.62   -0.496   0.604   |  1.18   4.67 -0.333
+   F583-1         1   35.40 +/-  8.85   0.26     6.78     4.98   +0.159   0.775   |  0.44   5.56 -0.499
+   F583-4         1   53.30 +/- 10.70   0.22     7.31     6.61   +0.050   0.400   |  0.76   4.49 -0.013
+   IC2574         2    3.91 +/-  0.20   0.85    14.94    22.14   -0.180   0.047   |  1.14  13.88 -0.146   *
+   KK98-251       1    6.80 +/-  2.04   0.25    11.10    23.80   -0.352   0.411   |  0.41   9.11 -0.247   *
+   NGC0100        1   13.50 +/-  4.05   0.23     5.36    19.56   -0.622   1.046   |  0.69   3.92 -0.334
+   NGC3109        2    1.33 +/-  0.07   0.26    16.15    27.31   -0.239   0.232   |  0.52  12.57 -0.128   *
+   NGC4068        2    4.37 +/-  0.22   0.21     6.34    19.78   -0.541   0.679   |  0.64   4.49 -0.311
+   UGC00731       1   12.50 +/-  3.75   0.91     6.12     4.04   +0.221   0.082   |  1.81   5.57 +0.230
+   UGC00891       1   10.20 +/-  3.10   1.48     5.00     8.05   -0.242   0.113   |  2.97   4.90 -0.050
+   UGC01281       2    5.27 +/-  0.24   0.38    10.91    22.20   -0.328   0.453   |  0.54   8.93 -0.268   *
+   UGC04278       1    9.51 +/-  2.85   0.14     7.63    20.42   -0.463   0.883   |  0.42   4.97 -0.220
+   UGC04483       2    3.34 +/-  0.31   0.08     5.93     8.35   -0.170   0.476   |  0.24   4.28 -0.170
+   UGC05005       1   53.70 +/- 10.70   0.78     5.03    10.13   -0.350   0.487   |  2.34   4.54 -0.178
+   UGC05750       1   58.70 +/- 11.70   0.31    11.06    77.79   -0.879   1.262   |  1.47   5.99 -0.446   *
+   UGC05764       1    7.47 +/-  2.24   0.36     6.45     4.44   +0.196   0.092   |  0.73   4.79 +0.062
+   UGC05829       1    8.64 +/-  2.59   0.63     8.96     8.25   +0.040   0.300   |  1.26   7.28 +0.166
+   UGC05918       1    7.66 +/-  2.30   0.56     7.36     6.74   +0.044   0.207   |  1.11   7.15 +0.152
+   UGC06667       4   18.00 +/-  2.50   0.87     8.11     6.57   +0.104   0.150   |  1.74   7.29 +0.212
+   UGC07559       2    4.97 +/-  0.25   0.36     6.02    11.56   -0.319   0.304   |  0.72   5.13 -0.238
+   UGC07577       2    2.59 +/-  0.13   0.38    14.32    29.35   -0.326   0.512   |  0.57   9.73 -0.422   *
+   UGC07866       2    4.57 +/-  0.23   0.33     5.17     6.02   -0.078   0.293   |  0.66   5.34 +0.040
+   UGC08837       2    7.21 +/-  0.36   0.52    11.51    24.40   -0.346   0.256   |  1.05   9.89 -0.122   *
+   UGCA442        2    4.35 +/-  0.22   0.42     6.79     7.53   -0.051   0.125   |  1.26   4.75 -0.106
+   UGCA444        2    0.98 +/-  0.05   0.12    14.55     8.67   +0.245   0.351   |  0.19  15.58 +0.323   *
+   (* boost above 10)
+
+2. THE SPEEDS THROUGH THE FABRIC (km/s)
+   v_hel and its source; cz_CMB; u_los = cz_CMB - H0 D with its error H0 e_D (+) the velocity error; the Local Group's
+   line-of-sight and transverse parts there; w_los = u_los minus the Local Group's line-of-sight part; the flow speed
+   (transverse part equal to the Local Group's); the Monte Carlo's 16th, 50th and 84th percentiles.
+   galaxy        v_hel   cz_CMB   u_los +/- err   LG_los LG_perp   w_los  v_flow  v_16  v_50  v_84  source of v_hel
+   CamB            77.0     24.2    -221 +/-   20    -278    562      57    604   461   637   824  Sesame Sca 2004AJ....127.2031K
+   D512-2         830.0   1018.2     -91 +/-  333     177    601    -268    608   518   716   922  ALFALFA AGC 242165
+   D564-8         483.0    759.4     118 +/-   21     350    520    -232    533   383   567   755  ALFALFA AGC 191794
+   DDO064         521.0    791.2     295 +/-  149     299    551      -4    625   499   675   858  Sesame Sca 2022ApJS..261...21Y
+   DDO154         374.0    648.2     353 +/-   15     311    545      43    649   528   680   852  Sesame Sca 2022ApJS..261...21Y
+   DDO170         940.0   1204.9      81 +/-  337     301    550    -221    556   477   674   879  Sesame Sca 2022ApJS..261...21Y
+   F565-V2       3683.0   3978.9     198 +/-  759     372    505    -174    542   537   814  1252  ALFALFA AGC 196124
+   F568-3        5907.0   6223.5     208 +/-  602     399    484    -191    527   496   739  1081  ALFALFA AGC 201888
+   F583-1        2267.0   2360.6    -224 +/-  646      53    625    -277    664   613   863  1209  VII/238 PGC 86657
+   F583-4        3611.0   3714.9    -176 +/-  781      76    622    -252    647   633   909  1328  VII/238 PGC 86660
+   IC2574          48.0    139.1    -146 +/-   15     -66    624     -81    641   483   670   859  Sesame Sca 2020ApJ...902..145K
+   KK98-251       126.0    -51.3    -548 +/-  149    -464    421     -83    691   577   741   905  VII/238 PGC 166192
+   NGC0100        847.0    499.7    -486 +/-  296    -586    224     100    535   384   615   875  Sesame Sca 2022ApJS..261...21Y
+   NGC3109        403.0    737.5     640 +/-    5     608    154      33    659   655   695   774  Sesame Sca 2012AJ....144....4M
+   NGC4068        208.0    389.7      71 +/-   17      99    619     -28    623   462   655   848  Sesame Sca 2020ApJ...902..145K
+   UGC00731       638.9    398.2    -514 +/-  274    -529    337      14    615   461   684   923  Sesame Sca z 1991RC3v9.C......0D
+   UGC00891       643.0    330.6    -414 +/-  226    -515    358     101    547   427   621   825  Sesame Sca 2022ApJS..261...21Y
+   UGC01281       154.0   -109.0    -494 +/-   18    -511    364      17    613   547   647   781  Sesame Sca 2022ApJS..261...21Y
+   UGC04278       557.0    707.9      14 +/-  208      77    622     -64    622   500   688   880  Sesame Sca 2020ApJ...902..145K
+   UGC04483       156.0    213.1     -31 +/-   23    -117    616      86    617   456   646   842  Sesame Sca 2020ApJ...902..145K
+   UGC05005      3819.4   4105.6     185 +/-  781     356    516    -170    548   548   832  1286  Sesame Sca z 2020ApJS..249....3A
+   UGC05750      4167.0   4489.5     204 +/-  854     412    472    -208    515   530   835  1361  Sesame Sca 2022ApJS..261...21Y
+   UGC05764       582.0    867.8     322 +/-  164     320    539       2    628   499   680   862  Sesame Sca 2022ApJS..261...21Y
+   UGC05829       628.0    903.0     272 +/-  189     294    554     -22    617   492   679   867  Sesame Sca 2022ApJS..261...21Y
+   UGC05918       339.1    449.7    -109 +/-  168     -32    626     -77    636   503   689   880  Sesame Sca z 2002LEDA.........0P
+   UGC06667       974.0   1165.0    -149 +/-  183     116    616    -265    634   503   692   883  Sesame Sca 2016A&amp;A...595A.118V
+   UGC07559       218.0    468.0     105 +/-   19     243    578    -138    587   434   623   816  Sesame Sca 2004AJ....127.2031K
+   UGC07577       194.9    416.0     227 +/-    9     181    600      46    642   494   673   860  Sesame Sca 2012AJ....144....4M
+   UGC07866       358.9    596.2     263 +/-   18     219    587      43    643   502   674   856  Sesame Sca z 2002LEDA.........0P
+   UGC08837       140.0    267.7    -259 +/-   27      11    627    -270    678   535   709   896  Sesame Sca 2020ApJ...902..145K
+   UGCA442        267.0    -17.8    -335 +/-   17    -314    543     -21    638   514   669   841  Sesame Sca 2020ApJ...902..145K
+   UGCA444       -130.0   -463.4    -535 +/-    4    -444    442     -90    694   613   724   864  Sesame Sca 2012AJ....144....4M
+   relative line-of-sight velocity w_los over the wide sample: rms 147 km/s, rms after the errors 0 km/s;
+   over the 14 galaxies with TRGB, Cepheid or supernova distances: rms 113 km/s, after the errors 112 km/s
+   error of u_los, distances from TRGB: 14 galaxies, 4 to 27 km/s
+   error of u_los, distances from Ursa Major: 1 galaxies, 183 to 183 km/s
+   error of u_los, distances from Hubble flow: 17 galaxies, 149 to 854 km/s
+   source of the heliocentric velocity over the 153 galaxies of the fit: ALFALFA 9, Sesame 141, VII/238 3
+   Monte Carlo over the wide sample: 16th percentiles 383 to 655 km/s, 84th percentiles 755 to 1361 km/s
+   flow speed over the wide sample: 515 to 694 km/s, median 623; |u_los| 14 to 640, median 222
+   check, all galaxies: the resolver's velocity minus the Updated Nearby Galaxy Catalog's for 56 galaxies: median +0.0 km/s, within 20 km/s for 55, largest -23.0 km/s (NGC6503)
+   check, the wide sample: the resolver's velocity minus the Updated Nearby Galaxy Catalog's for 18 galaxies: median +0.0 km/s, within 20 km/s for 18, largest -11.1 km/s (UGC07577)
+   check, all galaxies: the resolver's velocity minus the homogenized HI velocity of VII/238 for 139 galaxies: median +0.0 km/s, within 20 km/s for 122, largest -2981.0 km/s (UGC05750)
+   check, the wide sample: the resolver's velocity minus the homogenized HI velocity of VII/238 for 25 galaxies: median -0.1 km/s, within 20 km/s for 23, largest -2981.0 km/s (UGC05750)
+
+3. THE TRAIL AT THE INNERMOST POINT, OVER THE RADIUS (each range over 1/Gamma and F; the law's stretch)
+   galaxy        r_in  nu     T (kyr)    | gradient rule at v_flow, at |u_los|, at v_16-v_84 | flux rule at v_flow, at v_84
+   CamB          0.16   9.73   8.9- 30.5 |  0.670- 5.963  0.245- 2.183  0.512- 8.134 | 0.0586-0.2168 0.2957
+   D512-2        0.96   5.52   4.7- 16.1 |  0.034- 0.300  0.005- 0.045  0.029- 0.455 | 0.0052-0.0192 0.0291
+   D564-8        0.51   8.11   7.3- 25.0 |  0.127- 1.128  0.028- 0.249  0.091- 1.597 | 0.0133-0.0492 0.0696
+   DDO064        0.10  23.45  22.6- 77.4 |  6.788-60.374  3.200-28.464  5.415-82.867 | 0.2461-0.9111 1.2506
+   DDO154        0.49   5.79   5.0- 17.0 |  0.078- 0.695  0.043- 0.378  0.064- 0.912 | 0.0115-0.0425 0.0557
+   DDO170        1.87   5.42   4.6- 15.8 |  0.015- 0.135  0.002- 0.020  0.013- 0.214 | 0.0024-0.0088 0.0139
+   F565-V2       1.26   6.94   6.1- 21.0 |  0.037- 0.333  0.014- 0.121  0.037- 0.769 | 0.0046-0.0170 0.0392
+   F568-3        0.64   5.29   4.5- 15.3 |  0.040- 0.355  0.016- 0.140  0.038- 0.728 | 0.0064-0.0237 0.0487
+   F583-1        0.26   6.78   6.0- 20.4 |  0.211- 1.877  0.071- 0.632  0.195- 3.419 | 0.0265-0.0980 0.1785
+   F583-4        0.22   7.31   6.5- 22.2 |  0.286- 2.542  0.078- 0.692  0.280- 5.218 | 0.0332-0.1230 0.2526
+   IC2574        0.85  14.94  14.1- 48.4 |  0.326- 2.896  0.074- 0.662  0.245- 3.884 | 0.0185-0.0686 0.0920
+   KK98-251      0.25  11.10  10.3- 35.2 |  0.645- 5.740  0.511- 4.549  0.538- 7.515 | 0.0494-0.1830 0.2396
+   NGC0100       0.23   5.36   4.5- 15.6 |  0.116- 1.030  0.105- 0.936  0.083- 1.685 | 0.0184-0.0681 0.1113
+   NGC3109       0.26  16.15  15.3- 52.5 |  1.283-11.415  1.248-11.098  1.275-13.410 | 0.0676-0.2501 0.2939
+   NGC4068       0.21   6.34   5.5- 18.9 |  0.213- 1.893  0.024- 0.215  0.158- 2.577 | 0.0285-0.1056 0.1438
+   UGC00731      0.91   6.12   5.3- 18.2 |  0.045- 0.400  0.038- 0.334  0.034- 0.600 | 0.0062-0.0231 0.0347
+   UGC00891      1.48   5.00   4.2- 14.3 |  0.016- 0.141  0.012- 0.107  0.012- 0.213 | 0.0027-0.0100 0.0150
+   UGC01281      0.38  10.91  10.1- 34.6 |  0.364- 3.237  0.293- 2.606  0.325- 4.123 | 0.0283-0.1050 0.1337
+   UGC04278      0.14   7.63   6.8- 23.3 |  0.474- 4.214  0.010- 0.092  0.381- 5.956 | 0.0527-0.1953 0.2760
+   UGC04483      0.08   5.93   5.1- 17.5 |  0.479- 4.261  0.024- 0.212  0.354- 5.815 | 0.0686-0.2542 0.3469
+   UGC05005      0.78   5.03   4.2- 14.4 |  0.030- 0.271  0.010- 0.092  0.030- 0.636 | 0.0052-0.0191 0.0448
+   UGC05750      0.31  11.06  10.3- 35.1 |  0.385- 3.428  0.153- 1.361  0.397- 9.062 | 0.0296-0.1096 0.2898
+   UGC05764      0.36   6.45   5.6- 19.3 |  0.130- 1.156  0.067- 0.594  0.103- 1.587 | 0.0171-0.0634 0.0870
+   UGC05829      0.63   8.96   8.1- 27.9 |  0.146- 1.300  0.065- 0.574  0.117- 1.827 | 0.0139-0.0514 0.0722
+   UGC05918      0.56   7.36   6.6- 22.4 |  0.112- 0.996  0.019- 0.172  0.089- 1.379 | 0.0129-0.0479 0.0663
+   UGC06667      0.87   8.11   7.3- 25.0 |  0.088- 0.785  0.021- 0.185  0.070- 1.093 | 0.0092-0.0342 0.0477
+   UGC07559      0.36   6.02   5.2- 17.8 |  0.105- 0.933  0.019- 0.167  0.077- 1.295 | 0.0148-0.0548 0.0760
+   UGC07577      0.38  14.32  13.5- 46.2 |  0.669- 5.948  0.236- 2.103  0.515- 7.968 | 0.0397-0.1469 0.1969
+   UGC07866      0.33   5.17   4.4- 14.9 |  0.090- 0.801  0.037- 0.327  0.070- 1.065 | 0.0148-0.0548 0.0728
+   UGC08837      0.52  11.51  10.7- 36.6 |  0.328- 2.920  0.125- 1.113  0.259- 3.858 | 0.0243-0.0898 0.1186
+   UGCA442       0.42   6.79   6.0- 20.5 |  0.126- 1.124  0.066- 0.591  0.102- 1.482 | 0.0158-0.0585 0.0772
+   UGCA444       0.12  14.55  13.7- 47.0 |  2.364-21.026  1.822-16.206  2.087-26.161 | 0.1381-0.5115 0.6364
+   the gradient rule at the flow speed: wide sample, trail above a tenth of the radius 22 to 32 of 32, above the radius 3 to 20; boost above 10: above a tenth 9 to 9 of 9, above the radius 3 to 9
+   the flux rule at the flow speed: wide sample, trail above a tenth of the radius 2 to 12 of 32, above the radius 0 to 0; boost above 10: above a tenth 2 to 7 of 9, above the radius 0 to 0
+   the gradient rule at the line-of-sight component: wide sample, trail above a tenth of the radius 10 to 28 of 32, above the radius 3 to 9; boost above 10: above a tenth 8 to 9 of 9, above the radius 3 to 8
+   the flux rule at the line-of-sight component: wide sample, trail above a tenth of the radius 2 to 4 of 32, above the radius 0 to 0; boost above 10: above a tenth 2 to 4 of 9, above the radius 0 to 0
+   the same with the stretch that the observed field gives, nu(X_obs), at the flow speed:
+   the gradient rule: above a tenth of the radius 25 to 32 of 32, above the radius 10 to 24; median 0.3775 to 3.3579
+   the flux rule: above a tenth of the radius 6 to 16 of 32, above the radius 0 to 1; median 0.0271 to 0.1003
+
+4. THE BOOST LEFT (boost_left.py: sheared arrangement; in the plane of motion / normal to it), solved on a grid of
+   the displacement scale K = v F/Gamma (km/s yr) and interpolated in log K. Static check: the undisplaced solve against
+   the spherical law.
+   CamB         static check at the innermost point +0.0008, largest over its radii 0.0020; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.96/0.98, 0.69/0.67, 0.15/0.19
+   D512-2       static check at the innermost point +0.0000, largest over its radii 0.0017; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 1.00/1.00, 0.92/0.90
+   D564-8       static check at the innermost point +0.0000, largest over its radii 0.0013; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.97/0.97, 0.43/0.49
+   DDO064       static check at the innermost point +0.0036, largest over its radii 0.0036; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.60/0.56, -0.11/0.23, -0.07/0.05
+   DDO154       static check at the innermost point +0.0000, largest over its radii 0.0015; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.99/0.99, 0.75/0.72
+   DDO170       static check at the innermost point -0.0001, largest over its radii 0.0020; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 1.00/1.00, 0.98/0.97
+   F565-V2      static check at the innermost point +0.0003, largest over its radii 0.0032; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.99/1.00, 0.85/0.84
+   F568-3       static check at the innermost point +0.0002, largest over its radii 0.0015; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.99/1.00, 0.85/0.83
+   F583-1       static check at the innermost point +0.0002, largest over its radii 0.0035; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.93/0.94, 0.31/0.43
+   F583-4       static check at the innermost point +0.0028, largest over its radii 0.0039; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.98/1.00, 0.82/0.83, 0.19/0.38
+   IC2574       static check at the innermost point +0.0000, largest over its radii 0.0062; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.90/0.89, 0.21/0.30
+   KK98-251     static check at the innermost point +0.0001, largest over its radii 0.0025; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.98/0.99, 0.77/0.75, 0.12/0.20
+   NGC0100      static check at the innermost point +0.0011, largest over its radii 0.0037; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.99/1.00, 0.93/0.96, 0.46/0.52
+   NGC3109      static check at the innermost point +0.0006, largest over its radii 0.0041; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.94/0.96, 0.51/0.55, 0.04/0.13
+   NGC4068      static check at the innermost point +0.0008, largest over its radii 0.0015; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.99/1.00, 0.89/0.91, 0.28/0.42
+   UGC00731     static check at the innermost point +0.0002, largest over its radii 0.0056; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.99/1.00, 0.86/0.83
+   UGC00891     static check at the innermost point +0.0000, largest over its radii 0.0009; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 1.00/1.00, 0.97/0.97
+   UGC01281     static check at the innermost point +0.0002, largest over its radii 0.0076; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.99/1.00, 0.85/0.85, 0.20/0.27
+   UGC04278     static check at the innermost point +0.0004, largest over its radii 0.0063; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.97/0.99, 0.76/0.73, 0.06/0.26
+   UGC04483     static check at the innermost point +0.0008, largest over its radii 0.0008; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.97/0.99, 0.78/0.75, 0.16/0.26
+   UGC05005     static check at the innermost point +0.0005, largest over its radii 0.0025; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.99/1.00, 0.88/0.87
+   UGC05750     static check at the innermost point +0.0003, largest over its radii 0.0036; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.94/0.99, 0.71/0.67, -0.02/0.29
+   UGC05764     static check at the innermost point +0.0002, largest over its radii 0.0031; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.95/0.97, 0.49/0.54
+   UGC05829     static check at the innermost point +0.0004, largest over its radii 0.0082; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.95/0.96, 0.43/0.50
+   UGC05918     static check at the innermost point +0.0000, largest over its radii 0.0066; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.98/0.98, 0.58/0.60
+   UGC06667     static check at the innermost point -0.0000, largest over its radii 0.0078; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.98/0.99, 0.68/0.67
+   UGC07559     static check at the innermost point +0.0001, largest over its radii 0.0013; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.97/0.98, 0.57/0.59
+   UGC07577     static check at the innermost point +0.0017, largest over its radii 0.0078; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.96/0.99, 0.70/0.69, 0.05/0.21
+   UGC07866     static check at the innermost point -0.0000, largest over its radii 0.0028; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 1.00/1.00, 0.99/0.99, 0.71/0.68
+   UGC08837     static check at the innermost point +0.0000, largest over its radii 0.0065; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.99/1.00, 0.89/0.88, 0.23/0.33
+   UGCA442      static check at the innermost point +0.0013, largest over its radii 0.0018; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.99/1.00, 0.93/0.96, 0.49/0.53
+   UGCA444      static check at the innermost point -0.0002, largest over its radii 0.0034; boost left at the innermost point, gradient rule, K = 1e4, 1e5, 1e6: 0.96/0.94, 0.30/0.40, 0.01/0.09
+   static check over the wide sample: largest deviation 0.0082 at the data radii and 0.0036 at the innermost points
+   predicted residual at the innermost point, log10 of the boost left, clipped at -2 (dex):
+      grad-central    the gradient rule, central: the flow speed, the geometric means of 1/Gamma and F, the mean of the two directions
+      grad-rigid      the gradient rule, central with the rigid displacement (the innermost point only)
+      grad-least-flow the gradient rule, least at the flow speed: 190 yr, F = 1.0, the larger boost of the two directions
+      grad-least-los  the gradient rule, least at |u_los|: 190 yr, F = 1.0, the larger boost of the two directions
+      flux-central    the flux rule, central: the flow speed, the geometric means of 1/Gamma and F, the mean of the two directions
+      flux-most       the flux rule, most exposed: the 84th percentile of the speed, 650 yr, F = 0.92, the smaller boost of the two directions
+   galaxy        observed |    grad-central      grad-rigid grad-least-flow  grad-least-los    flux-central       flux-most
+   CamB         -0.801   |          -0.494          -0.331          -0.182          -0.068          -0.009          -0.037
+   D512-2       -0.014   |          -0.008          -0.005          -0.001          -0.000          -0.000          -0.001
+   D564-8       -0.299   |          -0.072          -0.054          -0.013          -0.001          -0.001          -0.004
+   DDO064       +0.450   |          -1.478          -0.943          -0.682          -0.521          -0.003          -0.163
+   DDO154       -0.203   |          -0.033          -0.023          -0.004          -0.001          -0.000          -0.002
+   DDO170       -0.075   |          -0.001          -0.001          +0.000          -0.000          -0.000          -0.000
+   F565-V2      -0.260   |          -0.015          -0.002          -0.002          -0.000          -0.000          -0.003
+   F568-3       -0.496   |          -0.014          -0.004          -0.002          -0.000          -0.000          -0.004
+   F583-1       +0.159   |          -0.156          -0.052          -0.036          -0.006          -0.003          -0.022
+   F583-4       +0.050   |          -0.266          -0.037          -0.097          -0.012          -0.011          -0.048
+   IC2574       -0.180   |          -0.251          -0.123          -0.056          -0.007          -0.001          -0.007
+   KK98-251     -0.352   |          -0.470          -0.210          -0.150          -0.117          -0.007          -0.029
+   NGC0100      -0.622   |          -0.095          +0.006          -0.019          -0.016          -0.005          -0.025
+   NGC3109      -0.239   |          -0.738          -0.388          -0.309          -0.302          -0.008          -0.034
+   NGC4068      -0.541   |          -0.185          -0.025          -0.053          -0.001          -0.007          -0.030
+   UGC00731     +0.221   |          -0.017          -0.005          -0.002          -0.001          -0.000          -0.002
+   UGC00891     -0.242   |          -0.002          -0.001          -0.000          -0.000          -0.000          -0.000
+   UGC01281     -0.328   |          -0.283          -0.141          -0.078          -0.064          -0.003          -0.015
+   UGC04278     -0.463   |          -0.383          -0.149          -0.136          -0.000          -0.012          -0.044
+   UGC04483     -0.170   |          -0.373          -0.237          -0.126          -0.001          -0.017          -0.055
+   UGC05005     -0.350   |          -0.011          -0.003          -0.001          -0.000          -0.000          -0.005
+   UGC05750     -0.879   |          -0.359          +0.006          -0.147          -0.058          -0.010          -0.035
+   UGC05764     +0.196   |          -0.100          -0.005          -0.019          -0.005          -0.003          -0.015
+   UGC05829     +0.040   |          -0.105          -0.026          -0.022          -0.006          -0.002          -0.008
+   UGC05918     +0.044   |          -0.062          -0.042          -0.010          -0.000          -0.001          -0.003
+   UGC06667     +0.104   |          -0.050          -0.016          -0.008          -0.001          -0.001          -0.003
+   UGC07559     -0.319   |          -0.065          -0.021          -0.011          -0.000          -0.002          -0.008
+   UGC07577     -0.326   |          -0.514          -0.272          -0.180          -0.064          -0.004          -0.022
+   UGC07866     -0.078   |          -0.038          -0.033          -0.003          -0.000          -0.000          -0.003
+   UGC08837     -0.346   |          -0.256          -0.119          -0.066          -0.019          -0.003          -0.012
+   UGCA442      -0.051   |          -0.112          +0.025          -0.022          -0.006          -0.004          -0.019
+   UGCA444      +0.245   |          -0.969          -0.613          -0.509          -0.404          -0.042          -0.131
+
+5. THE TESTS
+   boost above 10 (9 galaxies): residual at the innermost point, mean -0.217, median -0.326, rms 0.419 dex; the scatter beyond the observational error that sets chi^2 per point
+      to one for the unmodified law, 0.086 dex
+   a. Spearman's rho of the residual with x, and its two-sided permutation p (no dependence, as the flux rule requires):
+      the flow speed                                   : innermost point +0.150 (p 0.705); two innermost points +0.550 (p 0.134)
+      |u_los|                                          : innermost point +0.100 (p 0.810); two innermost points +0.467 (p 0.213)
+      u_los, signed                                    : innermost point +0.317 (p 0.412); two innermost points +0.033 (p 0.948)
+      w_los                                            : innermost point +0.367 (p 0.337); two innermost points -0.100 (p 0.810)
+      the gradient rule's central trail over the radius: innermost point +0.517 (p 0.160); two innermost points +0.500 (p 0.182)
+      the innermost radius, a control                  : innermost point -0.326 (p 0.394); two innermost points -0.477 (p 0.196)
+      the law's boost there, a control                 : innermost point +0.833 (p 0.008); two innermost points +0.717 (p 0.039)
+   b. the rho that the gradient rule would give: its predicted residuals plus noise, the noise the observed residuals
+      reshuffled or Gaussian with each point's sigma; median, 2.5 to 97.5 percent, and the share of draws at or beyond
+      the observed rho on the observed side
+      grad-central    x = the flow speed                   : observed +0.150; reshuffled -0.150 (-0.600 to +0.400), beyond 0.1613; Gaussian -0.117 (-0.667 to +0.533), beyond 0.2370
+      grad-central    x = the gradient rule's central trail: observed +0.517; reshuffled -0.658 (-0.950 to -0.250), beyond 0.0000; Gaussian -0.617 (-0.883 to -0.167), beyond 0.0003
+      grad-central    x = this case's predicted residual   : observed -0.517; reshuffled +0.658 (+0.233 to +0.933), beyond 0.0000; Gaussian +0.617 (+0.183 to +0.883), beyond 0.0000
+      grad-rigid      x = the flow speed                   : observed +0.150; reshuffled -0.167 (-0.650 to +0.450), beyond 0.1565; Gaussian -0.117 (-0.700 to +0.600), beyond 0.2632
+      grad-rigid      x = the gradient rule's central trail: observed +0.517; reshuffled -0.533 (-0.900 to +0.000), beyond 0.0000; Gaussian -0.500 (-0.817 to +0.117), beyond 0.0008
+      grad-rigid      x = this case's predicted residual   : observed -0.767; reshuffled +0.567 (+0.083 to +0.917), beyond 0.0000; Gaussian +0.467 (-0.250 to +0.900), beyond 0.0000
+      grad-least-flow x = the flow speed                   : observed +0.150; reshuffled -0.083 (-0.667 to +0.567), beyond 0.2600; Gaussian -0.083 (-0.733 to +0.617), beyond 0.2925
+      grad-least-flow x = the gradient rule's central trail: observed +0.517; reshuffled -0.450 (-0.883 to +0.167), beyond 0.0020; Gaussian -0.433 (-0.800 to +0.200), beyond 0.0015
+      grad-least-flow x = this case's predicted residual   : observed -0.517; reshuffled +0.450 (-0.200 to +0.883), beyond 0.0018; Gaussian +0.433 (-0.184 to +0.800), beyond 0.0022
+      grad-least-los  x = the flow speed                   : observed +0.150; reshuffled -0.083 (-0.684 to +0.583), beyond 0.2642; Gaussian -0.100 (-0.750 to +0.617), beyond 0.2880
+      grad-least-los  x = the gradient rule's central trail: observed +0.517; reshuffled -0.383 (-0.850 to +0.267), beyond 0.0008; Gaussian -0.383 (-0.800 to +0.250), beyond 0.0030
+      grad-least-los  x = this case's predicted residual   : observed -0.500; reshuffled +0.400 (-0.233 to +0.867), beyond 0.0027; Gaussian +0.383 (-0.267 to +0.800), beyond 0.0037
+      grad-central    two innermost points, x = the gradient rule's central trail: observed +0.500; reshuffled -0.483 (-0.883 to +0.150), beyond 0.0000; Gaussian -0.500, beyond 0.0000
+      grad-central    two innermost points, x = this case's predicted residual   : observed -0.717; reshuffled +0.600 (+0.100 to +0.917), beyond 0.0000; Gaussian +0.583, beyond 0.0000
+   c. the slope of the residual on each case's predicted residual, weighted least squares with an intercept;
+      the gradient rule requires a slope of 1 and the flux rule a slope of 0
+      grad-central   : slope -0.350 +/- 0.320 (bootstrap 16 to 84 percent -0.716 to -0.182), intercept -0.316 dex; predicted residuals -1.48 to -0.25
+      grad-rigid     : slope -0.639 +/- 0.501 (bootstrap 16 to 84 percent -1.105 to -0.383), intercept -0.310 dex; predicted residuals -0.94 to +0.01
+      grad-least-flow: slope -0.671 +/- 0.578 (bootstrap 16 to 84 percent -1.333 to -0.377), intercept -0.268 dex; predicted residuals -0.68 to -0.06
+      grad-least-los : slope -0.607 +/- 0.610 (bootstrap 16 to 84 percent -1.406 to -0.261), intercept -0.231 dex; predicted residuals -0.52 to -0.01
+   d. level test at the innermost points, chi^2 with the sigma above:
+      grad-central   : mean predicted -0.591 dex; chi^2 25.3 against 9.0 for no change, Delta chi^2 +16.3 on 9 points; largest terms UGCA444 +10.8, DDO064 +8.4, NGC3109 +3.1
+      grad-rigid     : mean predicted -0.312 dex; chi^2 12.5 against 9.0 for no change, Delta chi^2 +3.5 on 9 points; largest terms UGCA444 +5.2, DDO064 +4.2, IC2574 -3.1
+      grad-least-flow: mean predicted -0.242 dex; chi^2 11.1 against 9.0 for no change, Delta chi^2 +2.1 on 9 points; largest terms UGCA444 +3.9, DDO064 +2.6, IC2574 -1.8
+      grad-least-los : mean predicted -0.173 dex; chi^2 11.5 against 9.0 for no change, Delta chi^2 +2.5 on 9 points; largest terms UGCA444 +2.8, DDO064 +1.8, NGC3109 -0.9
+      flux-central   : mean predicted -0.009 dex; chi^2 9.0 against 9.0 for no change, Delta chi^2 -0.0 on 9 points; largest terms UGCA444 +0.2, NGC3109 -0.1, IC2574 -0.1
+      flux-most      : mean predicted -0.050 dex; chi^2 9.2 against 9.0 for no change, Delta chi^2 +0.2 on 9 points; largest terms UGCA444 +0.6, DDO064 +0.4, IC2574 -0.3
+   boost above 5 (32 galaxies): residual at the innermost point, mean -0.191, median -0.221, rms 0.354 dex; the scatter beyond the observational error that sets chi^2 per point
+      to one for the unmodified law, 0.072 dex
+   a. Spearman's rho of the residual with x, and its two-sided permutation p (no dependence, as the flux rule requires):
+      the flow speed                                   : innermost point +0.419 (p 0.019); two innermost points +0.296 (p 0.101)
+      |u_los|                                          : innermost point +0.133 (p 0.465); two innermost points +0.148 (p 0.417)
+      u_los, signed                                    : innermost point +0.000 (p 1.000); two innermost points +0.021 (p 0.909)
+      w_los                                            : innermost point -0.124 (p 0.500); two innermost points -0.098 (p 0.595)
+      the gradient rule's central trail over the radius: innermost point -0.079 (p 0.672); two innermost points -0.208 (p 0.248)
+      the innermost radius, a control                  : innermost point +0.116 (p 0.530); two innermost points +0.245 (p 0.176)
+      the law's boost there, a control                 : innermost point +0.066 (p 0.726); two innermost points +0.017 (p 0.928)
+   b. the rho that the gradient rule would give: its predicted residuals plus noise, the noise the observed residuals
+      reshuffled or Gaussian with each point's sigma; median, 2.5 to 97.5 percent, and the share of draws at or beyond
+      the observed rho on the observed side
+      grad-central    x = the flow speed                   : observed +0.419; reshuffled -0.252 (-0.512 to +0.027), beyond 0.0000; Gaussian -0.244 (-0.551 to +0.067), beyond 0.0000
+      grad-central    x = the gradient rule's central trail: observed -0.079; reshuffled -0.563 (-0.753 to -0.331), beyond 0.0000; Gaussian -0.490 (-0.725 to -0.207), beyond 0.0027
+      grad-central    x = this case's predicted residual   : observed +0.080; reshuffled +0.563 (+0.338 to +0.758), beyond 0.0000; Gaussian +0.490 (+0.203 to +0.722), beyond 0.0018
+      grad-rigid      x = the flow speed                   : observed +0.419; reshuffled -0.178 (-0.487 to +0.124), beyond 0.0000; Gaussian -0.160 (-0.495 to +0.184), beyond 0.0008
+      grad-rigid      x = the gradient rule's central trail: observed -0.079; reshuffled -0.367 (-0.622 to -0.076), beyond 0.0262; Gaussian -0.316 (-0.598 to +0.001), beyond 0.0707
+      grad-rigid      x = this case's predicted residual   : observed -0.107; reshuffled +0.389 (+0.091 to +0.635), beyond 0.0010; Gaussian +0.324 (-0.018 to +0.622), beyond 0.0067
+      grad-least-flow x = the flow speed                   : observed +0.419; reshuffled -0.128 (-0.448 to +0.179), beyond 0.0003; Gaussian -0.125 (-0.477 to +0.226), beyond 0.0015
+      grad-least-flow x = the gradient rule's central trail: observed -0.079; reshuffled -0.308 (-0.583 to +0.000), beyond 0.0725; Gaussian -0.255 (-0.554 to +0.079), beyond 0.1497
+      grad-least-flow x = this case's predicted residual   : observed +0.086; reshuffled +0.306 (+0.007 to +0.577), beyond 0.0755; Gaussian +0.252 (-0.085 to +0.556), beyond 0.1633
+      grad-least-los  x = the flow speed                   : observed +0.419; reshuffled -0.116 (-0.416 to +0.229), beyond 0.0008; Gaussian -0.100 (-0.452 to +0.266), beyond 0.0018
+      grad-least-los  x = the gradient rule's central trail: observed -0.079; reshuffled -0.206 (-0.515 to +0.128), beyond 0.2210; Gaussian -0.178 (-0.494 to +0.161), beyond 0.2810
+      grad-least-los  x = this case's predicted residual   : observed -0.014; reshuffled +0.208 (-0.118 to +0.510), beyond 0.0890; Gaussian +0.177 (-0.173 to +0.502), beyond 0.1505
+      grad-central    two innermost points, x = the gradient rule's central trail: observed -0.208; reshuffled -0.383 (-0.640 to -0.095), beyond 0.1180; Gaussian -0.390, beyond 0.1230
+      grad-central    two innermost points, x = this case's predicted residual   : observed +0.130; reshuffled +0.411 (+0.110 to +0.661), beyond 0.0302; Gaussian +0.414, beyond 0.0260
+   c. the slope of the residual on each case's predicted residual, weighted least squares with an intercept;
+      the gradient rule requires a slope of 1 and the flux rule a slope of 0
+      grad-central   : slope +0.143 +/- 0.197 (bootstrap 16 to 84 percent -0.070 to +0.374), intercept -0.050 dex; predicted residuals -1.48 to -0.00
+      grad-rigid     : slope +0.276 +/- 0.334 (bootstrap 16 to 84 percent -0.057 to +0.757), intercept -0.053 dex; predicted residuals -0.94 to +0.03
+      grad-least-flow: slope +0.110 +/- 0.453 (bootstrap 16 to 84 percent -0.273 to +0.738), intercept -0.064 dex; predicted residuals -0.68 to +0.00
+      grad-least-los : slope -0.071 +/- 0.543 (bootstrap 16 to 84 percent -0.569 to +0.474), intercept -0.069 dex; predicted residuals -0.52 to -0.00
+   d. level test at the innermost points, chi^2 with the sigma above:
+      grad-central   : mean predicted -0.249 dex; chi^2 49.2 against 32.0 for no change, Delta chi^2 +17.2 on 32 points; largest terms UGCA444 +11.0, DDO064 +8.5, IC2574 -3.7
+      grad-rigid     : mean predicted -0.120 dex; chi^2 32.5 against 32.0 for no change, Delta chi^2 +0.5 on 32 points; largest terms UGCA444 +5.3, DDO064 +4.2, IC2574 -3.9
+      grad-least-flow: mean predicted -0.092 dex; chi^2 33.0 against 32.0 for no change, Delta chi^2 +1.0 on 32 points; largest terms UGCA444 +4.0, DDO064 +2.6, IC2574 -2.3
+      grad-least-los : mean predicted -0.053 dex; chi^2 34.3 against 32.0 for no change, Delta chi^2 +2.3 on 32 points; largest terms UGCA444 +2.8, DDO064 +1.8, NGC3109 -0.9
+      flux-central   : mean predicted -0.005 dex; chi^2 31.9 against 32.0 for no change, Delta chi^2 -0.1 on 32 points; largest terms UGCA444 +0.2, UGC05764 +0.1, IC2574 -0.1
+      flux-most      : mean predicted -0.025 dex; chi^2 32.1 against 32.0 for no change, Delta chi^2 +0.1 on 32 points; largest terms UGCA444 +0.6, UGC05764 +0.4, DDO064 +0.4
+
+6. EVERY GALAXY OF THE WIDE SAMPLE REFITTED WITH EACH RULE'S BOOST LEFT AT ALL ITS RADII (the fit machinery of
+   refit_core.py, the boost left entered as a fixed change of log g per point; Delta chi^2 against the unmodified law
+   on the same sample)
+   the unmodified law on the wide sample: chi^2 780.9
+   grad-central: Delta chi^2 summed -51.6 over 32 galaxies, -42.4 over the 9 with boost above 10; worse by more than 4: 2, better by more than 4: 4
+      most worsened: UGCA444 +12.9, UGC05764 +4.5, DDO064 +2.1, UGC06667 +1.6, UGC00731 +1.2; most improved: IC2574 -34.3, CamB -8.8, NGC3109 -7.1, UGC08837 -5.1, KK98-251 -4.0
+   grad-least-flow: Delta chi^2 summed -20.6 over 32 galaxies, -17.3 over the 9 with boost above 10; worse by more than 4: 1, better by more than 4: 2
+      most worsened: UGCA444 +4.9, DDO064 +0.9, UGC05764 +0.7, UGC06667 +0.1, UGC00731 +0.1; most improved: IC2574 -11.8, NGC3109 -6.5, CamB -2.6, KK98-251 -1.5, UGC08837 -1.4
+   grad-least-los: Delta chi^2 summed -7.1 over 32 galaxies, -6.2 over the 9 with boost above 10; worse by more than 4: 0, better by more than 4: 1
+      most worsened: UGCA444 +3.8, DDO064 +0.6, UGC05764 +0.2, UGC00731 +0.1, UGC05829 +0.0; most improved: NGC3109 -6.4, IC2574 -1.7, KK98-251 -1.2, CamB -1.0, UGC01281 -0.4
+   flux-central: Delta chi^2 summed -1.3 over 32 galaxies, -0.9 over the 9 with boost above 10; worse by more than 4: 0, better by more than 4: 0
+      most worsened: UGCA444 +0.1, UGC05764 +0.1, UGC06667 +0.0, UGC00731 +0.0, DDO064 +0.0; most improved: NGC3109 -0.4, IC2574 -0.3, CamB -0.2, KK98-251 -0.1, UGC08837 -0.1
+   flux-most: Delta chi^2 summed -6.0 over 32 galaxies, -4.3 over the 9 with boost above 10; worse by more than 4: 0, better by more than 4: 0
+      most worsened: UGC05764 +0.7, UGCA444 +0.6, UGC06667 +0.3, DDO064 +0.2, UGC00731 +0.2; most improved: NGC3109 -1.7, IC2574 -1.7, CamB -1.1, UGC08837 -0.6, KK98-251 -0.5
+
+7. VARIANTS OF THE SPEED
+   H0 = 67.4 km/s/Mpc: flow speed 467 to 826 km/s (median 632); 16th to 84th percentiles, medians 510 and 863; |u_los| median 300
+   relative transverse velocity 100 km/s: flow speed 515 to 694 km/s (median 623); 16th to 84th percentiles, medians 552 and 768; |u_los| median 222
+   relative transverse velocity 300 km/s: flow speed 515 to 694 km/s (median 623); 16th to 84th percentiles, medians 485 and 990; |u_los| median 222
+
+[1409 s]

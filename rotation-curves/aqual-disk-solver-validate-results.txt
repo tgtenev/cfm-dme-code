@@ -1,0 +1,38 @@
+The exact AQUAL solutions in the disks: validation of the axisymmetric solver
+====================================================================================================
+
+1. KUZMIN DISK. Exact MOND field nu(|g_N|/a0) g_N in QUMOND and AQUAL (Famaey and McGaugh 2012 Sect. 6.1.2).
+   The sheet fills the first cell row (|z| < dz0). Errors are maxima of |g_R(num)/g_R(exact) - 1| over 0.1 b < R < 30 b.
+   Columns: Newton at the midplane against the exact field of the same slab; at z = b against the razor-thin field;
+   QUMOND and AQUAL at z = b against nu g_N (razor-thin); QUMOND and AQUAL at the midplane against the razor-thin
+   value, which the slab model reaches linearly in dz0; the AQUAL flux residual and its iteration count.
+   M = 1e+10 Msun, b = 2.0 kpc (GM/b^2 = 2.90 a0):
+     dz0 = 0.020 b, grid 533 x 164: Newton mid 5.9e-03, z=b 7.9e-04 | z=b QUMOND 2.9e-03, AQUAL 3.8e-03 | mid QUMOND 1.4e-02, AQUAL 1.4e-02 | residual 2e-05, 9 iterations
+     dz0 = 0.010 b, grid 533 x 191: Newton mid 2.5e-03, z=b 6.9e-04 | z=b QUMOND 1.8e-03, AQUAL 2.2e-03 | mid QUMOND 7.4e-03, AQUAL 7.2e-03 | residual 2e-05, 9 iterations
+     dz0 = 0.005 b, grid 533 x 233: Newton mid 8.5e-04, z=b 6.6e-04 | z=b QUMOND 1.2e-03, AQUAL 1.5e-03 | mid QUMOND 4.0e-03, AQUAL 3.9e-03 | residual 4e-05, 9 iterations
+   M = 1e+09 Msun, b = 1.0 kpc (GM/b^2 = 1.16 a0):
+     dz0 = 0.020 b, grid 533 x 164: Newton mid 5.9e-03, z=b 7.9e-04 | z=b QUMOND 3.4e-03, AQUAL 5.0e-03 | mid QUMOND 1.1e-02, AQUAL 1.0e-02 | residual 2e-05, 9 iterations
+     dz0 = 0.010 b, grid 533 x 191: Newton mid 2.5e-03, z=b 6.9e-04 | z=b QUMOND 2.0e-03, AQUAL 2.8e-03 | mid QUMOND 5.5e-03, AQUAL 5.2e-03 | residual 2e-05, 9 iterations
+     dz0 = 0.005 b, grid 533 x 233: Newton mid 8.5e-04, z=b 6.6e-04 | z=b QUMOND 1.4e-03, AQUAL 1.8e-03 | mid QUMOND 2.9e-03, AQUAL 2.8e-03 | residual 4e-05, 9 iterations
+   Box size: the same case (M = 1e10, b = 2, dz0 = 0.005 b) with the box at 500 b instead of 2000 b:
+     box    500 b: AQUAL at R =   1.0 b, z = b: +7.78e-04
+     box    500 b: AQUAL at R =  10.0 b, z = b: +1.30e-04
+     box    500 b: AQUAL at R =  29.9 b, z = b: +2.17e-05
+     box   2000 b: AQUAL at R =   1.0 b, z = b: +7.78e-04
+     box   2000 b: AQUAL at R =  10.0 b, z = b: +1.30e-04
+     box   2000 b: AQUAL at R =  29.9 b, z = b: +2.07e-05
+
+2. THICK EXPONENTIAL DISK: Newton against the ring-potential quadrature, and the boosts at two cell sizes.
+   Sigma_0 = 500.0 Msun/pc^2, R_d = 3.0 kpc, h_z = 0.375 kpc (exponential), cut at 10 R_d. Rows at the midplane.
+   dR0 = 0.05 R_d, dz0 = 0.125 h, grid 340 x 184. R/R_d:   0.50   1.00   1.50   2.20   3.00   4.00   6.00
+     Newton V^2 grid/ring - 1:   +0.0006 +0.0002 +0.0001 +0.0001 +0.0002 +0.0002 +0.0002
+     y_N:                         0.789  0.871  0.778  0.594  0.414  0.263  0.117
+     log10 nu(y_N) (algebraic):   0.230  0.217  0.232  0.270  0.324  0.397  0.538
+     boost QUMOND, AQUAL:         0.155  0.169  0.200  0.253  0.318  0.399  0.545  |   0.153  0.170  0.201  0.253  0.318  0.399  0.544
+   dR0 = 0.025 R_d, dz0 = 0.0625 h, grid 592 x 260. R/R_d:   0.50   1.00   1.50   2.20   3.00   4.00   6.00
+     Newton V^2 grid/ring - 1:   +0.0003 +0.0001 +0.0001 +0.0001 +0.0001 +0.0001 +0.0002
+     y_N:                         0.789  0.871  0.778  0.594  0.414  0.263  0.117
+     log10 nu(y_N) (algebraic):   0.230  0.217  0.232  0.270  0.324  0.397  0.538
+     boost QUMOND, AQUAL:         0.155  0.169  0.200  0.253  0.318  0.399  0.545  |   0.153  0.170  0.201  0.253  0.318  0.399  0.544
+
+[run time 12 s]

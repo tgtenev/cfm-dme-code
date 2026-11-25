@@ -1,0 +1,32 @@
+box134-mean            q= 6 th=0.01   same=mean D=4.883  empirical
+box134-min             q= 6 th=0.01   same=min  D=6.428  above
+box145-mean            q= 6 th=0.01   same=mean D=4.267  below
+box145-min             q= 6 th=0.01   same=min  D=5.945  target
+box234-mean            q= 6 th=0.01   same=mean D=4.98   empirical
+box234-min             q= 6 th=0.01   same=min  D=5.723  target
+brick123-max           q= 6 th=0.01   same=max  D=6.116  target
+brick123-mean          q= 6 th=0.01   same=mean D=6.484  above
+brick124-mean          q= 6 th=0.01   same=mean D=5.43   empirical
+brick124-min           q= 6 th=0.01   same=min  D=5.927  target
+p5-04-max              q=12 th=0.01   same=max  D=6.038  target
+p5-04-mean             q=12 th=0.01   same=mean D=6.387  above
+p5-06-max              q=12 th=0.01   same=max  D=6.085  target
+p5-06-mean             q=12 th=0.01   same=mean D=6.434  above
+p5-07-max              q=12 th=0.01   same=max  D=6.102  target
+p5-07-mean             q=12 th=0.01   same=mean D=6.377  above
+p5-08-max              q=12 th=0.01   same=max  D=6.113  target
+p5-08-mean             q=12 th=0.01   same=mean D=6.392  above
+p5-11-max              q=12 th=0.01   same=max  D=6.022  target
+p5-11-mean             q=12 th=0.01   same=mean D=6.155  target
+p5-11-mean-th0.003     q=12 th=0.003  same=mean D=6.546  above
+p5-11-mean-th0.03      q=12 th=0.03   same=mean D=5.734  target
+p5-11-min              q=12 th=0.01   same=min  D=8.487  above
+p5-12-max              q=12 th=0.01   same=max  D=6.086  target
+p5-12-mean             q=12 th=0.01   same=mean D=6.361  above
+p5-28-max              q=24 th=0.01   same=max  D=6.01   target
+p5-28-mean             q=24 th=0.01   same=mean D=6.651  above
+p6-05-mean             q= 6 th=0.01   same=mean D=5.595  empirical
+p6-05-min              q= 6 th=0.01   same=min  D=5.741  target
+rod4-mean              q= 3 th=0.01   same=mean D=5.802  target
+trigger-scale window, rod of four sites: 0.0033 to 0.0129; divisors 0.003: 6.222, 0.01: 5.807, 0.03: 5.363
+trigger-scale window, W pentomino (same 'mean'): 0.0090 to 0.0329 (extrapolated); divisors 0.003: 6.546, 0.01: 6.155, 0.03: 5.734

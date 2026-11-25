@@ -1,0 +1,54 @@
+THE COUNTING-FACTOR MENU ON THE ROTATION CURVES: THE SCALE RELATION a0 = c H_dS ln(1 + delta) / kappa AT kappa = 1/3, 2/3, 1 AND 2
+153 galaxies; 2000 bootstrap draws by galaxy, seed 20261114; xi* = 0.6573
+
+== SPARC's tabulated field, the algebraic relation (the fit of record)
+   H0 = 67.4 km/s/Mpc (c H_dS = 5.4185e-10 m/s^2)
+      kappa =   1: delta = 0.1966, a0 = 0.9726e-10, chi^2 = 4323.17, onset X = 3.66, dilute slope 0.913
+      kappa = 1/3: delta = 0.0661, a0 = 1.0407e-10, chi^2 = 4339.38, onset X = 10.27, dilute slope 0.968; minus kappa = 1: +16.2 +/- 11.5 (+1.41 SD), share of draws in which it fits better 0.065
+      kappa = 2/3: delta = 0.1317, a0 = 1.0053e-10, chi^2 = 4329.91, onset X = 5.31, dilute slope 0.939; minus kappa = 1: +6.7 +/- 5.6 (+1.20 SD), share of draws in which it fits better 0.101
+      kappa =   2: delta = 0.3862, a0 = 0.8847e-10, chi^2 = 4322.39, onset X = 2.01, dilute slope 0.846; minus kappa = 1: -0.8 +/- 14.8 (-0.05 SD), share of draws in which it fits better 0.533
+   H0 = 73.0 km/s/Mpc (c H_dS = 5.8687e-10 m/s^2)
+      kappa =   1: delta = 0.1819, a0 = 0.9807e-10, chi^2 = 4324.36, onset X = 3.93, dilute slope 0.919
+      kappa = 1/3: delta = 0.0611, a0 = 1.0436e-10, chi^2 = 4340.17, onset X = 11.09, dilute slope 0.971; minus kappa = 1: +15.8 +/- 10.7 (+1.48 SD), share of draws in which it fits better 0.057
+      kappa = 2/3: delta = 0.1216, a0 = 1.0105e-10, chi^2 = 4331.21, onset X = 5.73, dilute slope 0.944; minus kappa = 1: +6.9 +/- 5.3 (+1.30 SD), share of draws in which it fits better 0.089
+      kappa =   2: delta = 0.3576, a0 = 0.8971e-10, chi^2 = 4320.75, onset X = 2.15, dilute slope 0.855; minus kappa = 1: -3.6 +/- 13.9 (-0.26 SD), share of draws in which it fits better 0.609
+   [sparc-relation: 64 s]
+
+== the model's own Newtonian field of disks with thickness, the algebraic relation
+   H0 = 67.4 km/s/Mpc (c H_dS = 5.4185e-10 m/s^2)
+      kappa =   1: delta = 0.1838, a0 = 0.9144e-10, chi^2 = 4271.25, onset X = 3.89, dilute slope 0.918
+      kappa = 1/3: delta = 0.0623, a0 = 0.9827e-10, chi^2 = 4263.92, onset X = 10.87, dilute slope 0.970; minus kappa = 1: -7.3 +/- 10.5 (-0.70 SD), share of draws in which it fits better 0.753
+      kappa = 2/3: delta = 0.1235, a0 = 0.9462e-10, chi^2 = 4266.61, onset X = 5.65, dilute slope 0.943; minus kappa = 1: -4.6 +/- 5.2 (-0.89 SD), share of draws in which it fits better 0.815
+      kappa =   2: delta = 0.3596, a0 = 0.8322e-10, chi^2 = 4292.63, onset X = 2.14, dilute slope 0.854; minus kappa = 1: +21.4 +/- 14.1 (+1.51 SD), share of draws in which it fits better 0.068
+   H0 = 73.0 km/s/Mpc (c H_dS = 5.8687e-10 m/s^2)
+      kappa =   1: delta = 0.1702, a0 = 0.9224e-10, chi^2 = 4270.10, onset X = 4.18, dilute slope 0.923
+      kappa = 1/3: delta = 0.0576, a0 = 0.9857e-10, chi^2 = 4263.80, onset X = 11.74, dilute slope 0.972; minus kappa = 1: -6.3 +/- 9.8 (-0.65 SD), share of draws in which it fits better 0.739
+      kappa = 2/3: delta = 0.1142, a0 = 0.9515e-10, chi^2 = 4266.08, onset X = 6.08, dilute slope 0.947; minus kappa = 1: -4.0 +/- 4.9 (-0.83 SD), share of draws in which it fits better 0.793
+      kappa =   2: delta = 0.3329, a0 = 0.8433e-10, chi^2 = 4288.95, onset X = 2.29, dilute slope 0.863; minus kappa = 1: +18.9 +/- 13.3 (+1.42 SD), share of draws in which it fits better 0.076
+   [model-relation: 125 s]
+
+== SPARC's tabulated field, the full field solution
+   H0 = 67.4 km/s/Mpc (c H_dS = 5.4185e-10 m/s^2)
+      kappa =   1: delta = 0.1785, a0 = 0.8899e-10, chi^2 = 4569.54, onset X = 4.00, dilute slope 0.920
+      kappa = 1/3: delta = 0.0605, a0 = 0.9553e-10, chi^2 = 4561.17, onset X = 11.18, dilute slope 0.971; minus kappa = 1: -8.4 +/- 10.6 (-0.79 SD), share of draws in which it fits better 0.768
+      kappa = 2/3: delta = 0.1199, a0 = 0.9204e-10, chi^2 = 4564.20, onset X = 5.80, dilute slope 0.944; minus kappa = 1: -5.3 +/- 5.2 (-1.02 SD), share of draws in which it fits better 0.829
+      kappa =   2: delta = 0.3469, a0 = 0.8069e-10, chi^2 = 4601.83, onset X = 2.21, dilute slope 0.858; minus kappa = 1: +32.3 +/- 15.0 (+2.15 SD), share of draws in which it fits better 0.017
+   H0 = 73.0 km/s/Mpc (c H_dS = 5.8687e-10 m/s^2)
+      kappa =   1: delta = 0.1650, a0 = 0.8962e-10, chi^2 = 4567.90, onset X = 4.30, dilute slope 0.926
+      kappa = 1/3: delta = 0.0559, a0 = 0.9579e-10, chi^2 = 4560.98, onset X = 12.08, dilute slope 0.973; minus kappa = 1: -6.9 +/- 9.9 (-0.70 SD), share of draws in which it fits better 0.747
+      kappa = 2/3: delta = 0.1108, a0 = 0.9253e-10, chi^2 = 4563.60, onset X = 6.25, dilute slope 0.948; minus kappa = 1: -4.3 +/- 4.9 (-0.88 SD), share of draws in which it fits better 0.804
+      kappa =   2: delta = 0.3215, a0 = 0.8181e-10, chi^2 = 4595.13, onset X = 2.36, dilute slope 0.867; minus kappa = 1: +27.2 +/- 13.8 (+1.97 SD), share of draws in which it fits better 0.026
+   [sparc-full: 638 s]
+
+== the model's own Newtonian field of disks with thickness, the full field solution
+   H0 = 67.4 km/s/Mpc (c H_dS = 5.4185e-10 m/s^2)
+      kappa =   1: delta = 0.1670, a0 = 0.8369e-10, chi^2 = 4556.75, onset X = 4.26, dilute slope 0.925
+      kappa = 1/3: delta = 0.0569, a0 = 0.9002e-10, chi^2 = 4529.84, onset X = 11.87, dilute slope 0.973; minus kappa = 1: -26.9 +/- 9.8 (-2.76 SD), share of draws in which it fits better 0.995
+      kappa = 2/3: delta = 0.1124, a0 = 0.8661e-10, chi^2 = 4542.87, onset X = 6.17, dilute slope 0.948; minus kappa = 1: -13.9 +/- 4.8 (-2.87 SD), share of draws in which it fits better 0.997
+      kappa =   2: delta = 0.3249, a0 = 0.7622e-10, chi^2 = 4599.03, onset X = 2.34, dilute slope 0.866; minus kappa = 1: +42.3 +/- 14.4 (+2.93 SD), share of draws in which it fits better 0.001
+   H0 = 73.0 km/s/Mpc (c H_dS = 5.8687e-10 m/s^2)
+      kappa =   1: delta = 0.1545, a0 = 0.8432e-10, chi^2 = 4553.28, onset X = 4.57, dilute slope 0.930
+      kappa = 1/3: delta = 0.0526, a0 = 0.9032e-10, chi^2 = 4528.86, onset X = 12.81, dilute slope 0.975; minus kappa = 1: -24.4 +/- 9.1 (-2.69 SD), share of draws in which it fits better 0.995
+      kappa = 2/3: delta = 0.1040, a0 = 0.8710e-10, chi^2 = 4540.80, onset X = 6.64, dilute slope 0.951; minus kappa = 1: -12.5 +/- 4.5 (-2.78 SD), share of draws in which it fits better 0.996
+      kappa =   2: delta = 0.3012, a0 = 0.7726e-10, chi^2 = 4592.20, onset X = 2.50, dilute slope 0.874; minus kappa = 1: +38.9 +/- 13.7 (+2.83 SD), share of draws in which it fits better 0.002
+   [model-full: 1149 s]

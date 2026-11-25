@@ -1,0 +1,106 @@
+AQUAL refit: the full AQUAL solution against the algebraic relation, T11 (the empirical function, a0 free)
+==============================================================================================================
+Fit machinery of two_constant_fit.pl as ported in refit_core.py: 153 SPARC galaxies, 3,168 points; disk
+ratio and each bulge ratio free under 0.10 dex priors about 0.5 and 0.7; distance and inclination through q, profiled
+within their catalog priors; converged per-galaxy fits; a0 by a ladder in log10 a0; errors clustered by galaxy.
+The algebraic relation predicts g = nu(g_b/a0) g_b; the full AQUAL solution g = nu(g_b/a0) g_b 10^Gamma, Gamma from the
+disk solver (aqual-disk-solver.py) for the model at the current a0 (and delta), carried to the fitted ratios by
+Gamma(s rho, a0) = Gamma(rho, a0/s) plus, point by point, its remaining error against direct solutions at other disk and bulge ratios (mode 'corrected'). Both models see the same points.
+Coarse-grained tables: 3168 points from coarse-gamma-B200-T11-0.csv, coarse-gamma-B200-T11-1.csv, coarse-gamma-B200-T11-2.csv, coarse-gamma-B200-T11-3.csv; 16 columns replaced; 0 points without coarse-grained rows keep plain AQUAL's Gamma
+Bootstrap draws: 500 (aqual-refit-fit.py: 2000). Tag: B200-T11
+Points where the model's field or Gamma is undefined (excluded from both models): 0
+
+INPUT 1: THE MODEL'S OWN NEWTONIAN FIELD WITH THICKNESS FOR BOTH MODELS (model mismatch cancels)
+   relation: a0 = 0.9909e-10, chi^2 = 4269.66  [12 s]
+   full solution: a0 = 0.9136e-10, chi^2 = 4530.75  [75 s]
+   full solution at the relation's best-fit constants (no refit): chi^2 4539.44, Delta +269.8; the refit recovers 8.7 of it
+   Delta chi^2 = full minus relation at the respective best fits: +261.1 +/- 149.4 (galaxy-clustered SD, 500 draws; 16-84 half-width 145.1; delta-method 140.8); +1.75 SD.
+   Clustered SD of log10 a0 over the draws: relation 0.0361 dex, full 0.0371 dex; a0(full)/a0(relation) = 0.9220, its draws 16-84 percent 0.9023 to 0.9469
+   mock of the full solution at its best fit (prior-centre ratios, q = 1, 3168 points): relation refitted a0 = 0.9282e-10, chi^2 = 376.14; full refitted a0 = 0.9137e-10, chi^2 = 0.06; Delta chi^2 -376.1
+   mock of the relation at its best fit (prior-centre ratios, q = 1, 3168 points): relation refitted a0 = 0.9910e-10, chi^2 = 0.06; full refitted a0 = 0.9123e-10, chi^2 = 366.31; Delta chi^2 +366.2
+   Expected Delta chi^2: -376.1 if the full solution is right, +366.2 if the relation is. Observed +261.1 +/- 149.4:
+      rejection of the full solution (obs - E_full)/SD = +4.26; against the relation's expectation (obs - E_rel)/SD = -0.70  [90 s]
+   Slope test, refit residuals of the relation on the unabsorbed Gamma (1 if the full solution is right, 0 if the relation is): slope +0.469 +/- 0.214; rejection of the full solution 2.5 SD, of the relation +2.2 SD; rms of the unabsorbed part 0.0373 dex (3166 points)
+      the unabsorbed part is carried by a tail: median |.| 0.0070 dex, 1.4826 MAD 0.0104, rms without the largest 1 percent 0.0272, points beyond 0.1 dex 85 of 3166
+   Reverse slope test, refit residuals of the full solution on the unabsorbed -Gamma (1 if the relation is right, 0 if the full solution is): slope +0.568 +/- 0.203; rejection of the relation 2.1 SD, of the full solution +2.8 SD; rms 0.0390 dex
+   Parts of Delta chi^2 (full minus relation): data +102.3, mass-to-light priors +167.5, distance-inclination prior -8.7. In the 17 galaxies whose full-solution disk ratio lies more than 0.3 dex above 0.5: total +302.0 (data +146.1, mass-to-light +149.0, distance-inclination +6.8); the other 136: -40.9. Median fitted disk ratio 0.514 (relation), 0.572 (full); in those 17 galaxies 1.02 and 1.28.
+   Scatter of the residuals log10(g_obs/q^2) - log10 g_model about their mean (3167 points): relation 0.1052 dex, full solution 0.1031 dex. Gamma at the full solution's fit: rms 0.0567 dex, mean -0.0300, 16-84 percent -0.0612 to +0.0009.
+   Gamma read beyond the solver's a0 nodes at the full solution's fit (linear extrapolation, at most 0.5 dex): 2 points below, 0 above, of 3168; beyond the cap 0
+   Where it concentrates (per-galaxy Delta chi^2 = full minus relation, objective with priors, at the respective best fits):
+      bulge galaxies              31 galaxies:    +80.2 +/-   46.7 (delta method); worse by > 1:  12, better by > 1:   4
+      bulgeless                  122 galaxies:   +180.9 +/-  133.0 (delta method); worse by > 1:  65, better by > 1:  44
+      HSB (SBeff > 200)           62 galaxies:   +149.4 +/-   65.1 (delta method); worse by > 1:  32, better by > 1:  10
+      intermediate                14 galaxies:    +33.4 +/-   17.8 (delta method); worse by > 1:   9, better by > 1:   4
+      LSB (SBeff < 100)           77 galaxies:    +78.3 +/-  124.0 (delta method); worse by > 1:  36, better by > 1:  34
+      gas-rich (f_gas > 0.5)      66 galaxies:    +66.9 +/-  114.1 (delta method); worse by > 1:  35, better by > 1:  27
+      gas-poor (f_gas <= 0.5)     87 galaxies:   +194.2 +/-   83.1 (delta method); worse by > 1:  42, better by > 1:  21
+      gas-rich LSB                59 galaxies:    +35.9 +/-  113.6 (delta method); worse by > 1:  28, better by > 1:  27
+      largest increases: UGC00731 +44, IC4202 +43, UGC06667 +37, NGC0247 +32, UGC07524 +26, UGC05764 +24, UGC00128 +21, NGC6015 +19, NGC4183 +16, UGC04325 +16
+      largest decreases: D631-7 -40, IC2574 -40, NGC3109 -30, ESO563-G021 -22, CamB -19, UGC08837 -19
+      per point (data chi^2 only, no priors). Residual = log10(g_obs/q^2) - log10 g_model at each model's own fit;
+      Gamma at the full solution's fit (its a0 and ratios). By 2 pi G Sigma/g_R, the ratio of the vertical field
+      just outside the layer to the radial one (Sigma = 0.5 SB_disk + 0.7 SB_bul + Sigma_gas, g_R = SPARC g_bar at 0.5/0.7):
+        bin           points   sum dchi^2   mean residual: relation    full     Gamma: median   mean
+        [0, 0.25)       667       +12.5          +0.0040   +0.0001          +0.0021  +0.0014
+        [0.25, 0.5)     703       +44.7          -0.0046   -0.0092          -0.0068  -0.0083
+        [0.5, 1)        786       +68.6          +0.0025   -0.0004          -0.0154  -0.0195
+        [1, 2)          611       +89.1          +0.0051   +0.0165          -0.0470  -0.0473
+        [2, inf)        399      -112.6          -0.0631   -0.0027          -0.1008  -0.1140
+      by y = g_bar/a0 (SPARC g_bar at 0.5/0.7 over 1.2e-10, the bins of aqual-disk-solver-results.txt):
+        [0, 0.1)       1240       +32.0          -0.0109   +0.0011          -0.0235  -0.0450
+        [0.1, 1)       1227       +35.6          -0.0052   +0.0001          -0.0116  -0.0244
+        [1, 4)          452       +29.4          +0.0025   +0.0067          -0.0108  -0.0161
+        [4, inf)        247        +5.1          -0.0078   -0.0093          -0.0051  -0.0062
+      the 466 points at y < 0.1 with 2 pi G Sigma > g_R: sum dchi^2 -25.3; mean residual -0.0320 (relation), +0.0127 (full); Gamma median -0.0860
+   [model: 194 s]
+
+INPUT 2: SPARC'S TABULATED g_bar, Gamma AS A PREDICTED CHANGE ON THE RELATION
+   relation: a0 = 1.0475e-10, chi^2 = 4326.67  [4 s]
+   full solution: a0 = 0.9688e-10, chi^2 = 4539.91  [27 s]
+   full solution at the relation's best-fit constants (no refit): chi^2 4547.91, Delta +221.2; the refit recovers 8.0 of it
+   Delta chi^2 = full minus relation at the respective best fits: +213.2 +/- 143.2 (galaxy-clustered SD, 500 draws; 16-84 half-width 140.0; delta-method 141.1); +1.49 SD.
+   Clustered SD of log10 a0 over the draws: relation 0.0364 dex, full 0.0363 dex; a0(full)/a0(relation) = 0.9248, its draws 16-84 percent 0.9004 to 0.9471
+   mock of the full solution at its best fit (prior-centre ratios, q = 1, 3166 points): relation refitted a0 = 0.9896e-10, chi^2 = 393.53; full refitted a0 = 0.9689e-10, chi^2 = 0.06; Delta chi^2 -393.5
+   mock of the relation at its best fit (prior-centre ratios, q = 1, 3166 points): relation refitted a0 = 1.0476e-10, chi^2 = 0.06; full refitted a0 = 0.9595e-10, chi^2 = 382.31; Delta chi^2 +382.3
+   Expected Delta chi^2: -393.5 if the full solution is right, +382.3 if the relation is. Observed +213.2 +/- 143.2:
+      rejection of the full solution (obs - E_full)/SD = +4.24; against the relation's expectation (obs - E_rel)/SD = -1.18  [63 s]
+   Slope test, refit residuals of the relation on the unabsorbed Gamma (1 if the full solution is right, 0 if the relation is): slope +0.530 +/- 0.231; rejection of the full solution 2.0 SD, of the relation +2.3 SD; rms of the unabsorbed part 0.0368 dex (3165 points)
+      the unabsorbed part is carried by a tail: median |.| 0.0070 dex, 1.4826 MAD 0.0104, rms without the largest 1 percent 0.0271, points beyond 0.1 dex 85 of 3165
+   Reverse slope test, refit residuals of the full solution on the unabsorbed -Gamma (1 if the relation is right, 0 if the full solution is): slope +0.387 +/- 0.266; rejection of the relation 2.3 SD, of the full solution +1.5 SD; rms 0.0331 dex
+   Parts of Delta chi^2 (full minus relation): data +77.3, mass-to-light priors +158.7, distance-inclination prior -22.8. In the 17 galaxies whose full-solution disk ratio lies more than 0.3 dex above 0.5: total +313.2 (data +154.2, mass-to-light +153.5, distance-inclination +5.5); the other 136: -100.0. Median fitted disk ratio 0.510 (relation), 0.559 (full); in those 17 galaxies 0.98 and 1.24.
+   Scatter of the residuals log10(g_obs/q^2) - log10 g_model about their mean (3165 points): relation 0.1103 dex, full solution 0.1074 dex. Gamma at the full solution's fit: rms 0.0560 dex, mean -0.0304, 16-84 percent -0.0621 to +0.0009.
+   Gamma read beyond the solver's a0 nodes at the full solution's fit (linear extrapolation, at most 0.5 dex): 1 points below, 0 above, of 3165; beyond the cap 0
+   Where it concentrates (per-galaxy Delta chi^2 = full minus relation, objective with priors, at the respective best fits):
+      bulge galaxies              31 galaxies:    +62.2 +/-   43.8 (delta method); worse by > 1:  12, better by > 1:   5
+      bulgeless                  122 galaxies:   +151.0 +/-  134.4 (delta method); worse by > 1:  62, better by > 1:  41
+      HSB (SBeff > 200)           62 galaxies:   +101.2 +/-   63.7 (delta method); worse by > 1:  30, better by > 1:  11
+      intermediate                14 galaxies:    +27.7 +/-   19.5 (delta method); worse by > 1:   7, better by > 1:   5
+      LSB (SBeff < 100)           77 galaxies:    +84.4 +/-  124.9 (delta method); worse by > 1:  37, better by > 1:  30
+      gas-rich (f_gas > 0.5)      66 galaxies:    +76.9 +/-  114.8 (delta method); worse by > 1:  34, better by > 1:  24
+      gas-poor (f_gas <= 0.5)     87 galaxies:   +136.3 +/-   82.8 (delta method); worse by > 1:  40, better by > 1:  22
+      gas-rich LSB                59 galaxies:    +45.5 +/-  114.4 (delta method); worse by > 1:  27, better by > 1:  24
+      largest increases: UGC00731 +45, IC4202 +37, UGC06667 +36, NGC0247 +31, UGC05764 +27, UGC07524 +24, UGC00128 +21, UGC04325 +17, NGC5985 +16, UGC12632 +16
+      largest decreases: D631-7 -42, IC2574 -38, NGC3109 -27, ESO563-G021 -24, CamB -20, NGC0055 -19
+      per point (data chi^2 only, no priors). Residual = log10(g_obs/q^2) - log10 g_model at each model's own fit;
+      Gamma at the full solution's fit (its a0 and ratios). By 2 pi G Sigma/g_R, the ratio of the vertical field
+      just outside the layer to the radial one (Sigma = 0.5 SB_disk + 0.7 SB_bul + Sigma_gas, g_R = SPARC g_bar at 0.5/0.7):
+        bin           points   sum dchi^2   mean residual: relation    full     Gamma: median   mean
+        [0, 0.25)       667       +15.6          +0.0051   +0.0006          +0.0020  +0.0013
+        [0.25, 0.5)     703       +49.0          -0.0042   -0.0089          -0.0072  -0.0090
+        [0.5, 1)        786       +64.0          -0.0009   -0.0038          -0.0162  -0.0202
+        [1, 2)          611       +68.0          -0.0008   +0.0109          -0.0481  -0.0484
+        [2, inf)        398      -119.2          -0.0532   +0.0062          -0.1014  -0.1139
+      by y = g_bar/a0 (SPARC g_bar at 0.5/0.7 over 1.2e-10, the bins of aqual-disk-solver-results.txt):
+        [0, 0.1)       1239       +53.6          -0.0114   +0.0002          -0.0235  -0.0448
+        [0.1, 1)       1227       +23.8          -0.0042   +0.0010          -0.0127  -0.0250
+        [1, 4)          452        +3.9          -0.0062   -0.0017          -0.0125  -0.0179
+        [4, inf)        247        -4.0          +0.0002   -0.0014          -0.0063  -0.0079
+      the 464 points at y < 0.1 with 2 pi G Sigma > g_R: sum dchi^2 -14.6; mean residual -0.0301 (relation), +0.0144 (full); Gamma median -0.0859
+   [sparc: 291 s]
+
+SUMMARY
+   model : relation a0 = 0.9909e-10, chi^2 = 4269.66; full a0 = 0.9136e-10, chi^2 = 4530.75; Delta chi^2 fixed calibration +269.8, refitted +261.1 +/- 149.4 (+1.75 SD); expected -376.1 (full right), +366.2 (relation right); rejection of the full solution 4.26 SD
+   sparc : relation a0 = 1.0475e-10, chi^2 = 4326.67; full a0 = 0.9688e-10, chi^2 = 4539.91; Delta chi^2 fixed calibration +221.2, refitted +213.2 +/- 143.2 (+1.49 SD); expected -393.5 (full right), +382.3 (relation right); rejection of the full solution 4.24 SD
+   [main: 291 s]
+
+[run time 291 s]

@@ -1,0 +1,11 @@
+1. flat background: the bend's curvature minus 4(r u)'/r^2 = 0
+   background stretched by l: its own curvature = 2*(2*r*Derivative(l(r), r) + l(r)**3 - l(r))/(r**2*l(r)**3) ; at a constant stretch of 2 it is 3/(2*r**2)
+   background stretched by l: the bend's curvature minus 4(r u/l^2)'/r^2 = 0 ; so the literal analog weights the flux by 1/l^2, not 1/l
+2. gradient energy of the total strain (strain-gradient form): static equation is lap[div(chi grad e)] = 0 for that e: True
+2. gradient energy of the in-plane displacement alone: static equation is lap[div(chi grad e)] = 0 for that e: True
+    in spherical symmetry, bounded at infinity, that is r^2 chi e' = constant, a flux law for that e
+3. the reweighted constraints in any geometry and for moving sources, at linear order
+    lap Phi - 4 pi G (rho_hat + rho_ph) = 0 for any C^ij(t, x): the reweighted Hamiltonian constraint is solved by Psi = Phi, so lensing equals dynamics in any geometry
+    continuity of the baryons: 0 ; of the phantom with J_ph = -dP/dt: 0
+    momentum constraint d_i dPsi/dt + 4 pi G (J + J_ph)_i with Psi = Phi: [0, 0, 0] for any motion and any time dependence of C^ij
+    without the phantom current the x-component leaves -C00(t, x, y, z)*Derivative(Phi(t, x, y, z), t, x) - C01(t, x, y, z)*Derivative(Phi(t, x, y, z), t, y) - C02(t, x, y, z)*Derivative(Phi(t, x, y, z), t, z) - Derivative(C00(t, x, y, z), t)*Derivative(Phi(t, x, y, z), x) - Derivative(C01(t, x, y, z), t)*Derivative(Phi(t, x, y, z), y) - Derivative(C02(t, x, y, z), t)*Derivative(Phi(t, x, y, z), z) + Derivative(Phi(t, x, y, z), t, x) (not zero whenever P changes)

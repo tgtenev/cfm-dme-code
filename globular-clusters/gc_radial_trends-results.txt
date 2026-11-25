@@ -1,0 +1,108 @@
+THE RADIAL CONDITION OF THE GLOBULAR-CLUSTER PREFERENCE WITH A REALISTIC STELLAR M/L TREND
+============================================================================================================
+Delta lnL = max lnL(slope 0, Newton) - max lnL(slope 1, ambient rescaling); positive favors Newton.
+Sample gc_dynamical-rich-sample.tsv; catchment lengths 58.254, 90, 100, 200 pc; single values at 58.254 pc.
+Harris catalog mwgc.dat.txt, SHA-256 b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658: [Fe/H] for 152 clusters (Part II), lg(tc) for 143 (Part III).
+
+1. THE OBSERVABLE AND THE RADIUS OF THE CONDITION
+   y = log10 of the catalog's GLOBAL dynamical M/L_V (Baumgardt N-body fit, segregation included), one value
+   per cluster; x = log10 P(l_c); the radial trend is a covariate in log10 R_GC, the GALACTOCENTRIC radius,
+   across clusters (0.7 to 96 kpc). It is not a radius inside a cluster.
+   Pearson correlation of log P(58.254 pc) with log R_GC over the 133: 0.923.
+
+2. STELLAR-POPULATION PREDICTIONS OF Y_* AND THEIR TREND WITH R_GC
+   Harris 2010 [Fe/H] found for 127 of 133 clusters; missing: BH_140 (6.9 kpc), FSR_1716 (4.1 kpc), FSR_1735 (3.2 kpc), FSR_1758 (3.5 kpc), Gran_5 (3.3 kpc), VVV-CL001 (0.8 kpc).
+   Kroupa-equivalent ML slope over 0.2-0.8 Msun: -1.52 (Baumgardt and Hilker 2018: -1.5); over 0.3-0.8: -1.72; over 0.5-0.8: -2.30.
+
+   Predicted log Y_* regressed on log R_GC (OLS over the clusters with [Fe/H]); c is the power-law index;
+   'in/out' is Y_*(0.7 kpc) / Y_*(96 kpc) = 10^(-c x 2.137). Rescaling needs c = -0.34 (in/out 5.4) at 58.254 pc.
+   Z         metallicity only (Kroupa SSP; KM09 + D20)      N 127  c -0.075 +- 0.014  in/out 1.44  rms about trend 0.074 dex
+   Zage      metallicity, age-metallicity relation (D20)    N 127  c -0.062 +- 0.011  in/out 1.36  rms about trend 0.061 dex
+   Z+young   metallicity, outer halo 1 Gyr younger (assumed) N 127  c -0.091 +- 0.014  in/out 1.56  rms about trend 0.075 dex
+   Zsteep    metallicity, metal-rich slope doubled (stress) N 127  c -0.098 +- 0.021  in/out 1.62  rms about trend 0.109 dex
+   Zsteep+young the stress test plus the younger outer halo    N 127  c -0.114 +- 0.021  in/out 1.75  rms about trend 0.110 dex
+   Z+alpha   metallicity with BSH20's alpha-enhancement     N 127  c -0.062 +- 0.010  in/out 1.36  rms about trend 0.057 dex
+   Z+alpha+MF the same x MF depletion                        N 127  c +0.058 +- 0.019  in/out 0.75  rms about trend 0.091 dex
+   MF        MF depletion only (catalog MF via KM09)        N 127  c +0.120 +- 0.019  in/out 0.56  rms about trend 0.088 dex
+   TD        dissolution only (T_Diss via KM09 Eq. 5)       N 127  c +0.226 +- 0.025  in/out 0.33  rms about trend 0.114 dex
+   Z+MF      metallicity x MF depletion                     N 127  c +0.045 +- 0.021  in/out 0.80  rms about trend 0.101 dex
+   Zage+MF   metallicity (age-adj.) x MF depletion          N 127  c +0.058 +- 0.020  in/out 0.75  rms about trend 0.095 dex
+   Z+TD      metallicity x dissolution (T_Diss)             N 127  c +0.151 +- 0.027  in/out 0.47  rms about trend 0.140 dex
+   Z+MF+B17  metallicity x MF x remnant retention (B17)     N 124  c +0.119 +- 0.031  in/out 0.56  rms about trend 0.120 dex
+
+
+3. THE PREFERENCE WITH THE POPULATION PRIORS (all / R_GC > 8 kpc; 58.254, 90, 100, 200 pc)
+                                                              58.254     90    100    200 8:58.254   8:90  8:100  8:200
+   Z: offsets imposed (kappa = 1)                              +35.4  +40.2  +41.2  +46.1   +8.0   +9.7  +10.2  +13.7
+   Power-law prior on the trend, Y_* ~ R_GC^c with c ~ N(c0, sigma), all 133 clusters (no [Fe/H] needed):
+   c0 0, sigma 0.05 (c0 +0.000)                                +30.7  +33.7  +34.3  +38.1  +10.2  +11.8  +12.3  +15.9
+   c0 0, sigma 0.10 (c0 +0.000)                                +18.8  +19.7  +19.9  +21.8   +8.9   +9.2   +9.4  +11.0
+   c0 = metallicity-only trend, sigma 0.05 (c0 -0.075)         +24.3  +26.7  +27.2  +30.5   +7.9   +8.8   +9.2  +12.3
+   c0 = metallicity-only trend, sigma 0.10 (c0 -0.075)         +16.8  +17.5  +17.7  +19.4   +7.5   +7.3   +7.3   +8.3
+   c0 = metallicity x MF trend, sigma 0.05 (c0 +0.045)         +34.5  +37.8  +38.5  +42.6  +11.4  +13.4  +13.9  +17.8
+   c0 = metallicity x T_Diss trend, sigma 0.05 (c0 +0.151)     +43.0  +47.2  +48.0  +52.8  +13.7  +16.4  +17.0  +21.3
+   c0 = Newton's own fitted trend, sigma 0.05 (c0 -0.056)      +25.9  +28.4  +29.0  +32.4   +8.5   +9.6  +10.0  +13.2
+   c0 = mean of metallicity-side variants, sigma 0.028 (c0 -0.088)  +33.1  +37.5  +38.4  +43.4   +7.4   +8.7   +9.1  +12.6
+
+   Power law imposed at a fixed index (the trend alone, without per-cluster scatter):
+   c fixed at the Z trend (-0.075, in/out 1.44)                +47.6  +53.2  +54.3  +59.9   +8.0   +9.5  +10.0  +13.8
+   c fixed at the Z+young trend (-0.091, in/out 1.56)          +43.8  +49.3  +50.4  +56.0   +7.3   +8.7   +9.2  +12.8
+   c fixed at the Zsteep+young trend (-0.114, in/out 1.75)     +37.8  +43.2  +44.3  +49.9   +6.3   +7.4   +7.9  +11.4
+   c fixed at the Z+alpha trend (-0.062, in/out 1.36)          +50.3  +55.9  +57.0  +62.6   +8.5  +10.2  +10.7  +14.5
+   c fixed at the Z+MF trend (+0.045, in/out 0.80)             +63.8  +69.3  +70.4  +75.6  +12.3  +14.8  +15.5  +19.6
+   c fixed at the Z+alpha+MF trend (+0.058, in/out 0.75)       +64.4  +69.8  +70.8  +76.0  +12.7  +15.2  +15.9  +20.1
+   c fixed at the rescaling-side edge (-0.156, in/out 2.15)    +25.2  +30.3  +31.4  +36.9   +4.4   +5.0   +5.4   +8.5
+
+   Power law held to the population envelope (flat prior on c, profile as the bounded runs of gc_dynamical.py):
+   c in [-0.156, +0.276] (all variants, 2 s.e.)                +32.5  +37.6  +38.7  +44.2   +7.8   +8.4   +8.8  +11.9
+   c in [-0.102, 0] (metallicity-only, 2 s.e., rescaling's side)  +42.5  +48.0  +49.1  +54.7   +8.5   +9.7  +10.2  +13.8
+
+
+4. THE METALLICITY-BOUNDED PREFERENCE (the seven rows of section 3 that bound the trend by metallicity)
+   c fixed at -0.062 (Z+alpha)              all  +50.3 to  +62.6; beyond 8 kpc   +8.5 to  +14.5
+   c fixed at -0.075 (Z)                    all  +47.6 to  +59.9; beyond 8 kpc   +8.0 to  +13.8
+   c fixed at -0.091 (Z+young)              all  +43.8 to  +56.0; beyond 8 kpc   +7.3 to  +12.8
+   c fixed at -0.114 (Zsteep+young)         all  +37.8 to  +49.9; beyond 8 kpc   +6.3 to  +11.4
+   flat c in [-0.102, 0]                    all  +42.5 to  +54.7; beyond 8 kpc   +8.5 to  +13.8
+   c ~ N(-0.088, 0.0277)                    all  +33.1 to  +43.4; beyond 8 kpc   +7.4 to  +12.6
+   flat c in [-0.156, +0.276]               all  +32.5 to  +44.2; beyond 8 kpc   +7.8 to  +11.9
+   per-cluster metallicity offsets (kappa 1) all  +35.4 to  +46.1; beyond 8 kpc   +8.0 to  +13.7
+   The eighth row runs on the 127 clusters of the sample with Harris [Fe/H], 35 of them beyond 8 kpc.
+   Envelope over the seven rows:
+   envelope across 58.254, 90, 100, 200 pc all:  +32.5 to  +62.6 (env at 58.254 pc; fix:Z+alpha at 200 pc)
+                                           beyond 8 kpc:   +6.3 to  +14.5 (fix:Zsteep+young at 58.254 pc; fix:Z+alpha at 200 pc)
+   envelope at 58.254 pc                   all:  +32.5 to  +50.3 (env at 58.254 pc; fix:Z+alpha at 58.254 pc)
+                                           beyond 8 kpc:   +6.3 to   +8.5 (fix:Zsteep+young at 58.254 pc; fix:Z+alpha at 58.254 pc)
+   envelope at 90 pc                       all:  +37.5 to  +55.9 (pl:side at 90 pc; fix:Z+alpha at 90 pc)
+                                           beyond 8 kpc:   +7.4 to  +10.2 (fix:Zsteep+young at 90 pc; fix:Z+alpha at 90 pc)
+   envelope at 100 pc                      all:  +38.4 to  +57.0 (pl:side at 100 pc; fix:Z+alpha at 100 pc)
+                                           beyond 8 kpc:   +7.9 to  +10.7 (fix:Zsteep+young at 100 pc; fix:Z+alpha at 100 pc)
+   envelope at 200 pc                      all:  +43.4 to  +62.6 (pl:side at 200 pc; fix:Z+alpha at 200 pc)
+                                           beyond 8 kpc:  +11.4 to  +14.5 (fix:Zsteep+young at 200 pc; fix:Z+alpha at 200 pc)
+   Envelope over all eight rows:
+   envelope across 58.254, 90, 100, 200 pc all:  +32.5 to  +62.6 (env at 58.254 pc; fix:Z+alpha at 200 pc)
+                                           beyond 8 kpc:   +6.3 to  +14.5 (fix:Zsteep+young at 58.254 pc; fix:Z+alpha at 200 pc)
+   envelope at 58.254 pc                   all:  +32.5 to  +50.3 (env at 58.254 pc; fix:Z+alpha at 58.254 pc)
+                                           beyond 8 kpc:   +6.3 to   +8.5 (fix:Zsteep+young at 58.254 pc; fix:Z+alpha at 58.254 pc)
+   envelope at 90 pc                       all:  +37.5 to  +55.9 (pl:side at 90 pc; fix:Z+alpha at 90 pc)
+                                           beyond 8 kpc:   +7.4 to  +10.2 (fix:Zsteep+young at 90 pc; fix:Z+alpha at 90 pc)
+   envelope at 100 pc                      all:  +38.4 to  +57.0 (pl:side at 100 pc; fix:Z+alpha at 100 pc)
+                                           beyond 8 kpc:   +7.9 to  +10.7 (fix:Zsteep+young at 100 pc; fix:Z+alpha at 100 pc)
+   envelope at 200 pc                      all:  +43.4 to  +62.6 (pl:side at 200 pc; fix:Z+alpha at 200 pc)
+                                           beyond 8 kpc:  +11.4 to  +14.5 (fix:Zsteep+young at 200 pc; fix:Z+alpha at 200 pc)
+
+   Every row at three decimals:
+   row                  58.254       90      100      200 | 8:58.254     8:90    8:100    8:200
+   fix:Z+alpha         +50.323  +55.930  +57.045  +62.608 |   +8.494  +10.174  +10.703  +14.502
+   fix:Z               +47.569  +53.155  +54.270  +59.855 |   +7.969   +9.527  +10.035  +13.764
+   fix:Z+young         +43.792  +49.335  +50.448  +56.048 |   +7.294   +8.692   +9.171  +12.803
+   fix:Zsteep+young    +37.775  +43.216  +44.320  +49.919 |   +6.296   +7.448   +7.884  +11.357
+   envZ                +42.455  +47.953  +49.062  +54.666 |   +8.470   +9.745  +10.203  +13.756
+   pl:side             +33.111  +37.470  +38.400  +43.437 |   +7.440   +8.669   +9.109  +12.573
+   env                 +32.494  +37.596  +38.655  +44.154 |   +7.785   +8.432   +8.773  +11.891
+   Z:k1                +35.402  +40.179  +41.153  +46.135 |   +7.956   +9.674  +10.183  +13.716
+   The eighth row against the envelope of the seven across 58.254, 90, 100, 200 pc (32.494 to 62.608; beyond 8 kpc 6.296 to 14.502):
+     58.254 pc: all  +35.402 inside; beyond 8 kpc   +7.956 inside
+         90 pc: all  +40.179 inside; beyond 8 kpc   +9.674 inside
+        100 pc: all  +41.153 inside; beyond 8 kpc  +10.183 inside
+        200 pc: all  +46.135 inside; beyond 8 kpc  +13.716 inside

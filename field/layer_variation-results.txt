@@ -1,0 +1,42 @@
+THE VARIATION OF THE FIELD FROM THE UNEVEN EXCESS OF THE LAYERS
+
+1. The spread of the excess from layer to layer, in the steady state at a free volume of 0.19
+   place | drive X | total field, m/s^2 | guided share | boost | mean excess | rms excess | share of layers with no excess | rms of a layer's field over the mean total field
+   the Sun, total field 2e-10 m/s^2 | 2.062 | 2.000e-10 | 0.301 | 1.440 | 0.440 | 0.527 | 0.301 | 0.366
+   the crossover | 1.000 | 9.700e-11 | 0.160 | 2.000 | 1.000 | 1.091 | 0.160 | 0.545
+   boost 10 | 0.120 | 1.165e-11 | 0.021 | 10.000 | 9.000 | 9.095 | 0.021 | 0.909
+   boost 30 | 0.038 | 3.641e-12 | 0.007 | 30.000 | 29.000 | 29.095 | 0.007 | 0.970
+   at the Sun the baryons' field is 1.388e-10 m/s^2, and a layer's field differs from the mean by 7.316e-11 m/s^2 rms
+   two neighbouring layers at the Sun differ by 1.035e-10 m/s^2 rms, and by 2.638e-11 m/s^2 for one roughening
+
+2. The Sun's own field under the anisotropic form of the ambient-stretch coupling: a point mass in the uniaxial medium of stretch l has the potential -GM / sqrt(l^2 x_par^2 + x_perp^2)
+   at the Sun's ambient stretch of 1.440 the Sun's field along the Galaxy's field would be 0.694 of its field across it
+
+3. The scale-selective coupling: the stretch acts on the field averaged over a catchment length
+3a. the sampling noise of the mean, averaged over a volume one catchment length across
+   a catchment length cubed holds at least 2 A^2 = 6050 domains, by the cap on a domain's volume
+   place | sampling noise of the mean excess, as a share of the total field, at that largest domain
+   the Sun, total field 2e-10 m/s^2 | 0.47 percent, 0.0020 dex
+   the crossover | 0.70 percent, 0.0030 dex
+   boost 10 | 1.17 percent, 0.0050 dex
+   boost 30 | 1.25 percent, 0.0054 dex
+   at the Sun that is 9.41e-13 m/s^2 on the scale of a catchment length
+   one roughening of one such domain at the Sun shifts the mean field over the whole catchment length by 4.36e-15 m/s^2, 2.2e-05 of the field
+   catchment length 58 pc: an orbit at the Sun crosses 888 of them, so the orbit's mean field is off by 0.016 percent; a body crosses one in 1.53e+05 yr, in which its mean is redrawn 71 to 243 times
+      across a pair 1e4 AU apart the noise differs by 7.9e-16 m/s^2, 8.8e-06 of the pair's internal acceleration; across the Earth-Moon distance by 2.0e-22 m/s^2; its gradient is 0.66 of the Galaxy's own, the field over the Sun's distance from the centre
+      those differences hold for a window with soft edges; with a sharp-edged window the difference across the pair is at most 3.8e-14 m/s^2, 4.3e-04 of its internal acceleration
+   catchment length 200 pc: an orbit at the Sun crosses 258 of them, so the orbit's mean field is off by 0.029 percent; a body crosses one in 5.29e+05 yr, in which its mean is redrawn 245 to 839 times
+      across a pair 1e4 AU apart the noise differs by 2.3e-16 m/s^2, 2.6e-06 of the pair's internal acceleration; across the Earth-Moon distance by 5.9e-23 m/s^2; its gradient is 0.19 of the Galaxy's own, the field over the Sun's distance from the centre
+      those differences hold for a window with soft edges; with a sharp-edged window the difference across the pair is at most 2.1e-14 m/s^2, 2.3e-04 of its internal acceleration
+3b. one domain against the volume
+   the field: place | one roughening of one domain, as a share of the total field | the whole deviation of one domain, rms | the sum over the 6050 domains of one volume, 77.8 times that | the loss of boost by flux passing around volumes of high mean excess, of the order of that noise squared | the number of domains at which the noise would attain 0.057 dex, 14.0 percent
+   the Sun, total field 2e-10 m/s^2 | 2.2e-05, 4.36e-15 m/s^2 | 6.0e-05, 1.21e-14 m/s^2 | 0.47 percent | 2.2e-05 | 7, a margin of 889
+   the crossover | 1.6e-05, 1.52e-15 m/s^2 | 9.0e-05, 8.75e-15 m/s^2 | 0.70 percent | 4.9e-05 | 15, a margin of 400
+   boost 10 | 3.1e-06, 3.66e-17 m/s^2 | 1.5e-04, 1.75e-15 m/s^2 | 1.17 percent | 1.4e-04 | 42, a margin of 144
+   boost 30 | 1.0e-06, 3.81e-18 m/s^2 | 1.6e-04, 5.84e-16 m/s^2 | 1.25 percent | 1.6e-04 | 48, a margin of 127
+3c. the values that Papers I and II quote
+   Paper I's window, catchment length 30 pc: a ring at the Sun's radius holds 1717 catchment lengths and its mean is off by 0.011 percent; across a pair 1e4 AU apart a sharp-edged window gives at most 5.3e-14 m/s^2, 6.0e-04 of the internal acceleration at 1.5 solar masses and 9.0e-04 at 1 solar mass
+   Paper I's window, catchment length 200 pc: a ring at the Sun's radius holds 258 catchment lengths and its mean is off by 0.029 percent; across a pair 1e4 AU apart a sharp-edged window gives at most 2.1e-14 m/s^2, 2.3e-04 of the internal acceleration at 1.5 solar masses and 3.5e-04 at 1 solar mass
+   in the limit of a large boost the noise of one volume tends to 1 over the root of 6050, 1.29 percent, 0.0055 dex
+   a domain as thick as it is wide is at most 0.0549 of a catchment length across, 3.2 to 11.0 pc in the tightened window; at the rod's amplification of 57 a volume one catchment length across holds at least 6498 domains
+   at the Sun the mean excess is 0.44, the mean number of roughenings 2.3, and the share of layers with no excess 0.30
